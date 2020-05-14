@@ -12,7 +12,7 @@ class Master_bahan extends CI_Controller {
 
 	public function index()
 	{
-		$this->fungsi->check_previleges('master_bahan');
+		$this->fungsi->check_previleges('nama_bahan');
 		$data['master_bahan'] = $this->m_master_bahan->getData();
 		$this->load->view('master/master_bahan/v_master_bahan_list',$data);
 	}
