@@ -1,61 +1,100 @@
-<?php  if ( ! defined('BASEPATH')) exit('No direct script access allowed');?>
+<?php
+defined('BASEPATH') OR exit('No direct script access allowed');
 
-    <div class="row" id="form_pembelian">
-      <div class="col-lg-12">
-        <div class="box box-primary">
-          <div class="box-header with-border">
-            <h3 class="box-title">Master Satuan</h3>
+class kategori_no_induk extends CI_Controller {
 
-            <div class="box-tools pull-right">
-            <?php
-              $sesi = from_session('level');
-              if ($sesi == '1' || $sesi == '2' || $sesi == '3' || $sesi == '6') {
-                echo button('load_silent("master/satuan/form/base","#modal")','Add New Satuan','btn btn-success');
-              } else {
-                # code...
-              }
-              ?>
-            </div>
-          </div>
-          <div class="box-body">
-            <table width="100%" id="tableku" class="table table-striped">
-              <thead>
-                <th>No</th>
-                <th>Nama Satuan</th>
-                <th>Keterangan</th>
-                <th>Act</th>
-              </thead>
-              <tbody>
-          <?php 
-          $i = 1;
-          foreach($satuan->result() as $row): ?>
-          <tr>
-            <td align="center"><?=$i++?></td>
-            <td align="center"><?=$row->nama_satuan?></td>
-            <td align="center"><?=$row->keterangan?></td>
-            <td align="center">
-            <?php
-              $sesi = from_session('level');
-              if ($sesi == '1' || $sesi == '2' || $sesi == '3' || $sesi == '6') {
-                echo button('load_silent("master/satuan/form/sub/'.$row->id.'","#modal")','','btn btn-info fa fa-edit','data-toggle="tooltip" title="Edit"');
-              } else {
-                # code...
-              }
-              ?>
-            </td>
-          </tr>
+	public function __construct()
+	{
+		parent::__construct();
+		$this->fungsi->restrict();
+		$this->load->model('master/m_kategori_no_induk');
+	}
 
-        <?php endforeach;?>
-        </tbody>
-            </table>
-          </div>
-        </div>
-      </div>
-    </div>
-<script type="text/javascript">
-  $(document).ready(function() {
-    var table = $('#tableku').DataTable( {
-      "ordering": false,
-    } );
-  });
-</script>
+	public function index()
+	{
+		$this->fungsi->check_previleges('kategori_no_induk');
+		$data['kategori_no_induk'] = $this->m_kategori_no_induk->getData();
+		$this->load->view('master/kategori_no_induk/v_kategori_no_induk_list',$data);
+    }
+
+
+    public function form($param='')
+	{
+		$content   = "<div id='divsubcontent'></div>";
+		$header    = "Form Master Kategori No Induk";
+		$subheader = "kategori_no_induk";
+		$buttons[] = button('jQuery.facebox.close()','Tutup','btn btn-default','data-dismiss="modal"');
+		echo $this->fungsi->parse_modal($header,$subheader,$content,$buttons,"");
+		if($param=='base'){
+			$this->fungsi->run_js('load_silent("master/kategori_no_induk/show_addForm/","#divsubcontent")');	
+		}else{
+			$base_kom=$this->uri->segment(5);
+			$this->fungsi->run_js('load_silent("master/kategori_no_induk/show_editForm/'.$base_kom.'","#divsubcontent")');	
+		}
+	}
+    public function show_addForm()
+	{
+		$this->fungsi->check_previleges('kategori_no_induk');
+		$this->load->library('form_validation');
+		$config = array(
+				array(
+					'field'	=> 'kategori_no_induk',
+					'label' => 'kategori_no_induk',
+					'rules' => 'required'
+				)
+			);
+		$this->form_validation->set_rules($config);
+		$this->form_validation->set_error_delimiters('<span class="error-span">', '</span>');
+
+		if ($this->form_validation->run() == FALSE)
+		{
+			$data['status']='';
+			$this->load->view('master/kategori_no_induk/v_kategori_no_induk_add',$data);
+		}
+		else
+		{
+			$datapost = get_post_data(array('kategori','nomor_induk','id_status'));
+			$this->m_kategori_no_induk->insertData($datapost);
+			$this->fungsi->run_js('load_silent("master/kategori_no_induk","#content")');
+			$this->fungsi->message_box("Data Master Kategori No Induk sukses disimpan...","success");
+			$this->fungsi->catat($datapost,"Menambah Master kategori_no_induk dengan data sbb:",true);
+        }
+    }
+        public function show_editForm($id='')
+    {
+		$this->fungsi->check_previleges('kategori_no_induk');
+		$this->load->library('form_validation');
+		$config = array(
+				array(
+					'field'	=> 'id',
+					'label' => 'wes mbarke',
+					'rules' => ''
+				),
+				array(
+					'field'	=> 'kategori_no_induk',
+					'label' => 'kategori_no_induk',
+					'rules' => 'required'
+				)
+			);
+		$this->form_validation->set_rules($config);
+		$this->form_validation->set_error_delimiters('<span class="error-span">', '</span>');
+
+		if ($this->form_validation->run() == FALSE)
+		{
+			$data['edit'] = $this->db->get_where('master_kategori_no_induk',array('id'=>$id));
+			$data['status']='';
+			$this->load->view('master/kategori_no_induk/v_kategori_no_induk_edit',$data);
+		}
+		else
+		{
+			$datapost = get_post_data(array('id','kategori','nomor_induk','id_status'));
+			$this->m_kategori_no_induk->updateData($datapost);
+			$this->fungsi->run_js('load_silent("master/kategori_no_induk","#content")');
+			$this->fungsi->message_box("Data Master Kategori No Induk sukses diperbarui...","success");
+			$this->fungsi->catat($datapost,"Mengedit Master kategori_no_induk dengan data sbb:",true);
+		}
+	}
+}
+
+
+
