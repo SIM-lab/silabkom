@@ -22,6 +22,7 @@
         <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
         <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
+	  
   </head>
   <body class="hold-transition login-page">
     <div class="login-box">
@@ -53,7 +54,7 @@
           <div class="row">
           <div class="col-xs-6" >
           
-          <a href="https://api.whatsapp.com/send?phone=6285600339469&text=Saya%20lupa%20password.%20Tolong%20sata."> Lupa Password ?  </a> <!-- Bersifat sementara --->
+          <a href="https://api.whatsapp.com/send?phone=6285600339469&text=Saya%20lupa%20password.%20Tolong%20saya."> Lupa Password ?  </a> <!-- Bersifat sementara --->
         
       </div>
             <div class="col-xs-6">
