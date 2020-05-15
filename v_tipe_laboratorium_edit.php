@@ -57,7 +57,7 @@
         </div>
         <div class="form-group">
             <label class="col-sm-4 control-label">Simpan</label>
-            <div class="col-sm-8 simpan">
+            <div class="col-sm-8 Kembali">
             <?php
             echo button('send_form(document.faddmenugrup,"master/tipe_laboratorium/show_editForm/","#divsubcontent")','Simpan','btn btn-success')." ";
             ?>
@@ -74,7 +74,7 @@ $(document).ready(function() {
       initialPreview: '<img src="<?php echo base_url().$row->foto; ?>" class="file-preview-image">'
     });
     $(".select2").select2();
-    $('.simpan').click(function(e) {  
+    $('.Kembali').click(function(e) {  
         $('#myModal').modal('hide');
     });
 });
