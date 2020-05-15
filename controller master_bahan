@@ -34,12 +34,12 @@ class Master_bahan extends CI_Controller {
 
 	public function show_addForm()
 	{
-		$this->fungsi->check_previleges('master_bahan');
+		$this->fungsi->check_previleges('nama_bahan');
 		$this->load->library('form_validation');
 		$config = array(
 				array(
-					'field'	=> 'master_bahan',
-					'label' => 'master_bahan',
+					'field'	=> 'kode', //kolom mana yang mau di required (required:yang harus diisi)
+					'label' => 'kode',
 					'rules' => 'required'
 				)
 			);
@@ -49,12 +49,12 @@ class Master_bahan extends CI_Controller {
 		if ($this->form_validation->run() == FALSE)
 		{
 			$data['status']='';
-			$this->load->view('master/master_bahan/v_nama_bahan_add',$data);
+			$this->load->view('master/master_bahan/v_master_bahan_add',$data);
 		}
 		else
 		{
-			$datapost = get_post_data(array('kode','nama_bahan','keterangan','id_status'));
-			$this->m_nama_alat->insertData($datapost);
+			$datapost = get_post_data(array('kode','jenis_bahan','nama_bahan','tahun','pengarang'));
+			$this->m_master_bahan->insertData($datapost);
 			$this->fungsi->run_js('load_silent("master/master_bahan","#content")');
 			$this->fungsi->message_box("Data Master Nama Bahan sukses disimpan...","success");
 			$this->fungsi->catat($datapost,"Menambah Master master_bahan dengan data sbb:",true);
@@ -63,7 +63,7 @@ class Master_bahan extends CI_Controller {
 
 	public function show_editForm($id='')
 	{
-		$this->fungsi->check_previleges('mster_bahan');
+		$this->fungsi->check_previleges('nama_bahan'); //untuk mengechek batasan akses
 		$this->load->library('form_validation');
 		$config = array(
 				array(
@@ -82,18 +82,24 @@ class Master_bahan extends CI_Controller {
 
 		if ($this->form_validation->run() == FALSE)
 		{
-			$data['edit'] = $this->db->get_where('master_master_bahan',array('id'=>$id));
+			$data['edit'] = $this->db->get_where('master_bahan',array('id'=>$id));
 			$data['status']='';
 			$this->load->view('master/master_bahan/v_master_bahan_edit',$data);
 		}
 		else
 		{
-			$datapost = get_post_data(array('id','kode','nama_bahan','keterangan','id_status'));
-			$this->m_nama_alat->updateData($datapost);
+			$datapost = get_post_data(array('kode','jenis_bahan','nama_bahan','tahun','pengarang'));
+			$this->m_master_bahan->updateData($datapost);
 			$this->fungsi->run_js('load_silent("master/master_bahan","#content")');
 			$this->fungsi->message_box("Data Master Nama Bahan sukses diperbarui...","success");
 			$this->fungsi->catat($datapost,"Mengedit Master master_bahan dengan data sbb:",true);
 		}
+	}
+	public function delete()
+	{
+		$id = $this->uri->segment(4);
+		$this->m_master_bahan->deleteData($id);
+		redirect('admin');
 	}
 }
 
