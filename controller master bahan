@@ -72,7 +72,7 @@ class master_bahan extends CI_Controller {
 					'rules' => ''
 				),
 				array(
-					'field'	=> 'kode',
+					'field'	=> 'kode', //required sama dengan yang ada pada show_addForm
 					'label' => 'kode',
 					'rules' => 'required'
 				)
