@@ -31,7 +31,7 @@
               <tbody>
           <?php 
           $i = 1;
-          foreach($master_absen->result() as $row): ?>
+          foreach($master_absen->result() as $row): ?> 
           <tr>
             <td align="center"><?=$i++?></td>
             <td align="center"><?=$row->Kode_Lab?></td>
