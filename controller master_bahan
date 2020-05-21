@@ -68,7 +68,7 @@ class Master_bahan extends CI_Controller {
 		$config = array(
 				array(
 					'field'	=> 'id',
-					'label' => 'wes mbarke',
+					'label' => 'id',
 					'rules' => ''
 				),
 				array(
