@@ -96,3 +96,5 @@ class Master_bahan extends CI_Controller {
 		}
 	}
 }
+
+
