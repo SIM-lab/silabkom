@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class m_kategori_alat_bahan extends CI_Model {
+class M_kategori_alat_bahan extends CI_Model {
 
 	public function getData($value='')
 	{
@@ -30,4 +30,3 @@ class m_kategori_alat_bahan extends CI_Model {
 	}
 
 }
-
