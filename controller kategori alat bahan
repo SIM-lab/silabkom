@@ -94,11 +94,4 @@ class Kategori_alat_bahan extends CI_Controller {
 			$this->fungsi->catat($datapost,"Mengedit Master kategori_alat_bahan dengan data sbb:",true);
 		}
 	}
-	public function delete()
-	{
-		$id = $this->uri->segment(4);
-		$this->m_kategori_alat_bahan->deleteData($id);
-		redirect('admin');
-    }
-
 }
