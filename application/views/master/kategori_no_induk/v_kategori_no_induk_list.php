@@ -11,7 +11,7 @@
             <?php
               $sesi = from_session('level');
               if ($sesi == '1' || $sesi == '2' || $sesi == '3' || $sesi == '6') {
-                echo button('load_silent("master/kategori_induk/form/base","#modal")','Add New Kategori','btn btn-success');
+                echo button('load_silent("master/kategori_no_induk/form/base","#modal")','Add New Kategori','btn btn-success');
               } else {
                 # code...
               }
@@ -29,7 +29,7 @@
               <tbody>
           <?php 
           $i = 1;
-          foreach($kategori_induk->result() as $row): ?>
+          foreach($kategori_no_induk->result() as $row): ?>
           <tr>
             <td align="center"><?=$i++?></td>
             <td align="center"><?=$row->kategori?></td>
@@ -38,7 +38,7 @@
             <?php
               $sesi = from_session('level');
               if ($sesi == '1' || $sesi == '2' || $sesi == '3' || $sesi == '6') {
-                echo button('load_silent("master/kategori_induk/form/sub/'.$row->id.'","#modal")','','btn btn-info fa fa-edit','data-toggle="tooltip" title="Edit"');
+                echo button('load_silent("master/kategori_no_induk/form/sub/'.$row->id.'","#modal")','','btn btn-info fa fa-edit','data-toggle="tooltip" title="Edit"');
               } else {
                 # code...
               }
