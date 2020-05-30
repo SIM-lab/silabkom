@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title><?php echo $this->config->item('title')?></title>
-    <link rel="shortcut icon" href="<?php echo base_url('assets/img/title.png'); ?>" />
+    <link rel="shortcut icon" href="<?php echo base_url('assets/img/fav.jpg'); ?>" />
     <!-- Tell the browser to be responsive to screen width -->
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
   <!-- Bootstrap 3.3.5 -->
