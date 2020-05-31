@@ -20,26 +20,26 @@ class Master_bahan extends CI_Controller {
 	public function form($param='')
 	{
 		$content   = "<div id='divsubcontent'></div>";
-		$header    = "Form Master Nama Alat";
-		$subheader = "nama_alat";
+		$header    = "Form Master Nama Bahan";
+		$subheader = "master_bahan";
 		$buttons[] = button('jQuery.facebox.close()','Tutup','btn btn-default','data-dismiss="modal"');
 		echo $this->fungsi->parse_modal($header,$subheader,$content,$buttons,"");
 		if($param=='base'){
-			$this->fungsi->run_js('load_silent("master/nama_alat/show_addForm/","#divsubcontent")');	
+			$this->fungsi->run_js('load_silent("master/master_bahan/show_addForm/","#divsubcontent")');	
 		}else{
 			$base_kom=$this->uri->segment(5);
-			$this->fungsi->run_js('load_silent("master/nama_alat/show_editForm/'.$base_kom.'","#divsubcontent")');	
+			$this->fungsi->run_js('load_silent("master/master_bahan/show_editForm/'.$base_kom.'","#divsubcontent")');	
 		}
 	}
 
 	public function show_addForm()
 	{
-		$this->fungsi->check_previleges('nama_alat');
+		$this->fungsi->check_previleges('master_bahan');
 		$this->load->library('form_validation');
 		$config = array(
 				array(
-					'field'	=> 'nama_alat',
-					'label' => 'nama_alat',
+					'field'	=> 'master_bahan',
+					'label' => 'master_bahan',
 					'rules' => 'required'
 				)
 			);
@@ -49,21 +49,21 @@ class Master_bahan extends CI_Controller {
 		if ($this->form_validation->run() == FALSE)
 		{
 			$data['status']='';
-			$this->load->view('master/nama_alat/v_nama_alat_add',$data);
+			$this->load->view('master/master_bahan/v_nama_bahan_add',$data);
 		}
 		else
 		{
-			$datapost = get_post_data(array('kode','nama_alat','keterangan','id_status'));
-			$this->m_nama_alat->insertData($datapost);
-			$this->fungsi->run_js('load_silent("master/nama_alat","#content")');
+			$datapost = get_post_data(array('kode','jenis_bahan','nama_bahan','tahun','pengarang','id_status'));
+			$this->m_master_bahan->insertData($datapost);
+			$this->fungsi->run_js('load_silent("master/master_bahan","#content")');
 			$this->fungsi->message_box("Data Master Nama Alat sukses disimpan...","success");
-			$this->fungsi->catat($datapost,"Menambah Master nama_alat dengan data sbb:",true);
+			$this->fungsi->catat($datapost,"Menambah Master master_bahan dengan data sbb:",true);
 		}
 	}
 
 	public function show_editForm($id='')
 	{
-		$this->fungsi->check_previleges('nama_alat');
+		$this->fungsi->check_previleges('master_bahan');
 		$this->load->library('form_validation');
 		$config = array(
 				array(
@@ -72,8 +72,8 @@ class Master_bahan extends CI_Controller {
 					'rules' => ''
 				),
 				array(
-					'field'	=> 'nama_alat',
-					'label' => 'nama_alat',
+					'field'	=> 'master_bahan',
+					'label' => 'master_bahan',
 					'rules' => 'required'
 				)
 			);
@@ -82,20 +82,20 @@ class Master_bahan extends CI_Controller {
 
 		if ($this->form_validation->run() == FALSE)
 		{
-			$data['edit'] = $this->db->get_where('master_nama_alat',array('id'=>$id));
+			$data['edit'] = $this->db->get_where('master_bahan',array('id'=>$id));
 			$data['status']='';
-			$this->load->view('master/nama_alat/v_nama_alat_edit',$data);
+			$this->load->view('master/master_bahan/v_master_bahan_edit',$data);
 		}
 		else
 		{
-			$datapost = get_post_data(array('id','kode','nama_alat','keterangan','id_status'));
-			$this->m_nama_alat->updateData($datapost);
-			$this->fungsi->run_js('load_silent("master/nama_alat","#content")');
-			$this->fungsi->message_box("Data Master Nama Alat sukses diperbarui...","success");
-			$this->fungsi->catat($datapost,"Mengedit Master nama_alat dengan data sbb:",true);
+			$datapost = get_post_data(array('id','jenis_bahan','nama_bahan','tahun','pengarang','id_status'));
+			$this->m_master_bahan->updateData($datapost);
+			$this->fungsi->run_js('load_silent("master/master_bahan","#content")');
+			$this->fungsi->message_box("Data Master Nama Bahan sukses diperbarui...","success");
+			$this->fungsi->catat($datapost,"Mengedit Master master_bahan dengan data sbb:",true);
 		}
 	}
 }
 
-/* End of file nama_alat.php */
-/* Location: ./application/controllers/master/nama_alat.php */
+/* End of file master_bahan.php */
+/* Location: ./application/controllers/master/master_bahan.php */

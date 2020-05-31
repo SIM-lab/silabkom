@@ -21,13 +21,13 @@ class kategori_no_induk extends CI_Controller {
     public function form($param='')
 	{
 		$content   = "<div id='divsubcontent'></div>";
-		$header    = "Form Master Kategori Nomor Induk";
+		$header    = "Form Master Kategori No Induk";
 		$subheader = "kategori_no_induk";
 		$buttons[] = button('jQuery.facebox.close()','Tutup','btn btn-default','data-dismiss="modal"');
 		echo $this->fungsi->parse_modal($header,$subheader,$content,$buttons,"");
 		if($param=='base'){
 			$this->fungsi->run_js('load_silent("master/kategori_no_induk/show_addForm/","#divsubcontent")');	
-		}else {
+		}else{
 			$base_kom=$this->uri->segment(5);
 			$this->fungsi->run_js('load_silent("master/kategori_no_induk/show_editForm/'.$base_kom.'","#divsubcontent")');	
 		}
@@ -53,7 +53,7 @@ class kategori_no_induk extends CI_Controller {
 		}
 		else
 		{
-			$datapost = get_post_data(array('id','kategori','no_induk'));
+			$datapost = get_post_data(array('kategori','nomor_induk','id_status'));
 			$this->m_kategori_no_induk->insertData($datapost);
 			$this->fungsi->run_js('load_silent("master/kategori_no_induk","#content")');
 			$this->fungsi->message_box("Data Master Kategori No Induk sukses disimpan...","success");
@@ -87,10 +87,10 @@ class kategori_no_induk extends CI_Controller {
 		}
 		else
 		{
-			$datapost = get_post_data(array('id','kategori','no_induk'));
+			$datapost = get_post_data(array('id','kategori','nomor_induk','id_status'));
 			$this->m_kategori_no_induk->updateData($datapost);
 			$this->fungsi->run_js('load_silent("master/kategori_no_induk","#content")');
-			$this->fungsi->message_box("Data Master Kategori Nomor Induk sukses diperbarui...","success");
+			$this->fungsi->message_box("Data Master Kategori No Induk sukses diperbarui...","success");
 			$this->fungsi->catat($datapost,"Mengedit Master kategori_no_induk dengan data sbb:",true);
 		}
 	}
