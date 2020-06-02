@@ -99,17 +99,14 @@
         <section class="sidebar">
           <!-- Sidebar user panel -->
           <div class="user-panel">
-            <div class="pull-left image">
+            <div class="pull-left image ">
               <?php
-                  $avatar = parse_avatar(from_session('gambar'),from_session('nama'),50,'img-circle');
-                  ('load_silent("cms/user/show_editForm_user/'.from_session('id').'","#content")');
+                  $avatar = parse_avatar(from_session('gambar'),from_session('nama'),40,'img-circle elevation-2');
                 ?>
-              <?php echo anchor('cms/user/show_editForm_user/'.from_session('id'),$avatar) ; ?>
+             <?php echo anchor('cms/user/show_editForm_user/'.from_session('id'),$avatar) ; ?>
             </div>
-            <div class="pull-left info">
-              <p><font color="#bfbfbf" size="2px">Login As :</font></p>
-              <p><?php echo from_session('nama');?></p>
-              <p><?php echo from_session('nama_level');?></p>
+            <div class="pull-left info" >
+            <p><font size="6px"><?php echo from_session('nama');?></font></p>
             </div>
           </div>
           <ul class="sidebar-menu ">
