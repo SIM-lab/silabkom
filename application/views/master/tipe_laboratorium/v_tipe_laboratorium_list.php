@@ -11,7 +11,7 @@
             <?php
               $sesi = from_session('level');
               if ($sesi == '1' || $sesi == '2' || $sesi == '3' || $sesi == '6') {
-                echo button('load_silent("master/tipe_laboratorium/form/base","#modal")','Add New Laboratorium','btn btn-success');
+                echo button('load_silent("master/tipe_laboratorium/form/base",)','Add New Laboratorium','btn btn-success');
               } else {
                 # code...
               }
@@ -53,8 +53,7 @@
                 
               }
               ?> 
-                  <a href="<?= site_url("master/mata_kuliah/delete/".$row->id."","#modal") ?>" class="btn btn-danger fa fa-trash"
-              onclick="return confirm('Apa anda Yakin ?')">
+              <a href="<?= site_url('master/tipe_laboratorium/delete/'.$row->id) ?>" class="btn btn-danger fa fa-trash" onclick="return confirm('Apakah Anda Yakin?')"></a>
               </a>
             </td>
           </tr>

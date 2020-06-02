@@ -98,6 +98,12 @@ class tipe_laboratorium extends CI_Controller {
 		}
 	}
 	 
+	public function delete()
+	{
+		$id = $this->uri->segment(4);
+		$this->m_tipe_laboratorium->deleteData($id);
+		redirect('admin');
+	}
 }
 
 /* End of file tipe_laboratorium.php */

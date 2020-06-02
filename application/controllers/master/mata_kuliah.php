@@ -26,12 +26,9 @@ class mata_kuliah extends CI_Controller {
 		echo $this->fungsi->parse_modal($header,$subheader,$content,$buttons,"");
 		if($param=='base'){
 			$this->fungsi->run_js('load_silent("master/mata_kuliah/show_addForm/","#divsubcontent")');
-		}elseif ($base_kom=$this->uri->segment(5)) {
+		}else {
+			$base_kom=$this->uri->segment(5);
 			$this->fungsi->run_js('load_silent("master/mata_kuliah/show_editForm/'.$base_kom.'","#divsubcontent")');
-		}
-		else{
-			$base_koma=$this->uri->segment(5);
-			$this->fungsi->run_js('load_silent("master/mata_kuliah/delete/'.$base_koma.'","#divsubcontent")');	
 		}
 
 	}
@@ -99,41 +96,16 @@ class mata_kuliah extends CI_Controller {
 			$this->fungsi->catat($datapost,"Mengedit Master mata_kuliah dengan data sbb:",true);
 		}
 	}
-	public function delete($id='')
+	
+		 
+	public function delete()
 	{
-		$this->fungsi->check_previleges('mata_kuliah');
-		$this->load->library('form_validation');
-		$config = array(
-				array(
-					'field'	=> 'id',
-					'label' => 'astaghfirullah',
-					'rules' => ''
-				),
-				array(
-					'field'	=> 'mata_kuliah',
-					'label' => 'mata_kuliah',
-					'rules' => 'required'
-				)
-			);
-		$this->form_validation->set_rules($config);
-		$this->form_validation->set_error_delimiters('<span class="error-span">', '</span>');
-
-		if ($this->form_validation->run() == FALSE)
-		{
-			$data['delete'] = $this->db->get_where('master_mata_kuliah');
-			$data['status']='';
-			//$this->load->view('master/mata_kuliah/v_mata_kuliah_delete',$data);
-		}
-		else
-		{
-			$datapost = get_post_data(array($id));
-			$this->m_mata_kuliah->deleteData($datapost);
-			$this->fungsi->run_js('load_silent("master/mata_kuliah","#content")');
-			$this->fungsi->message_box("Data Master Nama Alat sukses diperbarui...","success");
-			$this->fungsi->catat($datapost,"Mengedit Master mata_kuliah dengan data sbb:",true);
-		}
+		$id = $this->uri->segment(4);
+		$this->m_mata_kuliah->deleteData($id);
+		redirect('admin');
 	}
 }
+
 
 /* End of file mata_kuliah.php */
 /* Location: ./application/controllers/master/mata_kuliah.php */

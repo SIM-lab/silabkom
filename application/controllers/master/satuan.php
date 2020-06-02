@@ -132,6 +132,13 @@ class satuan extends CI_Controller {
 			$this->fungsi->message_box("Data Master Satuan sukses diperbarui...","success");
 			$this->fungsi->catat($datapost,"Mengedit Master satuan dengan data sbb:",true);
 		}
-	}	
+	}
+	public function delete()
+            {
+                $id = $this->uri->segment(4);
+                $this->m_satuan->deleteData($id);
+				redirect('admin');
+				$this->load->view('master/satuan/v_satuan_list');
+            }	
 	
 }

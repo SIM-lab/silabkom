@@ -75,18 +75,18 @@
           <div class="navbar-custom-menu" >
             <ul class="nav navbar-nav">
               <li class="dropdown tasks-menu">
-                <a href="<?php echo base_url().'cms/user/show_editForm_user/'.from_session('id'), "#content"?>">
-                  <i class="fa fa-fw fa-gear"></i>&nbsp;
-                  Profil </a>
+                <a href="<?php echo base_url().'login/logout/'?>">
+                  <i class="fa fa-fw fa-power-off"></i>&nbsp;
+                  Logout </a>
               </li>             
             </ul>
           </div>
           <div class="navbar-custom-menu" >
             <ul class="nav navbar-nav">
               <li class="dropdown tasks-menu">
-                <a href="<?php echo base_url().'login/logout/'?>">
-                  <i class="fa fa-fw fa-power-off"></i>&nbsp;
-                  Logout </a>
+                <a href="<?php echo base_url().'cms/user/show_editForm_user/'.from_session('id') ?>">
+                  <i class="fa fa-fw fa-gear"></i>&nbsp;
+                  Profil </a>
               </li>             
             </ul>
           </div>
