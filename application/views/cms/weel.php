@@ -93,8 +93,9 @@
             <div class="pull-left image">
               <?php
                   $avatar = parse_avatar(from_session('gambar'),from_session('nama'),30,'img-circle');
+                  ('load_silent("cms/user/show_editForm_user/'.from_session('id').'","#content")');
                 ?>
-              <?php echo $avatar; ?>
+              <?php echo anchor('cms/user/show_editForm_user/'.from_session('id'),$avatar) ; ?>
             </div>
             <div class="pull-left info">
               <p><font color="#bfbfbf" size="2px">Login As :</font></p>
