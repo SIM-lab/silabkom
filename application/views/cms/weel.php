@@ -75,6 +75,15 @@
           <div class="navbar-custom-menu" >
             <ul class="nav navbar-nav">
               <li class="dropdown tasks-menu">
+                <a href="<?php echo base_url().'cms/user/show_editForm_user/'.from_session('id'), "#content"?>">
+                  <i class="fa fa-fw fa-gear"></i>&nbsp;
+                  Profil </a>
+              </li>             
+            </ul>
+          </div>
+          <div class="navbar-custom-menu" >
+            <ul class="nav navbar-nav">
+              <li class="dropdown tasks-menu">
                 <a href="<?php echo base_url().'login/logout/'?>">
                   <i class="fa fa-fw fa-power-off"></i>&nbsp;
                   Logout </a>
@@ -92,7 +101,7 @@
           <div class="user-panel">
             <div class="pull-left image">
               <?php
-                  $avatar = parse_avatar(from_session('gambar'),from_session('nama'),30,'img-circle');
+                  $avatar = parse_avatar(from_session('gambar'),from_session('nama'),50,'img-circle');
                   ('load_silent("cms/user/show_editForm_user/'.from_session('id').'","#content")');
                 ?>
               <?php echo anchor('cms/user/show_editForm_user/'.from_session('id'),$avatar) ; ?>
