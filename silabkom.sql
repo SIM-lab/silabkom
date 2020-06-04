@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 04, 2020 at 03:44 PM
+-- Generation Time: Jun 04, 2020 at 05:55 PM
 -- Server version: 10.1.32-MariaDB
 -- PHP Version: 5.6.36
 
@@ -52,7 +52,8 @@ INSERT INTO `cms_captcha` (`captcha_id`, `captcha_time`, `ip_address`, `word`) V
 (3275, 1591277919, '::1', '503846'),
 (3276, 1591277920, '::1', '083619'),
 (3277, 1591277921, '::1', '210910'),
-(3278, 1591277922, '::1', '370341');
+(3278, 1591277922, '::1', '370341'),
+(3279, 1591278673, '::1', '589529');
 
 -- --------------------------------------------------------
 
@@ -108,7 +109,8 @@ INSERT INTO `cms_log` (`id_log`, `ip`, `mac_address`, `time`, `kegiatan`, `user`
 (79, '::1', '', '2020-06-04 11:38:59', 'Login  by RAFANDI', 'rafandi'),
 (80, '127.0.0.1', '', '2020-06-04 16:19:19', 'Login  by RAFANDI', 'rafandi'),
 (81, '::1', '', '2020-06-04 18:58:43', 'Login  by RAFANDI', 'rafandi'),
-(82, '::1', '', '2020-06-04 20:37:08', 'Logout SILABKOM by RAFANDI', 'rafandi');
+(82, '::1', '', '2020-06-04 20:37:08', 'Logout SILABKOM by RAFANDI', 'rafandi'),
+(83, '::1', '', '2020-06-04 20:51:13', 'Login  by RAFANDI', 'rafandi');
 
 -- --------------------------------------------------------
 
@@ -148,7 +150,7 @@ INSERT INTO `cms_menu` (`id`, `alias`, `nama`, `deskripsi`, `allowed_level`, `ur
 (130, 'kategori_nomer_induk', 'Kategori Nomer Induk', '-', '+1+2+', 'master/kategori_nomer_induk', 1, 3, 2),
 (129, 'gambar_depan', 'Gambar Depan', '-', '+1+2+', 'master/gambar_depan', 1, 2, 2),
 (128, 'instansi', 'Instansi', '-', '+1+2+', 'master/instansi', 1, 1, 2),
-(173, 'periode', 'Periode', '', ' 	+1+2+3+4+5+6+8+7+', 'peminjaman/periode/v_periode_list', 1, 1, 4);
+(173, 'periode_pengajuan', 'Pengajuan', '', ' 	+1+2+3+4+5+6+8+7+', 'pengajuan/periode_pengajuan', 1, 1, 4);
 
 -- --------------------------------------------------------
 
@@ -226,7 +228,7 @@ INSERT INTO `cms_user` (`id`, `nama`, `gambar`, `username`, `password`, `level`,
 (11, 'Admin Outstanding', 'files/2016/10/e511c2db7c393226effc9f303cf2a674.png', 'admin2', '*E3CCE608FE4C2B066CB6AE607CB6A53C309EC0E6', 4, 1, '0291-595628', 'Jl. Citrosoma RT. 17/06', '2017-02-24 11:47:36'),
 (12, 'Bittaqwa', 'files/2017/01/850a0830a9fb703e55f1ef318d2195df.jpg', 'bittaqwa', '*2900EA52D759AACA10038BA767FDDA68A9F7853A', 6, 1, '', '', '2017-03-01 10:11:37'),
 (13, 'coba', 'files/2017/04/f6b70ba5e4de413f8832472bef538c0d.JPG', 'coba', '*FD64E348EC9DCCE6525B358693A9CFDC733F5184', 3, 1, 'qq', 'qq', '2017-04-25 09:27:29'),
-(14, 'RAFANDI', 'files/2020/05/foto.jpg', 'rafandi', '*66005FBF8E725C011243BD39EC5BBF6FFF812C97', 1, 1, NULL, NULL, '2020-06-04 18:58:43');
+(14, 'RAFANDI', 'files/2020/05/foto.jpg', 'rafandi', '*66005FBF8E725C011243BD39EC5BBF6FFF812C97', 1, 1, NULL, NULL, '2020-06-04 20:51:13');
 
 -- --------------------------------------------------------
 
@@ -475,7 +477,6 @@ CREATE TABLE `periode_pengajuan` (
 --
 
 INSERT INTO `periode_pengajuan` (`id`, `periode_pengajuan`, `semester`, `bulan`, `tahun`, `sumber_pendanaan`, `pajak`, `status_pengajuan`, `status`) VALUES
-(1, 'Pa13241', 'Ganjil', 'Februari', 2020, 'Universitas', 1, 'Sudah Disetujui', 'Ada'),
 (2, 'Pb1435', 'Genap', 'Maret', 2020, 'Fakultas', 3, 'Sudah Didistribusika', 'Ada'),
 (4, 'pa1234676', 'Antara', 'Desember', 2020, 'Jurusan', 2, 'Tidak Disetujui', 'Ada');
 
@@ -582,13 +583,13 @@ ALTER TABLE `periode_pengajuan`
 -- AUTO_INCREMENT for table `cms_captcha`
 --
 ALTER TABLE `cms_captcha`
-  MODIFY `captcha_id` bigint(13) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3279;
+  MODIFY `captcha_id` bigint(13) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3280;
 
 --
 -- AUTO_INCREMENT for table `cms_log`
 --
 ALTER TABLE `cms_log`
-  MODIFY `id_log` int(30) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=83;
+  MODIFY `id_log` int(30) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=84;
 
 --
 -- AUTO_INCREMENT for table `cms_menu`
