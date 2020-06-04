@@ -8,12 +8,12 @@
 		<div class="small-box bg-blue">
 		<div class="inner">
 		<h3>0</h3>
-		<p>Data Lab</p>
+		<p>Data Laboratorium</p>
 		</div>
 		<div class="icon">
 		<i class ="fa fa-desktop"></i>
 		</div>
-		<a href="#" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
+		<a href="#" class="small-box-footer">Butuh Info lagi? <i class="fa fa-arrow-circle-right"></i></a>
 		</div>
 		</div>
 
