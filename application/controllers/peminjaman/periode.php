@@ -7,7 +7,7 @@ class Periode extends CI_Controller {
 	{
 		parent::__construct();
 		$this->fungsi->restrict();
-		$this->load->model('lab/m_periode');
+		$this->load->model('peminjaman/m_periode');
 	}
 
 	public function index()
