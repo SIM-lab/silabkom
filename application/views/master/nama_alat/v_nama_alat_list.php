@@ -22,11 +22,10 @@
             <table width="100%" id="tableku" class="table table-striped">
               <thead>
                 <th>No</th>
+                <th>Kode</th>
                 <th>Nama Alat</th>
-                <th>Merk</th>
-                <th>Seri</th>
-                <th>Stok Minimum</th>
-                <th>Stok Saat Ini</th>
+                <th>Keterangan</th>
+                <th>Jumlah</th>
                 <th>Act</th>
               </thead>
               <tbody>
@@ -35,11 +34,10 @@
           foreach($nama_alat->result() as $row): ?>
           <tr>
             <td align="center"><?=$i++?></td>
+            <td align="center"><?=$row->kode?></td>
             <td align="center"><?=$row->nama_alat?></td>
-            <td align="center"><?=$row->merk?></td>
-            <td align="center"><?=$row->seri?></td>
-            <td align="center"><?=$row->stok_min?></td>
-            <td align="center"><?=$row->stok_ini?></td>
+            <td align="center"><?=$row->keterangan?></td>
+            <td align="center"><?=$row->jumlah?></td>
             <td align="center">
             <?php
               $sesi = from_session('level');

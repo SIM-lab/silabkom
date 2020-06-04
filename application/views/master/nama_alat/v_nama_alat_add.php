@@ -4,6 +4,14 @@
     <?php echo form_open('',array('name'=>'faddmenugrup','class'=>'form-horizontal','role'=>'form'));?>
         
         <div class="form-group">
+            <label class="col-sm-4 control-label">Kode</label>
+            <div class="col-sm-8">
+            <?php echo form_input(array('name'=>'kode','class'=>'form-control'));?>
+            <?php echo form_error('kode');?>
+            <span id="check_data"></span>
+            </div>
+        </div>
+        <div class="form-group">
             <label class="col-sm-4 control-label">Nama Alat</label>
             <div class="col-sm-8">
             <?php echo form_input(array('name'=>'nama_alat','class'=>'form-control'));?>
@@ -12,39 +20,23 @@
             </div>
         </div>
         <div class="form-group">
-            <label class="col-sm-4 control-label">Merk</label>
+            <label class="col-sm-4 control-label">Keterangan</label>
             <div class="col-sm-8">
-            <?php echo form_input(array('name'=>'merk','class'=>'form-control'));?>
-            <?php echo form_error('merk');?>
+            <?php echo form_input(array('name'=>'keterangan','class'=>'form-control'));?>
+            <?php echo form_error('keterangan');?>
             <span id="check_data"></span>
             </div>
         </div>
         <div class="form-group">
-            <label class="col-sm-4 control-label">Seri</label>
+            <label class="col-sm-4 control-label">Jumlah</label>
             <div class="col-sm-8">
-            <?php echo form_input(array('name'=>'seri','class'=>'form-control'));?>
-            <?php echo form_error('seri');?>
+            <?php echo form_input(array('name'=>'Jumlah','class'=>'form-control'));?>
+            <?php echo form_error('Jumlah');?>
             <span id="check_data"></span>
             </div>
         </div>
         <div class="form-group">
-            <label class="col-sm-4 control-label">Stok Minimal</label>
-            <div class="col-sm-8">
-            <?php echo form_input(array('name'=>'stok_min','class'=>'form-control'));?>
-            <?php echo form_error('stok_min');?>
-            <span id="check_data"></span>
-            </div>
-        </div>
-        <div class="form-group">
-            <label class="col-sm-4 control-label">Stok Saat Ini</label>
-            <div class="col-sm-8">
-            <?php echo form_input(array('name'=>'stok_ini','class'=>'form-control'));?>
-            <?php echo form_error('stok_ini');?>
-            <span id="check_data"></span>
-            </div>
-        </div>
-        <div class="form-group">
-            <label class="col-sm-4 control-label">Save</label>
+            <label class="col-sm-4 control-label">Simpan</label>
             <div class="col-sm-8 tutup">
             <?php
             echo button('send_form(document.faddmenugrup,"master/nama_alat/show_addForm/","#divsubcontent")','Save','btn btn-success')." ";
