@@ -33,7 +33,7 @@
           <div class="form-group has-feedback">
             	<input placeholder="Username" type="text" id="username" name="username" value="<?php echo set_value('username'); ?>" class="form-control"  >
 				<?php echo form_error('username', '<span class="error-span">', '</span>'); ?>
-            <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
+            <span class="glyphicon glyphicon-user form-control-feedback"></span>
           </div>
           <div class="form-group has-feedback">
 				<input placeholder="Password" type="password" class="form-control" id="password" name="password" value="<?php echo set_value('password'); ?>">
@@ -52,7 +52,7 @@
 
           <div class="row">
           <div class="col-xs-6">
-          <a href="https://api.whatsapp.com/send?phone=6285600339469&text=Saya%20lupa%20password.%20Tolong%20saya."> Lupa Password ?  </a> <!-- Bersifat sementara --->
+          <a href="https://api.whatsapp.com/send?phone=628813792426&text=Saya%20lupa%20password.%20Tolong%20saya." target="_blank"> Lupa Password ?  </a> <!-- Bersifat sementara --->
           </div> 
             <div class="col-xs-6">
               <button type="submit" class="btn btn-success btn-block btn-flat">LOGIN</button>

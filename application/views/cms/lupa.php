@@ -29,7 +29,7 @@
       
       <div class="login-box-body">
         <h4>Lupa Password  <b><?php echo $this->config->item('project')?></b></h4>
-        <?php echo form_open('lupa',array('name'=>'flupa')); ?>
+        <?php echo form_open('lupa',array('name'=>'lupa')); ?>
           <div class="form-group has-feedback">
             	<input placeholder="Username" type="text" id="username" name="username" value="<?php echo set_value('username'); ?>" class="form-control"  >
 				<?php echo form_error('username', '<span class="error-span">', '</span>'); ?>

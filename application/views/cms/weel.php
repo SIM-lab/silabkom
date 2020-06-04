@@ -106,7 +106,7 @@
              <?php echo anchor('cms/user/show_editForm_user/'.from_session('id'),$avatar) ; ?>
             </div>
             <div class="pull-left info" >
-            <p><font size="6px"><?php echo from_session('nama');?></font></p>
+            <p><font size="5px"><?php echo from_session('nama');?></font></p>
             </div>
           </div>
           <ul class="sidebar-menu ">
