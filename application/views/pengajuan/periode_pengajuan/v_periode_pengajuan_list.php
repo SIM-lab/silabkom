@@ -55,9 +55,9 @@
                 # code...
               }
               ?>
-              <a href="<?= site_url('pengajuan/periode_pengajuan/delete/'.$row->id) ?>" class="btn btn-danger" onclick="return confirm('Anda yakin ingin menghapus periode pengajuan ?')"><i class="fa fa-trash"></i></a>
+              <a href="<?= site_url('pengajuan/periode_pengajuan/delete/'.$row->id) ?>" class="btn btn-danger fa fa-trash" onclick="return confirm('Apakah Anda Yakin?')"></a>
 
-            </td>
+</td>
           </tr>
 
         <?php endforeach;?>
