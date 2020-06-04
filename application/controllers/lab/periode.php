@@ -7,7 +7,7 @@ class Periode extends CI_Controller {
 	{
 		parent::__construct();
 		$this->fungsi->restrict();
-		$this->load->model('master/m_periode');
+		$this->load->model('lab/m_periode');
 	}
 
 	public function index()
@@ -36,8 +36,8 @@ class Periode extends CI_Controller {
 		$this->load->library('form_validation');
 		$config = array(
 				array(
-					'field'	=> 'nama_alat',
-					'label' => 'nama_alat',
+					'field'	=> 'periode',
+					'label' => 'periode',
 					'rules' => 'required'
 				)
 			);
@@ -70,8 +70,8 @@ class Periode extends CI_Controller {
 					'rules' => ''
 				),
 				array(
-					'field'	=> 'nama_alat',
-					'label' => 'nama_alat',
+					'field'	=> 'periode',
+					'label' => 'periode',
 					'rules' => 'required'
 				)
 			);
