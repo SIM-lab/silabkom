@@ -13,7 +13,7 @@
 		<div class="icon">
 		<i class ="fa fa-desktop"></i>
 		</div>
-		<a href="#" class="small-box-footer">Butuh Info lagi? <i class="fa fa-arrow-circle-right"></i></a>
+		<a href="#" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
 		</div>
 		</div>
 
