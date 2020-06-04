@@ -88,7 +88,7 @@ class Nama_alat extends CI_Controller {
 		}
 		else
 		{
-			$datapost = get_post_data(array('id','kode','nama_alat','keterangan','jumlah','id_status'));
+			$datapost = get_post_data(array('id','kode','nama_alat','keterangan','id_status'));
 			$this->m_nama_alat->updateData($datapost);
 			$this->fungsi->run_js('load_silent("master/nama_alat","#content")');
 			$this->fungsi->message_box("Data Master Nama Alat sukses diperbarui...","success");

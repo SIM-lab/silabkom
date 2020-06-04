@@ -8,35 +8,43 @@
     <?php echo form_hidden('id',$row->id); ?>
     <div class="form-group">
     
-            <label class="col-sm-4 control-label">Kode</label>
-            <div class="col-sm-8">
-         
-            <?php echo form_input(array('name'=>'kode','value'=>$row->kode,'class'=>'form-control'));?>
-            <?php echo form_error('kode');?>
-            <span id="check_data"></span>
-            </div>
-        </div>
-        <div class="form-group">
             <label class="col-sm-4 control-label">Nama Alat</label>
             <div class="col-sm-8">
+         
             <?php echo form_input(array('name'=>'nama_alat','value'=>$row->nama_alat,'class'=>'form-control'));?>
             <?php echo form_error('nama_alat');?>
             <span id="check_data"></span>
             </div>
         </div>
         <div class="form-group">
-            <label class="col-sm-4 control-label">Keterangan</label>
+            <label class="col-sm-4 control-label">Merk</label>
             <div class="col-sm-8">
-            <?php echo form_input(array('name'=>'keterangan','value'=>$row->keterangan,'class'=>'form-control'));?>
-            <?php echo form_error('keterangan');?>
+            <?php echo form_input(array('name'=>'merk','value'=>$row->merk,'class'=>'form-control'));?>
+            <?php echo form_error('merk');?>
             <span id="check_data"></span>
             </div>
         </div>
         <div class="form-group">
-            <label class="col-sm-4 control-label">Jumlah</label>
+            <label class="col-sm-4 control-label">Seri</label>
             <div class="col-sm-8">
-            <?php echo form_input(array('name'=>'jumlah','value'=>$row->jumlah,'class'=>'form-control'));?>
-            <?php echo form_error('jumlah');?>
+            <?php echo form_input(array('name'=>'seri','value'=>$row->seri,'class'=>'form-control'));?>
+            <?php echo form_error('seri');?>
+            <span id="check_data"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-sm-4 control-label">Stok Minimal</label>
+            <div class="col-sm-8">
+            <?php echo form_input(array('name'=>'stok_min','value'=>$row->stok_min,'class'=>'form-control'));?>
+            <?php echo form_error('stok_min');?>
+            <span id="check_data"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-sm-4 control-label">Stok Saat Ini</label>
+            <div class="col-sm-8">
+            <?php echo form_input(array('name'=>'stok_ini','value'=>$row->stok_ini,'class'=>'form-control'));?>
+            <?php echo form_error('stok_ini');?>
             <span id="check_data"></span>
             </div>
         </div>
