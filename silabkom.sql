@@ -147,7 +147,7 @@ INSERT INTO `cms_menu` (`id`, `alias`, `nama`, `deskripsi`, `allowed_level`, `ur
 (133, 'mata_kuliah', 'Mata Kuliah', '-', '+1+2+', 'master/mata_kuliah', 1, 6, 2),
 (132, 'tipe_laboratorium', 'Tipe Laboratorium', '-', '+1+2+', 'master/tipe_laboratorium', 1, 5, 2),
 (131, 'kategori_alat_bahan', 'Kategori Alat dan Bahan', '-', '+1+2+', 'master/kategori_alat_bahan', 1, 4, 2),
-(130, 'kategori_nomer_induk', 'Kategori Nomer Induk', '-', '+1+2+', 'master/kategori_nomer_induk', 1, 3, 2),
+(130, 'kategori_no_induk', 'Kategori Nomer Induk', '-', '+1+2+', 'master/kategori_no_induk', 1, 3, 2),
 (129, 'gambar_depan', 'Gambar Depan', '-', '+1+2+', 'master/gambar_depan', 1, 2, 2),
 (128, 'instansi', 'Instansi', '-', '+1+2+', 'master/instansi', 1, 1, 2),
 (173, 'periode_pengajuan', 'Pengajuan', '', ' 	+1+2+3+4+5+6+8+7+', 'pengajuan/periode_pengajuan', 1, 1, 4);
