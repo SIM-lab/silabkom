@@ -47,6 +47,7 @@
                 # code...
               }
               ?> 
+               <a href="<?= site_url('cms/user/delete/'.$row->id) ?>" class="btn btn-danger fa fa-trash" onclick="return confirm('Apakah Anda Yakin?')"></a>
 						</td>
 					</tr>
          
