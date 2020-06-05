@@ -99,7 +99,7 @@
 
                 <div class="timeline-body">
                   <div class="embed-responsive embed-responsive-16by9">
-                    <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/Gfu_kdZ8D34" allowfullscreen="" frameborder="0"></iframe>
+                    <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/d-Et8P4YGOI" allowfullscreen="" frameborder="0"></iframe>
                   </div>
                 </div>
                 <div class="timeline-footer">
