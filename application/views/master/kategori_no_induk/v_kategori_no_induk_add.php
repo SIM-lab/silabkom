@@ -15,8 +15,8 @@
         <div class="form-group">
             <label class="col-sm-4 control-label">Nomor Induk</label>
             <div class="col-sm-8">
-            <?php echo form_input(array('name'=>'no_induk','class'=>'form-control'));?>
-            <?php echo form_error('no_induk');?>
+            <?php echo form_input(array('name'=>'nomor_induk','class'=>'form-control'));?>
+            <?php echo form_error('nomor_induk');?>
             <span id="check_data"></span>
             </div>
         </div>

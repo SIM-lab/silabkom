@@ -13,7 +13,7 @@
 		<div class="icon">
 		<i class ="fa fa-desktop"></i>
 		</div>
-		<a href="#" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
+		<a href="master/tipe_laboratorium" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
 		</div>
 		</div>
 
@@ -30,7 +30,7 @@
     <!--<i class="fa fa-cogs"> </i> BISA DIGANTI INI JIKA EMANG  JELEK ICONNYA-->
     <ion-icon name="construct-sharp"></ion-icon>
 		</div>
-		<a href="#" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
+		<a href="master/nama_alat" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
 		</div>
 		</div>
 

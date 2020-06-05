@@ -10,7 +10,7 @@
             <label class="col-sm-4 control-label">ID Pengajuan</label>
             <div class="col-sm-8">
             <?php echo form_hidden('id',$row->id); ?>
-            <?php echo form_input(array('name'=>'pengajuan_bahan','value'=>$row->pengajuan_bahan,'class'=>'form-control'));?>
+            <?php echo form_input(array('name'=>'pengajuan_bahan','value'=>$row->id_pengajuan_bahan,'class'=>'form-control'));?>
             <?php echo form_error('pengajuan_bahann');?>
             <span id="check_data"></span>
             </div>
