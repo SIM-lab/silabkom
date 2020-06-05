@@ -34,13 +34,10 @@ class User extends CI_Controller {
 		echo $this->fungsi->parse_modal($header,$subheader,$content,$buttons,"");
 		if($param=='base'){
 			$this->fungsi->run_js('load_silent("cms/user/show_addForm/","#divsubcontent")');	
-		}else if($base_kom=$this->uri->segment(5)){
-		
-			$this->fungsi->run_js('load_silent("cms/user/show_editForm/'.$base_kom.'","#divsubcontent")');	
-			
 		}else{
 			$base_kom=$this->uri->segment(5);
-			$this->fungsi->run_js('load_silent("cms/user/show_deleteForm/'.$base_kom.'","#divsubcontent")');
+			$this->fungsi->run_js('load_silent("cms/user/show_editForm/'.$base_kom.'","#divsubcontent")');	
+			
 		}
 	}
 	public function show_addForm()
