@@ -64,8 +64,8 @@ class Pengajuan_bahan extends CI_Controller {
 		$this->load->library('form_validation');
 		$config = array(
 				array(
-					'field'	=> 'nama_bahan',
-					'label' => 'nama_bahan',
+					'field'	=> 'id',
+					'label' => 'wes mbarke',
 					'rules' => ''
 				),
 				array(
