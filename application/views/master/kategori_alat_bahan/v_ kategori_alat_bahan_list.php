@@ -41,9 +41,11 @@
               if ($sesi == '1' || $sesi == '2' || $sesi == '3' || $sesi == '6') {
                 echo button('load_silent("master/kategori_alat_bahan/form/sub/'.$row->id.'","#modal")','','btn btn-info fa fa-edit','data-toggle="tooltip" title="Edit"');
               } else {
-                # code...
+                # code...  
               }
               ?>
+              <a href="<?= site_url('master/kategori_alat_bahan/delete/'.$row->id) ?>" class="btn btn-danger" onclick="return confirm('Anda Yakin Ingin Menghapus Kategori Alat dan Bahan Ini ?')"><i class="fa fw fa-trash"></i></a>
+
             </td>
           </tr>
 
