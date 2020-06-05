@@ -43,6 +43,7 @@
                 # code...
               }
               ?>
+              <a href="<?= site_url('master/kategori_no_induk/delete/'.$row->id) ?>" class="btn btn-danger fa fa-trash" onclick="return confirm('Apakah Anda Yakin?')"></a>
             </td>
           </tr>
 

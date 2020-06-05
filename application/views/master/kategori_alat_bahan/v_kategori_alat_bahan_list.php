@@ -44,8 +44,7 @@
                 # code...  
               }
               ?>
-              <a href="<?= site_url('master/kategori_alat_bahan/delete/'.$row->id) ?>" class="btn btn-danger" onclick="return confirm('Anda Yakin Ingin Menghapus Kategori Alat dan Bahan Ini ?')"><i class="fa fw fa-trash"></i></a>
-
+            <a href="<?= site_url('master/kategori_alat_bahan/delete/'.$row->id) ?>" class="btn btn-danger fa fa-trash" onclick="return confirm('Apakah Anda Yakin?')"></a>
             </td>
           </tr>
 

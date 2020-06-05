@@ -49,7 +49,7 @@
                 # code...
               }
               ?>
-              <a href="<?= site_url('master/master_bahan/delete/'.$row->id) ?>" class="btn btn-danger" onclick="return confirm('Anda Yakin Ingin Menghapus Master Bahan Ini ?')"><i class="fa fw fa-trash"></i></a>
+             <a href="<?= site_url('master/nama_alat/delete/'.$row->id) ?>" class="btn btn-danger fa fa-trash" onclick="return confirm('Apakah Anda Yakin?')"></a>
             </td>
           </tr>
 
