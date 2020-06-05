@@ -38,7 +38,7 @@
           <tr>
             <td align="center"><?=$i++?></td>
             <td align="center"><?=$row->jenis?></td>
-            <td align="center"><img src="<?php echo base_url().$row->foto; ?>" class="file-preview-image"></td>
+            <td align="center"><img src="<?php echo base_url().$row->foto ?>" class="file-preview-image"height="50" width="220"></td>
             <td align="center"><?=$row->koordinator?></td>
             <td align="center"><?=$row->laboran?></td>
             <td align="center"><?=$row->alamat?></td>

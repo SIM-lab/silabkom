@@ -12,20 +12,27 @@ class M_user extends CI_Model {
 		return $this->db->get('cms_user cu');
 	}
 
-	public function insertData($data='',$new=true)
+	public function insertData($data='')
 	{
-		if($new)
-        {
-            $this->db->insert('cms_user',$data);
-        }
-        else
-        {
-            $this->db->where('id',$data['id']);
+		
+        $this->db->insert('cms_usert',$data);
+       
+	}
+
+	public function updateData($data='')
+	{
+			$this->db->where('id',$data['id']);
             $this->db->update('cms_user',$data);
-        }
+	}
+
+	public function deleteData($id='')
+	{
+		$this->db->where('id', $id);
+        $this->db->delete('cms_user');
 	}
 
 }
+
 
 /* End of file m_user.php */
 /* Location: ./application/models/cms/m_user.php */

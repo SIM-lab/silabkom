@@ -15,8 +15,8 @@
             <table width="100%" id="tableku" class="table table-striped">
               <thead>
                 <th>No</th>
-                <th>Nama</th>
                 <th>Picture</th>
+                <th>Nama</th>
                 <th>Username</th>
                 <th>Level</th>
                 <th>no HP</th>
@@ -31,8 +31,8 @@
           ?>
           <tr>
             <td><?=$i++?></td>
-            <td><?=$row->nama?></td>
             <td><?=$avatar?></td>
+            <td><?=$row->nama?></td>
             <td><?=$row->username?></td>
             <td><?=$row->level?></td>
             <td><?=$row->no_hp?></td>
