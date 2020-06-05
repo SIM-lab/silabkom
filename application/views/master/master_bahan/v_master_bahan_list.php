@@ -48,6 +48,7 @@
                 # code...
               }
               ?>
+              <a href="<?= site_url('master/master_bahan/delete/'.$row->id) ?>" class="btn btn-danger" onclick="return confirm('Anda Yakin Ingin Menghapus Master Bahan Ini ?')"><i class="fa fw fa-trash"></i></a>
             </td>
           </tr>
 

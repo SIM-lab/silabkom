@@ -95,6 +95,12 @@ class Master_bahan extends CI_Controller {
 			$this->fungsi->catat($datapost,"Mengedit Master master_bahan dengan data sbb:",true);
 		}
 	}
+	public function delete()
+	{
+		$id = $this->uri->segment(4);
+		$this->m_master_bahan->deleteData($id);
+		redirect('admin');
+	}
 }
 
 /* End of file master_bahan.php */
