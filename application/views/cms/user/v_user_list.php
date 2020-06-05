@@ -37,11 +37,19 @@
             <td><?=$row->level?></td>
             <td><?=$row->no_hp?></td>
             <td><?=$row->alamat?></td>
+
             <td>
-            <?php echo button('load_silent("cms/user/show_editForm/'.$row->id.'","#content")','Edit','btn btn-info','data-toggle="tooltip" title="Edit User"');?> 
+            <?php
+              $sesi = from_session('level');
+              if ($sesi == '1' || $sesi == '2' || $sesi == '3' || $sesi == '6') {
+               echo button('load_silent("cms/user/show_editForm/'.$row->id.'","#content")','','btn btn-info fa fa-edit','data-toggle="tooltip" title="Edit"');
+              } else {
+                # code...
+              }
+              ?> 
 						</td>
 					</tr>
-
+         
 				<?php endforeach;?>
 				</tbody>
             </table>
