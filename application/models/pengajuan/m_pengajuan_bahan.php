@@ -1,13 +1,13 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class m_pengajuan_bahan extends CI_Model {
+class M_pengajuan_bahan extends CI_Model {
 
     //select->read
 	public function getData($value='')
 	{
-		$this->db->from('pengajuan_bahan ma');
-		$this->db->order_by('ma.id', 'desc');
+		$this->db->from('pengajuan_bahan mb');
+		$this->db->order_by('mb.id', 'desc');
 		return $this->db->get();
     }
     

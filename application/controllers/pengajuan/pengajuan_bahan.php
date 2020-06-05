@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class pengajuan_bahan extends CI_Controller {
+class Pengajuan_bahan extends CI_Controller {
 	
 	public function __construct()
 	{
@@ -14,7 +14,7 @@ class pengajuan_bahan extends CI_Controller {
 	{
 		$this->fungsi->check_previleges('pengajuan_bahan');
 		$data['pengajuan_bahan'] = $this->m_pengajuan_bahan->getData();
-		$this->load->view('pengajuan/pengajuan_bahan/v_pengajuan_bahan',$data);
+		$this->load->view('pengajuan/pengajuan_bahan/v_pengajuan_bahan_list',$data);
 	}
 	public function form($param='')
 	{
@@ -64,8 +64,8 @@ class pengajuan_bahan extends CI_Controller {
 		$this->load->library('form_validation');
 		$config = array(
 				array(
-					'field'	=> 'id',
-					'label' => 'bebas',
+					'field'	=> 'nama_bahan',
+					'label' => 'nama_bahan',
 					'rules' => ''
 				),
 				array(
