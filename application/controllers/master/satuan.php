@@ -17,22 +17,22 @@ class satuan extends CI_Controller {
 		$this->load->view('master/satuan/v_satuan_list',$data);
     }
     
+	}
+
 	public function form($param='')
 	{
 		$content   = "<div id='divsubcontent'></div>";
 		$header    = "Form Master Nama Alat";
+		$header    = "Form Master Nama Satuan";
 		$subheader = "satuan";
 		$buttons[] = button('jQuery.facebox.close()','Tutup','btn btn-default','data-dismiss="modal"');
 		echo $this->fungsi->parse_modal($header,$subheader,$content,$buttons,"");
 		if($param=='base'){
 			$this->fungsi->run_js('load_silent("master/satuan/show_addForm/","#divsubcontent")');	
-		}else if($base_kom=$this->uri->segment(5)){
-		
-			$this->fungsi->run_js('load_silent("master/satuan/show_editForm/'.$base_kom.'","#divsubcontent")');	
-			
 		}else{
 			$base_kom=$this->uri->segment(5);
 			$this->fungsi->run_js('load_silent("master/satuan/show_deleteForm/'.$base_kom.'","#divsubcontent")');
+			$this->fungsi->run_js('load_silent("master/satuan/show_editForm/'.$base_kom.'","#divsubcontent")');	
 		}
 	}
 
@@ -44,6 +44,8 @@ class satuan extends CI_Controller {
 				array(
 					'field'	=> 'satuan',
 					'label' => 'satuan',
+					'field'	=> 'nama_satuan',
+					'label' => 'nama_satuan',
 					'rules' => 'required'
 				)
 			);
