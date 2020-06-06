@@ -80,16 +80,17 @@
                   Logout </a>
               </li>             
             </ul>
-          </div>
-          <div class="navbar-custom-menu" >
+           </div>
+           <div class="navbar-custom-menu" >
             <ul class="nav navbar-nav">
               <li class="dropdown tasks-menu">
-                <a href="<?php echo base_url().'cms/user/show_editForm_user/'.from_session('id') ?>">
-                  <i class="fa fa-fw fa-gear"></i>&nbsp;
-                  Profil </a>
+              
+                 <?php echo button('load_silent("cms/user/show_editForm_user/'.from_session('id').'","#content")','','btn bg-blue-light fa fa-fw fa-user','data-toggle="tooltip" title="Update Profil"');?> 
+                  
               </li>             
             </ul>
-          </div>
+           </div>
+          
         </nav>
       </header>
       <!-- Left side column. contains the logo and sidebar -->
@@ -101,9 +102,9 @@
           <div class="user-panel">
             <div class="pull-left image ">
               <?php
-                  $avatar = parse_avatar(from_session('gambar'),from_session('nama'),40,'img-circle elevation-2');
+                  echo $avatar = parse_avatar(from_session('gambar'),from_session('nama'),40,'img-circle');
                 ?>
-             <?php echo anchor('cms/user/show_editForm_user/'.from_session('id'),$avatar) ; ?>
+              
             </div>
             <div class="pull-left info" >
             <p><font size="5px"><?php echo from_session('nama');?></font></p>
