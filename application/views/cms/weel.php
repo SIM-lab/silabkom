@@ -84,9 +84,8 @@
            <div class="navbar-custom-menu" >
             <ul class="nav navbar-nav">
               <li class="dropdown tasks-menu">
+              <?php echo button('load_silent("cms/user/show_editForm_user/'.from_session('id').'","#content")','',' fa fa-fw fa-user');?> 
               
-                 <?php echo button('load_silent("cms/user/show_editForm_user/'.from_session('id').'","#content")','','btn bg-blue-light fa fa-fw fa-user','data-toggle="tooltip" title="Update Profil"');?> 
-                  
               </li>             
             </ul>
            </div>
