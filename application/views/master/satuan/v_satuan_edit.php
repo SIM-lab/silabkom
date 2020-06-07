@@ -12,7 +12,7 @@
             <label class="col-sm-4 control-label">Nama Satuan</label>
             <div class="col-sm-8">
             <?php echo form_hidden('id',$row->id); ?>
-            <?php echo form_input(array('name'=>'satuan','value'=>$row->satuan,'class'=>'form-control'));?>
+            <?php echo form_input(array('name'=>'satuan','value'=>$row->Nama_satuan,'class'=>'form-control'));?>
             <?php echo form_error('satuan');?>
             <span id="check_data"></span>
             </div>
@@ -20,7 +20,7 @@
         <div class="form-group">
             <label class="col-sm-4 control-label">Keterangan</label>
             <div class="col-sm-8">
-            <?php echo form_input(array('name'=>'ket','value'=>$row->ket,'class'=>'form-control'));?>
+            <?php echo form_input(array('name'=>'ket','value'=>$row->keterangan,'class'=>'form-control'));?>
             <?php echo form_error('ket');?>
             <span id="check_data"></span>
             </div>

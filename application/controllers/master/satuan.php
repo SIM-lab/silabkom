@@ -26,13 +26,9 @@ class satuan extends CI_Controller {
 		echo $this->fungsi->parse_modal($header,$subheader,$content,$buttons,"");
 		if($param=='base'){
 			$this->fungsi->run_js('load_silent("master/satuan/show_addForm/","#divsubcontent")');	
-		}else if($base_kom=$this->uri->segment(5)){
-		
-			$this->fungsi->run_js('load_silent("master/satuan/show_editForm/'.$base_kom.'","#divsubcontent")');	
-			
 		}else{
 			$base_kom=$this->uri->segment(5);
-			$this->fungsi->run_js('load_silent("master/satuan/show_deleteForm/'.$base_kom.'","#divsubcontent")');
+			$this->fungsi->run_js('load_silent("master/satuan/show_editForm/'.$base_kom.'","#divsubcontent")');
 		}
 	}
 
@@ -92,47 +88,14 @@ class satuan extends CI_Controller {
 		}
 		else
 		{
-			$datapost = get_post_data(array('id','satuan','ket'));
+			$datapost = get_post_data(array('id','nama_satuan','keterangan'));
 			$this->m_satuan->updateData($datapost);
 			$this->fungsi->run_js('load_silent("master/satuan","#content")');
 			$this->fungsi->message_box("Data Master Satuan sukses diperbarui...","success");
 			$this->fungsi->catat($datapost,"Mengedit Master satuan dengan data sbb:",true);
 		}
 	}
-	public function show_deleteForm ($id='')
-	{
-		$this->fungsi->check_previleges('satuan');
-		$this->load->library('form_validation');
-		$config = array(
-				array(
-					'field'	=> 'id',
-					'label' => 'wes mbarke',
-					'rules' => ''
-				),
-				array(
-					'field'	=> 'satuan',
-					'label' => 'satuan',
-					'rules' => 'required'
-				)
-			);
-		$this->form_validation->set_rules($config);
-		$this->form_validation->set_error_delimiters('<span class="error-span">', '</span>');
-
-		if ($this->form_validation->run() == FALSE)
-		{
-			$data['delete'] = $this->db->get_where('master_satuan',array('id'=>$id));
-			$data['status']='';
-			$this->load->view('master/satuan/v_satuan_list',$data);
-		}
-		else
-		{
-			$datapost = get_post_data(array('id','satuan','ket'));
-			$this->m_satuan->deleteData($datapost);
-			$this->fungsi->run_js('load_silent("master/satuan","#content")');
-			$this->fungsi->message_box("Data Master Satuan sukses diperbarui...","success");
-			$this->fungsi->catat($datapost,"Mengedit Master satuan dengan data sbb:",true);
-		}
-	}
+	
 	public function delete()
             {
                 $id = $this->uri->segment(4);

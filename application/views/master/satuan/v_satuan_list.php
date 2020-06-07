@@ -33,7 +33,7 @@
           <tr>
             <td align="center"><?=$i++?></td>
             <td align="center"><?=$row->nama_satuan?></td>
-            <td align="center"><?=$row->keterangan?></td>
+             <td align="center"><?=$row->keterangan?></td>
             <td align="center">
             <?php
               $sesi = from_session('level');
