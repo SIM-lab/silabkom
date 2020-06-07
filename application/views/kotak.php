@@ -14,7 +14,6 @@
 		<i class ="fa fa-desktop"></i>
 		</div>
 		<h5 class="small-box-footer"<?php echo button('load_silent("master/tipe_laboratorium","#content")','' ,'  ');?>More info <i class="fa fa-arrow-circle-right"></i></h5>
-		
 		</div>
 		</div>
 

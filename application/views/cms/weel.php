@@ -61,10 +61,15 @@
 
       <header class="main-header">
         <!-- Logo -->
-        <a href="#" class="logo bg-black">
+        <a  href="#" class="logo">
+          <!-- mini logo for sidebar mini 50x50 pixels -->
+          <span class="logo-mini">
+		  	<img src="assets/img/logo.png" width="25">
+			<!--Sikadu2-->
+		  </span>
           <!-- logo for regular state and mobile devices -->
-          <span class="logo-mini"><?php echo $this->config->item('nama_pendek')?></span>
-          <span class="logo-lg"><?php echo $this->config->item('project')?></span>
+          <span class="logo-lg">
+		    <img src="assets/img/logo.png" height="50">  <?php echo $this->config->item('project')?></span>
         </a>
         <!-- Header Navbar: style can be found in header.less -->
         <nav class="navbar navbar-static-top " role="navigation">
@@ -83,9 +88,9 @@
            </div>
            <div class="navbar-custom-menu" >
             <ul class="nav navbar-nav">
+           
               <li class="dropdown tasks-menu">
-              <?php echo button('load_silent("cms/user/show_editForm_user/'.from_session('id').'","#content")','',' fa fa-fw fa-user');?> 
-              
+                            
               </li>             
             </ul>
            </div>
