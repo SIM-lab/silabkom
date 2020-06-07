@@ -22,14 +22,21 @@
                 <!-- /.col -->
                 <div class="col-sm-4 border-right">
                   <div class="description-block">
-                  <?php echo button('load_silent("cms/user/show_editForm_user/'.from_session('id').'","#content")','Edit User',' btn .btn-sm bg-blue ');?> 
+                  <?php echo button('load_silent("cms/user/show_editForm_user/'.from_session('id').'","#content")','Edit User',' btn .btn-lg ');?> 
                   </div>
                   <!-- /.description-block -->
                 </div>
                 <!-- /.col -->
                 <div class="col-sm-4">
                   <div class="description-block">
-             
+                    iki gek rencana ya 
+                  <?php
+              $sesi = from_session('level');
+              if ($sesi == '1' || $sesi == '2' || $sesi == '3' || $sesi == '6') {
+                echo button('load_silent("cms/user/show_editForm_user/'.from_session('id').'","#content")','Buat Pengunguman',' btn .btn-lg ');
+              } else {
+                
+              }?>
                   </div>
                   <!-- /.description-block -->
                 </div>
