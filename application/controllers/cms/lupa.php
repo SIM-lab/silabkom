@@ -1,18 +1,18 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class lupa extends CI_Controller {
+class Lupa extends CI_Controller {
 
 	public function __construct()
 	{
 		parent::__construct();
 		$this->fungsi->restrict();
-		$this->load->model('master/m_lupa');
+		$this->load->model('cms/m_lupa');
 	}
 
 
 
-	public function ding()
+	public function insertData()
 	{
 		$this->fungsi->check_previleges('lupa');
 		$this->load->library('form_validation');
@@ -35,7 +35,7 @@ class lupa extends CI_Controller {
 		{
 			$datapost = get_post_data(array('id','ussername','email','no'));
 			$this->m_lupa->insertData($datapost);
-			$this->fungsi->run_js('load_silent("cms/lupa","#content")');
+			$this->fungsi->run_js('load_silent("cms/lupa","#divsubcontent")');
 			$this->fungsi->message_box("Sudah Terkirim !","Tunggu Beberapa Menit Lagi");
 			
 		}

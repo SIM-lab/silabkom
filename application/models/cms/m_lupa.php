@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class m_lupa extends CI_Model {
+class M_lupa extends CI_Model {
 
 	    //select->read
 		public function getData($value='')
@@ -18,3 +18,4 @@ class m_lupa extends CI_Model {
 			$this->db->insert('cms_lupa',$data);
 		   
 		}
+	}

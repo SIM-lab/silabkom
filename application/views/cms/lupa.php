@@ -8,7 +8,7 @@
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
     <!-- Bootstrap 3.3.5 -->
     <?php echo css('assets/bootstrap/css/bootstrap.min.css')?>
-    <link rel="shortcut icon" href="<?php echo base_url('assets/img/title.png'); ?>" />
+    <link rel="shortcut icon" href="<?php echo base_url('assets/img/fav.jpg'); ?>" />
     <!-- Font Awesome -->
     <?php echo css('assets/css/fa.css')?>
     <!-- Ionicons -->
@@ -48,10 +48,13 @@
 
           <div class="row">
           <div class="col-xs-6">
+          <?php echo button('load_silent("cms/login","")','kembali Ke Login  ' ,' btn');?>
           
           </div>
             <div class="col-xs-6">
-              <button type="submit" class="btn btn-success btn-block btn-flat">KIRIM</button>
+            <?php
+            echo button('send_form(lupa,"cms/lupa","#divsubcontent")','Kirim','btn btn-success')." ";
+            ?>
             </div><!-- /.col -->
           </div>
         </form>
