@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class kategori_no_induk extends CI_Controller {
+class Kategori_no_induk extends CI_Controller {
 
 	public function __construct()
 	{
@@ -53,7 +53,7 @@ class kategori_no_induk extends CI_Controller {
 		}
 		else
 		{
-			$datapost = get_post_data(array('kategori','nomor_induk','id_status'));
+			$datapost = get_post_data(array('kategori','no_induk','id_status'));
 			$this->m_kategori_no_induk->insertData($datapost);
 			$this->fungsi->run_js('load_silent("master/kategori_no_induk","#content")');
 			$this->fungsi->message_box("Data Master Kategori No Induk sukses disimpan...","success");
@@ -87,7 +87,7 @@ class kategori_no_induk extends CI_Controller {
 		}
 		else
 		{
-			$datapost = get_post_data(array('id','kategori','nomor_induk','id_status'));
+			$datapost = get_post_data(array('id','kategori','no_induk','id_status'));
 			$this->m_kategori_no_induk->updateData($datapost);
 			$this->fungsi->run_js('load_silent("master/kategori_no_induk","#content")');
 			$this->fungsi->message_box("Data Master Kategori No Induk sukses diperbarui...","success");
