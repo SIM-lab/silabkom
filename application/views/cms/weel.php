@@ -61,10 +61,12 @@
 
       <header class="main-header">
         <!-- Logo -->
-        <a href="#" class="logo bg-black">
+        <a href="#" class="logo bg-primary">
           <!-- logo for regular state and mobile devices -->
-          <span class="logo-mini"><?php echo $this->config->item('nama_pendek')?></span>
-          <span class="logo-lg"><?php echo $this->config->item('project')?></span>
+          <span class="logo-mini">
+		  	<img src= "assets/img/logo.png" width="25">
+		  </span>
+          <span class="logo-lg" ><img src="assets/img/logo.png" height="50">  <?php echo $this->config->item('project')?></>
         </a>
         <!-- Header Navbar: style can be found in header.less -->
         <nav class="navbar navbar-static-top " role="navigation">
@@ -81,32 +83,23 @@
               </li>             
             </ul>
           </div>
-          <div class="navbar-custom-menu" >
-            <ul class="nav navbar-nav">
-              <li class="dropdown tasks-menu">
-                <a href="<?php echo base_url().'cms/user/show_editForm_user/'.from_session('id') ?>">
-                  <i class="fa fa-fw fa-gear"></i>&nbsp;
-                  Profil </a>
-              </li>             
-            </ul>
-          </div>
         </nav>
       </header>
       <!-- Left side column. contains the logo and sidebar -->
      
-      <aside class="main-sidebar bg-black ">
+      <aside class="main-sidebar bg-primary ">
         <!-- sidebar: style can be found in sidebar.less -->
         <section class="sidebar">
           <!-- Sidebar user panel -->
           <div class="user-panel">
             <div class="pull-left image ">
               <?php
-                  $avatar = parse_avatar(from_session('gambar'),from_session('nama'),40,'img-circle elevation-2');
+                  $avatar = parse_avatar(from_session('gambar'),from_session('nama'),40,'img-circle');
                 ?>
              <?php echo anchor('cms/user/show_editForm_user/'.from_session('id'),$avatar) ; ?>
             </div>
             <div class="pull-left info" >
-            <p><font size="5px"><?php echo from_session('nama');?></font></p>
+            <p><font size="6px"><?php echo from_session('nama');?></font></p>
             </div>
           </div>
           <ul class="sidebar-menu ">
