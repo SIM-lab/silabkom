@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class satuan extends CI_Controller {
+class Satuan extends CI_Controller {
 
 	public function __construct()
 	{
@@ -20,7 +20,7 @@ class satuan extends CI_Controller {
 	public function form($param='')
 	{
 		$content   = "<div id='divsubcontent'></div>";
-		$header    = "Form Master Nama Alat";
+		$header    = "Form Master Satuan";
 		$subheader = "satuan";
 		$buttons[] = button('jQuery.facebox.close()','Tutup','btn btn-default','data-dismiss="modal"');
 		echo $this->fungsi->parse_modal($header,$subheader,$content,$buttons,"");
@@ -42,8 +42,8 @@ class satuan extends CI_Controller {
 		$this->load->library('form_validation');
 		$config = array(
 				array(
-					'field'	=> 'satuan',
-					'label' => 'satuan',
+					'field'	=> 'nama_satuan',
+					'label' => 'nama_satuan',
 					'rules' => 'required'
 				)
 			);
@@ -57,10 +57,10 @@ class satuan extends CI_Controller {
 		}
 		else
 		{
-			$datapost = get_post_data(array('id','satuan','ket'));
+			$datapost = get_post_data(array('id','nama_satuan','keterangan'));
 			$this->m_satuan->insertData($datapost);
 			$this->fungsi->run_js('load_silent("master/satuan","#content")');
-			$this->fungsi->message_box("Data Master Nama Alat sukses disimpan...","success");
+			$this->fungsi->message_box("Data Master Satuan sukses disimpan...","success");
 			$this->fungsi->catat($datapost,"Menambah Master satuan dengan data sbb:",true);
 		}
 	}
@@ -76,8 +76,8 @@ class satuan extends CI_Controller {
 					'rules' => ''
 				),
 				array(
-					'field'	=> 'satuan',
-					'label' => 'satuan',
+					'field'	=> 'nama_satuan',
+					'label' => 'nama_satuan',
 					'rules' => 'required'
 				)
 			);
@@ -92,7 +92,7 @@ class satuan extends CI_Controller {
 		}
 		else
 		{
-			$datapost = get_post_data(array('id','satuan','ket'));
+			$datapost = get_post_data(array('id','nama_satuan','keterangan'));
 			$this->m_satuan->updateData($datapost);
 			$this->fungsi->run_js('load_silent("master/satuan","#content")');
 			$this->fungsi->message_box("Data Master Satuan sukses diperbarui...","success");
@@ -110,8 +110,8 @@ class satuan extends CI_Controller {
 					'rules' => ''
 				),
 				array(
-					'field'	=> 'satuan',
-					'label' => 'satuan',
+					'field'	=> 'nama_satuan',
+					'label' => 'nama_satuan',
 					'rules' => 'required'
 				)
 			);
@@ -126,7 +126,7 @@ class satuan extends CI_Controller {
 		}
 		else
 		{
-			$datapost = get_post_data(array('id','satuan','ket'));
+			$datapost = get_post_data(array('id','nama_satuan','keterangan'));
 			$this->m_satuan->deleteData($datapost);
 			$this->fungsi->run_js('load_silent("master/satuan","#content")');
 			$this->fungsi->message_box("Data Master Satuan sukses diperbarui...","success");
