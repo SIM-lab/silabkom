@@ -38,8 +38,8 @@ class Kategori_no_induk extends CI_Controller {
 		$this->load->library('form_validation');
 		$config = array(
 				array(
-					'field'	=> 'kategori_no_induk',
-					'label' => 'kategori_no_induk',
+					'field'	=> 'kategori',
+					'label' => 'kategori',
 					'rules' => 'required'
 				)
 			);
@@ -71,8 +71,8 @@ class Kategori_no_induk extends CI_Controller {
 					'rules' => ''
 				),
 				array(
-					'field'	=> 'kategori_no_induk',
-					'label' => 'kategori_no_induk',
+					'field'	=> 'kategori',
+					'label' => 'kategori',
 					'rules' => 'required'
 				)
 			);
@@ -93,6 +93,12 @@ class Kategori_no_induk extends CI_Controller {
 			$this->fungsi->message_box("Data Master Kategori No Induk sukses diperbarui...","success");
 			$this->fungsi->catat($datapost,"Mengedit Master kategori_no_induk dengan data sbb:",true);
 		}
+	}
+	public function delete()
+	{
+		$id = $this->uri->segment(4);
+		$this->m_kategori_no_induk->deleteData($id);
+		redirect('admin');
 	}
 }
 

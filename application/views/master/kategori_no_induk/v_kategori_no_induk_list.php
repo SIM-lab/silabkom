@@ -5,7 +5,7 @@
       <div class="col-lg-12">
         <div class="box box-primary">
           <div class="box-header with-border">
-            <h3 class="box-title">Master Kategori Nomor Induk</h3>
+            <h3 class="box-title">Master Kategori No Induk</h3>
 
             <div class="box-tools pull-right">
             <?php
@@ -23,7 +23,7 @@
               <thead>
                 <th>No</th>
                 <th>kategori</th>
-                <th>Nomor Induk</th>
+                <th>No Induk</th>
                 <th>Act</th>
               </thead>
               <tbody>
@@ -43,6 +43,7 @@
                 # code...
               }
               ?>
+               <a href="<?= site_url('master/kategori_no_induk/delete/'.$row->id) ?>" class="btn btn-danger" onclick="return confirm('Anda Yakin Ingin Menghapus Master Kategori No Induk Ini ?')"><i class="fa fw fa-trash"></i></a>
             </td>
           </tr>
 
