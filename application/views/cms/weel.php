@@ -84,21 +84,12 @@
                   Logout </a>
               </li>             
             </ul>
-           </div>
-           <div class="navbar-custom-menu" >
-            <ul class="nav navbar-nav">
-              <li class="dropdown tasks-menu">
-              <?php echo button('load_silent("cms/user/show_editForm_user/'.from_session('id').'","#content")','',' fa fa-fw fa-user');?> 
-              
-              </li>             
-            </ul>
-           </div>
-          
+           </div>                  
         </nav>
       </header>
       <!-- Left side column. contains the logo and sidebar -->
      
-      <aside class="main-sidebar bg-black ">
+      <aside class="main-sidebar bg-primary ">
         <!-- sidebar: style can be found in sidebar.less -->
         <section class="sidebar">
           <!-- Sidebar user panel -->
@@ -110,7 +101,7 @@
               
             </div>
             <div class="pull-left info" >
-            <p><font size="5px"><?php echo from_session('nama');?></font></p>
+            <p><font size="6px"><?php echo from_session('nama');?></font></p>
             </div>
           </div>
           <ul class="sidebar-menu ">

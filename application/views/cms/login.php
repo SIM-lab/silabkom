@@ -26,9 +26,9 @@
   <body class="hold-transition login-page">
     <div class="login-box">
       <!-- /.login-logo -->
-      
+      <img src="assets/img/logo.png" height="150" style="display: block; margin: auto;" > 
       <div class="login-box-body">
-        <h4>Login <b><?php echo $this->config->item('project')?></b></h4>
+        <h4 align="center"><b>LOGIN</b></h4>
         <?php echo form_open('login',array('name'=>'flogin')); ?>
           <div class="form-group has-feedback">
             	<input placeholder="Username" type="text" id="username" name="username" value="<?php echo set_value('username'); ?>" class="form-control"  >
