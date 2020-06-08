@@ -49,7 +49,7 @@ class Master_bahan extends CI_Controller {
 		if ($this->form_validation->run() == FALSE)
 		{
 			$data['status']='';
-			$this->load->view('master/master_bahan/v_nama_bahan_add',$data);
+			$this->load->view('master/master_bahan/v_master_bahan_add',$data);
 		}
 		else
 		{

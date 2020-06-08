@@ -11,7 +11,7 @@
             <?php
               $sesi = from_session('level');
               if ($sesi == '1' || $sesi == '2' || $sesi == '3' || $sesi == '6') {
-                echo button('load_silent("master/nama_alat/form/base","#modal")','Add New Nama Alat','btn btn-success');
+                echo button('load_silent("master/master_bahan/form/base","#modal")','Add New Nama Bahan','btn btn-success');
               } else {
                 # code...
               }
@@ -44,12 +44,12 @@
             <?php
               $sesi = from_session('level');
               if ($sesi == '1' || $sesi == '2' || $sesi == '3' || $sesi == '6') {
-                echo button('load_silent("master/nama_alat/form/sub/'.$row->id.'","#modal")','','btn btn-info fa fa-edit','data-toggle="tooltip" title="Edit"');
+                echo button('load_silent("master/master_bahan/form/sub/'.$row->id.'","#modal")','','btn btn-info fa fa-edit','data-toggle="tooltip" title="Edit"');
               } else {
                 # code...
               }
               ?>
-             <a href="<?= site_url('master/nama_alat/delete/'.$row->id) ?>" class="btn btn-danger fa fa-trash" onclick="return confirm('Apakah Anda Yakin?')"></a>
+             <a href="<?= site_url('master/master_bahan/delete/'.$row->id) ?>" class="btn btn-danger fa fa-trash" onclick="return confirm('Apakah Anda Yakin?')"></a>
             </td>
           </tr>
 
