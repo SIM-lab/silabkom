@@ -92,7 +92,7 @@ class Laboratorium extends CI_Controller {
 		}
 		else
 		{
-			$datapost = get_post_data(array('nama_lab','alamat_lab','korlab','laboran','status'));
+			$datapost = get_post_data(array('id','nama_lab','alamat_lab','korlab','laboran','status'));
 			$this->m_laboratorium->updateData($datapost);
 			$this->fungsi->run_js('load_silent("kelola/laboratorium","#content")');
 			$this->fungsi->message_box("Data Kelola laboratorium sukses diperbarui...","success");
