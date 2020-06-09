@@ -161,6 +161,7 @@
     <?php echo js('assets/js/ajaxFileUpload.js') ?>
     <!-- Morris.js charts -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js"></script>
+    <?php echo js('assets/js/Chart.min.js') ?>
     <!-- Sparkline -->
     <?php echo js('assets/plugins/sparkline/jquery.sparkline.min.js') ?>
     <!-- jvectormap -->
