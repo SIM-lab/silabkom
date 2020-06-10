@@ -28,7 +28,7 @@
 		
 		<div class="icon"  >
 		🛠&nbsp;
-	  <i class="fa fa-wrench "> </i>
+	  <i class="fa fa-wrench fa-rotate-270 fa-hammer "> </i>
 	  ☭ &nbsp;
     <!--<i class="fa fa-cogs"> </i> BISA DIGANTI INI JIKA EMANG  JELEK ICONNYA-->
 </div>

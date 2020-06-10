@@ -110,8 +110,8 @@
             </li>
             <?php foreach($menu[0] as $grup_id=>$arr_menu):?>
             <li class="treeview">
-              <a href="#" id="<?=$menu[1][$grup_id]?>">
-                <i class="<?php echo $menu[2][$grup_id];?>"></i> <span><?php echo $menu[1][$grup_id];?></span>
+              <a href="#"  id="<?=$menu[1][$grup_id]?>">
+                <i style="color: grey;" class="<?php echo $menu[2][$grup_id];?>"></i> <span><?php echo $menu[1][$grup_id];?></span>
                 <i class="fa fa-angle-left pull-right"></i>
               </a>
               <ul class="treeview-menu">
