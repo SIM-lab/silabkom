@@ -426,12 +426,12 @@ CREATE TABLE `master_level` (
 --
 
 INSERT INTO `master_level` (`id`, `level`) VALUES
-(1, 'Super Admin'),
-(2, 'Admin'),
-(3, 'Level 1'),
-(4, 'Level 2'),
-(5, 'Level 3'),
-(6, 'Level 0');
+(1, 'Admin'),
+(2, 'Kepala Laboratorium'),
+(3, 'Laboran'),
+(4, 'Koordinator Laboratorium'),
+(5, 'Dosen'),
+(6, 'Mahasiswa');
 
 -- --------------------------------------------------------
 
