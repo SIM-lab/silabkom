@@ -7,7 +7,7 @@ class lupa extends CI_Controller {
 	{
 		parent::__construct();
 		$this->fungsi->restrict();
-		$this->load->model('master/m_lupa');
+		$this->load->model('cms/m_lupa');
 	}
 
 	public function index()

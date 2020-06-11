@@ -54,7 +54,7 @@
 
           <div class="row">
           <div class="col-xs-6">
-          <a href="https://api.whatsapp.com/send?phone=628813792426&text=Saya%20lupa%20password.%20Tolong%20saya." target="_blank"> Lupa Password ?  </a> <!-- Bersifat sementara --->
+          <?php echo button('load_silent("cms/lupa","#content")','Lupa Sandi ?','btn ');?> <!-- Bersifat sementara --->
           </div> 
             <div class="col-xs-6">
               <button type="submit" class="btn btn-success btn-block btn-flat">LOGIN</button>
