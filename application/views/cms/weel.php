@@ -96,7 +96,6 @@
                 ?>
                 <p><?php echo from_session('nama');?> - <?php echo from_session('nama_level');?>
             </p>
-            <p><?php echo from_session('last_login');?></p>
           </li>
           <!-- Menu Footer-->
           <li class="user-footer">
