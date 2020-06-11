@@ -69,21 +69,49 @@
           <span class="logo-lg" ><img src="assets/img/logo.png" height="50">  <?php echo $this->config->item('project')?></>
         </a>
         <!-- Header Navbar: style can be found in header.less -->
-        <nav class="navbar navbar-static-top " role="navigation">
-          <!-- Sidebar toggle button-->
-          <a href="#" class="sidebar-toggle" data-toggle="offcanvas" role="button">
-            <span class="sr-only">Toggle navigation</span>
-          </a>
-          <div class="navbar-custom-menu" >
-            <ul class="nav navbar-nav">
-              <li class="dropdown tasks-menu">
-                <a href="<?php echo base_url().'login/logout/'?>">
-                  <i class="fa fa-fw fa-power-off"></i>&nbsp;
-                  Logout </a>
-              </li>             
-            </ul>
-          </div>
-        </nav>
+        <nav class="navbar navbar-static-top" role="navigation">
+  <!-- Sidebar toggle button-->
+  <a href="<?php echo base_url(); ?>assets/#" class="sidebar-toggle" data-toggle="offcanvas" role="button">
+    <span class="sr-only">Toggle navigation</span>
+  </a>
+  <!-- Navbar Right Menu -->
+  <div class="navbar-custom-menu">
+    <ul class="nav navbar-nav">
+      <!-- User Account Menu -->
+      <li class="dropdown user user-menu">
+        <!-- Menu Toggle Button -->
+        <a href="" class="dropdown-toggle" data-toggle="dropdown" >
+          <!-- The user image in the navbar-->
+          <?php
+              echo $avatar = parse_avatar(from_session('gambar'),from_session('nama'),50,'user-image User Image');
+                ?>
+          <!-- hidden-xs hides the username on small devices so only the image appears. -->
+          <span class="hidden-xs"><?php echo from_session('nama');?></span>
+</a>
+        <ul class="dropdown-menu">
+          <!-- The user image in the menu -->
+          <li class="user-header">
+          <?php
+              echo $avatar = parse_avatar(from_session('gambar'),from_session('nama'),50,'img-circle  elevation-2');
+                ?>
+                <p><?php echo from_session('nama');?> - <?php echo from_session('nama_level');?>
+            </p>
+            <p><?php echo from_session('last_login');?></p>
+          </li>
+          <!-- Menu Footer-->
+          <li class="user-footer">
+            <div class="pull-left">
+            <?php echo button('load_silent("cms/user/show_editForm_user/'.from_session('id').'","#content")','Edit User',' btn btn-default brn-flat ');?> 
+            </div>
+            <div class="pull-right">
+              <a href="<?php echo base_url().'login/logout/'?>" class="btn btn-default btn-flat">Log Out</a>
+            </div>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+</nav>
       </header>
       <!-- Left side column. contains the logo and sidebar -->
      
