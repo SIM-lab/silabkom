@@ -24,12 +24,12 @@
 		<div class="inner">
 		<h3>0</h3>
 		<p>Data Alat</p>
-		</div>
-		
+		</div>		
 		<div class="icon"  >
-		🛠&nbsp;
-	  <i class="fa fa-wrench fa-rotate-270 fa-hammer "> </i>
-	  ☭ &nbsp;
+		<i class="fa fa-wrench fa-rotate-270 fa-hammer "> </i>
+		<!--🛠&nbsp;
+	  
+	  <!--☭ &nbsp; -->
     <!--<i class="fa fa-cogs"> </i> BISA DIGANTI INI JIKA EMANG  JELEK ICONNYA-->
 </div>
 		<h5 class="small-box-footer"<?php echo button('load_silent("master/nama_alat","#content")','','');?>More info <i class="fa fa-arrow-circle-right"></i></h5>
