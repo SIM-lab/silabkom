@@ -18,3 +18,4 @@ class m_lupa extends CI_Model {
 			$this->db->insert('cms_lupa',$data);
 		   
 		}
+	}

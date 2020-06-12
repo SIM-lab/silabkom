@@ -9,6 +9,7 @@
                 <h3 class="box-title">From Edit User</h3>
             </div>
           <div class="box-body">
+          <?php echo button('load_silent("cms/profile/ubah_password/","#content")','Ubah Password','btn btn-info','data-toggle="tooltip" title="Ubah Password"');?> 
             <?php echo form_open('',array('name'=>'faddmenugrup','class'=>'form-horizontal','role'=>'form'));?>
             
             <div class="form-group">
