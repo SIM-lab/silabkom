@@ -7,7 +7,7 @@
 		<!-- small box -->
 		<div class="small-box bg-blue">
 		<div class="inner">
-		<h3>0</h3>
+		<h3><?php echo $lab?></h3>
 		<p>Data Laboratorium</p>
 		</div>
 		<div class="icon">
