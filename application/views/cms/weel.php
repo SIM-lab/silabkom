@@ -40,7 +40,7 @@
   <link rel="stylesheet" href="<?=base_url();?>assets/css/AdminLTE.css">
   <link rel="stylesheet" href="<?=base_url();?>assets/plugins/pace/pace.min.css">
   <!-- mbuh-->
-  <link rel="stylesheet" href="<?php echo base_url('assets/bootstrap/css/bootstrap.css');?>">
+  
   <!-- Google Font: Source Sans Pro -->
   <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
   <link href="<?=base_url();?>assets/css/fileinput.min.css" media="all" rel="stylesheet" type="text/css" />
@@ -231,11 +231,9 @@
     <?php echo js('assets/plugins/datatables/extensions/FixedColumns/js/dataTables.fixedColumns.min.js') ?>
     <?php echo js('assets/plugins/datatables/extensions/TableTools/js/dataTables.tableTools.min.js') ?>
     <?php echo js('assets/js/dataTables.fixedColumns.min.js') ?>
-    <!--ckeditor.js -->
-    <?php echo js('assets/ckeditor/ckeditor.js') ?>
-    <!-- panggil adapter jquery ckeditor -->
-    <?php echo js('assets/ckeditor/adapters/jquery.js') ?>
+<!-- isian berita-->
 
+<?php echo js('assets/ckeditor/ckeditor.js') ?>
     <script>
     $(document).ajaxStart(function() { Pace.restart(); });
     var site = '<?php echo site_url();?>';
