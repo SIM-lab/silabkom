@@ -1,0 +1,49 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Froala Design Blocks - Skeleton</title>
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0">
+    <link rel="stylesheet" href="<?=base_url();?>assets/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+   <link rel="stylesheet" href="<?=base_url();?>assets/css/skins/_all-skins.min.css">
+    <link type="text/css" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/froala-design-blocks/2.0.0/css/froala_blocks.min.css">
+	  <!-- Include all Editor plugins CSS style. -->
+<link rel="stylesheet" href="assets/plugins/froalaeditor/css/froala_editor.pkgd.min.css">
+
+<!-- Include Code Mirror CSS. -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.3.0/codemirror.min.css">
+  </head>
+
+  <body>
+<div id="froala-editor"></div>
+<pre id="eg-previewer" class="prettyprint linenums:1">
+</pre>
+
+	   
+  </body>
+	<!-- Include all Editor plugins JS files. -->
+<script type="text/javascript" src="file:///C:/xampp/htdocs/silabkom/assets/plugins/froalaeditor/js/froala_editor.pkgd.min.js"></script>
+
+<!-- Include Code Mirror JS. -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.3.0/codemirror.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.3.0/mode/xml/xml.min.js"></script>
+
+<!-- Include PDF export JS lib. -->
+<script type="text/javascript" src="https://raw.githack.com/eKoopmans/html2pdf/master/dist/html2pdf.bundle.js"></script>
+<script>
+ var callback = function () {
+ var editor = this
+
+   $('pre#eg-previewer').text(editor.codeBeautifier.run(editor.html.get()))
+   $('pre#eg-previewer').removeClass('prettyprinted');
+ }
+
+ new FroalaEditor('div#froala-editor', {
+   events: {
+     initialized: callback,
+     contentChanged: callback
+   }
+ })
+</script>
+</html>
