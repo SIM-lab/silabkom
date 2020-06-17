@@ -3,6 +3,8 @@
 <div class="box-body big">
     <?php echo form_open('',array('name'=>'faddmenugrup','class'=>'form-horizontal','role'=>'form'));?>
         
+        
+
         <div class="form-group">
             <label class="col-sm-4 control-label">Nama Satuan</label>
             <div class="col-sm-8">
@@ -19,6 +21,7 @@
             <span id="check_data"></span>
             </div>
         </div>
+        
         <div class="form-group">
             <label class="col-sm-4 control-label">Save</label>
             <div class="col-sm-8 tutup">
