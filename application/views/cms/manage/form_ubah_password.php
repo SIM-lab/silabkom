@@ -33,7 +33,7 @@
                 Simpan data</label>
             <div class="col-sm-9">
                 <?php
-                    echo button('send_form(document.fgantipass,"cms/profile/ubah_password/","#content")','Simpan','btn btn-success');
+                    echo button('send_form(document.fgantipass,"cms/profile/ubah_password/,#content")','Simpan','btn btn-success');
                 ?>
             </div>
             </div>

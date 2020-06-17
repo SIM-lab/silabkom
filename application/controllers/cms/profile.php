@@ -195,12 +195,12 @@ class Profile extends CI_Controller {
     }
   }
 
-  function password_check($id)
+  function password_check($str)
   {
     $id=from_session('user_id');
-    $this->db->where('id',$id);
+    $this->db->where('id_user',$id);
     $query = $this->db->get('cms_user');
-    $pass = $this->db->query('SELECT PASSWORD("'.$id.'") as pwd')->row()->pwd;
+    $pass = $this->db->query('SELECT PASSWORD("'.$str.'") as pwd')->row()->pwd;
     if ($query->row()->password != $pass)
     {
       $this->form_validation->set_message('Password yang anda masukkan salah');
