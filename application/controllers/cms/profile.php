@@ -46,7 +46,7 @@ class Profile extends CI_Controller {
     $this->load->helper('asset');
     $this->load->view('cms/manage/profile_edit');
   }
-  function edit_user($id_user)
+  function edit_user($id)
   {
     $user=get_post_data(array('email','alamat','no_hp'));
     $this->m_profile->ubah_identitas($user);
@@ -149,24 +149,7 @@ class Profile extends CI_Controller {
   }
   function ubah_password()
   {
-    die('<div class="row">
-            <div class="col-md-12">
-              <div class="box box-default">
-                <div class="box-header with-border">
-                  <i class="fa fa-warning"></i>
-                  <h3 class="box-title">Perhatian</h3>
-                </div><!-- /.box-header -->
-                <div class="box-body">
-                  
-                  <div class="alert alert-warning alert-dismissible">
-                    <button aria-hidden="true" data-dismiss="alert" class="close" type="button">×</button>
-                    <h4><i class="icon fa fa-warning"></i> PENGUMUMAN</h4>
-                    PINDAH PASSWORD SILAHKAN MELALUI AUTH
-                  </div>
-                  <a href="http://auth.umrah.ac.id" target="_blank" class="btn btn-info" role="button">KE AUTH --></a>
-                </div><!-- /.box-body -->
-              </div><!-- /.box -->
-            </div><!-- /.col -->');
+ 
    $this->load->library('form_validation');
     $config = array(
 
@@ -197,7 +180,7 @@ class Profile extends CI_Controller {
       $header = "Form Ubah Password";
       $subheader = "Untuk merubah password mohon masukkan password lama anda";
       $buttons[] = button('document.fgantipass.reset()','Reset Form','btn btn-default');
-      $buttons[] = button('load_silent("cms/profile","#content")','Batalkan','btn btn-danger','data-dismiss="modal"');
+      $buttons[] = button('load_silent(" ","#content")','Batalkan','btn btn-danger','data-dismiss="modal"');
       echo $this->fungsi->parse_formbox($header,$subheader,$content,$buttons,"");
     }
     else
@@ -212,12 +195,12 @@ class Profile extends CI_Controller {
     }
   }
 
-  function password_check($str)
+  function password_check($id)
   {
     $id=from_session('user_id');
-    $this->db->where('id_user',$id);
+    $this->db->where('id',$id);
     $query = $this->db->get('cms_user');
-    $pass = $this->db->query('SELECT PASSWORD("'.$str.'") as pwd')->row()->pwd;
+    $pass = $this->db->query('SELECT PASSWORD("'.$id.'") as pwd')->row()->pwd;
     if ($query->row()->password != $pass)
     {
       $this->form_validation->set_message('Password yang anda masukkan salah');

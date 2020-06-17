@@ -26,7 +26,9 @@
   <body class="hold-transition login-page">
     <div class="login-box">
       <!-- /.login-logo -->
-      
+      <center class="logo-lg" >
+		  	<img src= "assets/img/logo.png" width="150">
+		  </center>
       <div class="login-box-body">
         <h4>Login <b><?php echo $this->config->item('project')?></b></h4>
         <?php echo form_open('login',array('name'=>'flogin')); ?>
@@ -52,7 +54,7 @@
 
           <div class="row">
           <div class="col-xs-6">
-          <a href="https://api.whatsapp.com/send?phone=628813792426&text=Saya%20lupa%20password.%20Tolong%20saya." target="_blank"> Lupa Password ?  </a> <!-- Bersifat sementara --->
+          <a href="<?= site_url('lupa') ?>" class="btn ">lupa pasword ? </a> <!-- Bersifat sementara --->
           </div> 
             <div class="col-xs-6">
               <button type="submit" class="btn btn-success btn-block btn-flat">LOGIN</button>

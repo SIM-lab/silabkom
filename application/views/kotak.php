@@ -7,13 +7,13 @@
 		<!-- small box -->
 		<div class="small-box bg-blue">
 		<div class="inner">
-		<h3>0</h3>
+		<h3><?php echo $lab?></h3>
 		<p>Data Laboratorium</p>
 		</div>
 		<div class="icon">
 		<i class ="fa fa-desktop"></i>
 		</div>
-		<a href="master/tipe_laboratorium" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
+		<h5 class="small-box-footer"<?php echo button('load_silent("master/tipe_laboratorium","#content")','' ,'  ');?>More info <i class="fa fa-arrow-circle-right"></i></h5>
 		</div>
 		</div>
 
@@ -24,13 +24,15 @@
 		<div class="inner">
 		<h3>0</h3>
 		<p>Data Alat</p>
-		</div>
-		<div class="icon">
-      <i class="fa fa-construct"> </i>
+		</div>		
+		<div class="icon"  >
+		<i class="fa fa-wrench fa-rotate-270 fa-hammer "> </i>
+		<!--🛠&nbsp;
+	  
+	  <!--☭ &nbsp; -->
     <!--<i class="fa fa-cogs"> </i> BISA DIGANTI INI JIKA EMANG  JELEK ICONNYA-->
-    <ion-icon name="construct-sharp"></ion-icon>
-		</div>
-		<a href="master/nama_alat" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
+</div>
+		<h5 class="small-box-footer"<?php echo button('load_silent("master/nama_alat","#content")','','');?>More info <i class="fa fa-arrow-circle-right"></i></h5>
 		</div>
 		</div>
 
@@ -45,7 +47,7 @@
 		<div class="icon">
 		<i class="fa fa-flask"></i>
 		</div>
-		<a href="?master=nama_alat" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
+		<h5 class="small-box-footer"<?php echo button('load_silent("master/master_bahan","#content")','' ,' ');?>More info <i class="fa fa-arrow-circle-right"></i></h5>
 		</div>
     </div>
 

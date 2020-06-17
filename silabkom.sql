@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 04, 2020 at 05:55 PM
+-- Generation Time: Jun 15, 2020 at 06:18 AM
 -- Server version: 10.1.32-MariaDB
 -- PHP Version: 5.6.36
 
@@ -40,20 +40,8 @@ CREATE TABLE `cms_captcha` (
 --
 
 INSERT INTO `cms_captcha` (`captcha_id`, `captcha_time`, `ip_address`, `word`) VALUES
-(3269, 1591271923, '::1', '371544'),
-(3268, 1591271818, '::1', '085512'),
-(3267, 1591271650, '::1', '108095'),
-(3266, 1591271627, '::1', '580210'),
-(3270, 1591277830, '::1', '079564'),
-(3271, 1591277833, '::1', '857582'),
-(3272, 1591277834, '::1', '459649'),
-(3273, 1591277902, '::1', '324023'),
-(3274, 1591277918, '::1', '297682'),
-(3275, 1591277919, '::1', '503846'),
-(3276, 1591277920, '::1', '083619'),
-(3277, 1591277921, '::1', '210910'),
-(3278, 1591277922, '::1', '370341'),
-(3279, 1591278673, '::1', '589529');
+(3294, 1592191779, '::1', '644475'),
+(3293, 1592191770, '::1', '813378');
 
 -- --------------------------------------------------------
 
@@ -110,7 +98,30 @@ INSERT INTO `cms_log` (`id_log`, `ip`, `mac_address`, `time`, `kegiatan`, `user`
 (80, '127.0.0.1', '', '2020-06-04 16:19:19', 'Login  by RAFANDI', 'rafandi'),
 (81, '::1', '', '2020-06-04 18:58:43', 'Login  by RAFANDI', 'rafandi'),
 (82, '::1', '', '2020-06-04 20:37:08', 'Logout SILABKOM by RAFANDI', 'rafandi'),
-(83, '::1', '', '2020-06-04 20:51:13', 'Login  by RAFANDI', 'rafandi');
+(83, '::1', '', '2020-06-04 20:51:13', 'Login  by RAFANDI', 'rafandi'),
+(84, '::1', '', '2020-06-05 07:20:47', 'Login  by Akhmad', 'mamad'),
+(85, '::1', '', '2020-06-05 07:21:21', 'Logout SILABKOM by Akhmad', 'mamad'),
+(86, '::1', '', '2020-06-05 07:21:31', 'Login  by Akhmad', 'mamad'),
+(87, '::1', '', '2020-06-05 08:31:58', 'Menambah menu dengan data sbb:<br />\r\n                    <ul><li><b>nama</b> dengan value <b>Pengajuan Bahan</b></li><li><b>deskripsi</b> dengan value <b>Pengajuan Bahan</b></li><li><b>alias</b> dengan value <b>pengajuan_bahan</b></li><li><b>allowed_level</b> dengan value <b>1,2,3,4,5,6</b></li><li><b>url</b> dengan value <b>pengajuan/pengajuan_bahan</b></li><li><b>aktif</b> dengan value <b>1</b></li><li><b>urutan</b> dengan value <b>2</b></li><li><b>grup</b> dengan value <b>4</b></li></ul>', 'mamad'),
+(88, '::1', '', '2020-06-05 08:32:46', 'Mengubah manajemen menu, dengan data:<br />\r\n                    <ul><li><b>allowed_level</b> dengan value <b>1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1</b></li><li><b>cur_level</b> dengan value <b>1</b></li></ul>', 'mamad'),
+(89, '::1', '', '2020-06-05 08:32:52', 'Logout SILABKOM by Akhmad', 'mamad'),
+(90, '::1', '', '2020-06-05 08:33:00', 'Login  by Akhmad', 'mamad'),
+(91, '::1', '', '2020-06-05 13:10:39', 'Login  by Akhmad', 'mamad'),
+(92, '::1', '', '2020-06-05 13:33:02', 'Menambah pengajuan_bahan dengan data sbb:<br />\r\n                    <ul><li><b>id_pengajuan_bahan</b> dengan value <b>PB123</b></li><li><b>nama_bahan</b> dengan value <b>PC</b></li><li><b>seri</b> dengan value <b>AMD</b></li><li><b>merk</b> dengan value <b>Intel</b></li><li><b>satuan_grosir</b> dengan value <b>1200000</b></li><li><b>jumlah_grosir</b> dengan value <b>10</b></li><li><b>harga_grosir</b> dengan value <b>12000000</b></li><li><b>estimasi_jumlah</b> dengan value <b>10</b></li></ul>', 'mamad'),
+(93, '::1', '', '2020-06-05 13:40:29', 'Menambah pengajuan_bahan dengan data sbb:<br />\r\n                    <ul><li><b>id_pengajuan_bahan</b> dengan value <b>PB123</b></li><li><b>nama_bahan</b> dengan value <b>PC</b></li><li><b>seri</b> dengan value <b>AMD</b></li><li><b>merk</b> dengan value <b>Intel</b></li><li><b>satuan_grosir</b> dengan value <b>1200000</b></li><li><b>jumlah_grosir</b> dengan value <b>10</b></li><li><b>harga_grosir</b> dengan value <b>12000000</b></li><li><b>estimasi_jumlah</b> dengan value <b>10</b></li></ul>', 'mamad'),
+(94, '::1', '', '2020-06-05 13:40:44', 'Mengedit pengajuan_bahan dengan data sbb:<br />\r\n                    <ul><li><b>nama_bahan</b> dengan value <b>PC</b></li><li><b>seri</b> dengan value <b>AMD</b></li><li><b>merk</b> dengan value <b>Intel</b></li><li><b>satuan_grosir</b> dengan value <b>1200000</b></li><li><b>jumlah_grosir</b> dengan value <b>10</b></li><li><b>harga_grosir</b> dengan value <b>12000000</b></li><li><b>estimasi_jumlah</b> dengan value <b>13</b></li></ul>', 'mamad'),
+(95, '::1', '', '2020-06-05 13:42:52', 'Mengedit pengajuan_bahan dengan data sbb:<br />\r\n                    <ul><li><b>nama_bahan</b> dengan value <b>PC</b></li><li><b>seri</b> dengan value <b>AMD</b></li><li><b>merk</b> dengan value <b>Intel</b></li><li><b>satuan_grosir</b> dengan value <b>1200000</b></li><li><b>jumlah_grosir</b> dengan value <b>10</b></li><li><b>harga_grosir</b> dengan value <b>12000000</b></li><li><b>estimasi_jumlah</b> dengan value <b>13</b></li></ul>', 'mamad'),
+(96, '::1', '', '2020-06-05 13:43:03', 'Mengedit pengajuan_bahan dengan data sbb:<br />\r\n                    <ul><li><b>nama_bahan</b> dengan value <b>Komputer</b></li><li><b>seri</b> dengan value <b>AMD</b></li><li><b>merk</b> dengan value <b>Intel</b></li><li><b>satuan_grosir</b> dengan value <b>1200000</b></li><li><b>jumlah_grosir</b> dengan value <b>10</b></li><li><b>harga_grosir</b> dengan value <b>12000000</b></li><li><b>estimasi_jumlah</b> dengan value <b>10</b></li></ul>', 'mamad'),
+(97, '::1', '', '2020-06-05 13:44:46', 'Mengedit pengajuan_bahan dengan data sbb:<br />\r\n                    <ul><li><b>nama_bahan</b> dengan value <b>PC</b></li><li><b>seri</b> dengan value <b>AMD</b></li><li><b>merk</b> dengan value <b>Intel</b></li><li><b>satuan_grosir</b> dengan value <b>1200000</b></li><li><b>jumlah_grosir</b> dengan value <b>10</b></li><li><b>harga_grosir</b> dengan value <b>12000000</b></li><li><b>estimasi_jumlah</b> dengan value <b>15</b></li></ul>', 'mamad'),
+(98, '::1', '', '2020-06-05 13:46:02', 'Mengedit pengajuan_bahan dengan data sbb:<br />\r\n                    <ul><li><b>id_pengajuan_bahan</b> dengan value <b>2</b></li><li><b>nama_bahan</b> dengan value <b>PC</b></li><li><b>seri</b> dengan value <b>AMD</b></li><li><b>merk</b> dengan value <b>Intel</b></li><li><b>satuan_grosir</b> dengan value <b>1200000</b></li><li><b>jumlah_grosir</b> dengan value <b>10</b></li><li><b>harga_grosir</b> dengan value <b>12000000</b></li><li><b>estimasi_jumlah</b> dengan value <b>15</b></li></ul>', 'mamad'),
+(99, '::1', '', '2020-06-05 13:49:33', 'Mengedit pengajuan_bahan dengan data sbb:<br />\r\n                    <ul><li><b>id_pengajuan_bahan</b> dengan value <b>2</b></li><li><b>nama_bahan</b> dengan value <b>Komputer</b></li><li><b>seri</b> dengan value <b>AMD</b></li><li><b>merk</b> dengan value <b>Intel</b></li><li><b>satuan_grosir</b> dengan value <b>1200000</b></li><li><b>jumlah_grosir</b> dengan value <b>10</b></li><li><b>harga_grosir</b> dengan value <b>12000000</b></li><li><b>estimasi_jumlah</b> dengan value <b>10</b></li></ul>', 'mamad'),
+(100, '::1', '', '2020-06-05 13:52:18', 'Mengedit pengajuan_bahan dengan data sbb:<br />\r\n                    <ul><li><b>id_pengajuan_bahan</b> dengan value <b>2</b></li><li><b>nama_bahan</b> dengan value <b>Komputer</b></li><li><b>seri</b> dengan value <b>AMD</b></li><li><b>merk</b> dengan value <b>Intel</b></li><li><b>satuan_grosir</b> dengan value <b>1200000</b></li><li><b>jumlah_grosir</b> dengan value <b>10</b></li><li><b>harga_grosir</b> dengan value <b>12000000</b></li><li><b>estimasi_jumlah</b> dengan value <b>10</b></li></ul>', 'mamad'),
+(101, '::1', '', '2020-06-05 16:55:02', 'Login  by Akhmad', 'mamad'),
+(102, '::1', '', '2020-06-05 16:55:37', 'Logout SILABKOM by Akhmad', 'mamad'),
+(103, '::1', '', '2020-06-15 10:29:39', 'Login  by Akhmad', 'mamad'),
+(104, '::1', '', '2020-06-15 10:39:01', 'Mengedit grup menu dengan data sbb:<br />\r\n                    <ul><li><b>id_grup_menu</b> dengan value <b>4</b></li><li><b>nama_grup</b> dengan value <b>Pengajuan</b></li></ul>', 'mamad'),
+(105, '::1', '', '2020-06-15 10:39:08', 'Menambah grup menu dengan data sbb:<br />\r\n                    <ul><li><b>nama_grup</b> dengan value <b>Peminjaman</b></li></ul>', 'mamad'),
+(106, '::1', '', '2020-06-15 11:15:28', 'Menambah menu dengan data sbb:<br />\r\n                    <ul><li><b>nama</b> dengan value <b>Pengajuan Alat</b></li><li><b>deskripsi</b> dengan value <b>Pengajuan Alat</b></li><li><b>alias</b> dengan value <b>pengajuan_alat</b></li><li><b>allowed_level</b> dengan value <b>1,2,3</b></li><li><b>url</b> dengan value <b>pengajuan/pengajuan_alat</b></li><li><b>aktif</b> dengan value <b>1</b></li><li><b>urutan</b> dengan value <b>3</b></li><li><b>grup</b> dengan value <b>4</b></li></ul>', 'mamad');
 
 -- --------------------------------------------------------
 
@@ -150,7 +161,9 @@ INSERT INTO `cms_menu` (`id`, `alias`, `nama`, `deskripsi`, `allowed_level`, `ur
 (130, 'kategori_nomer_induk', 'Kategori Nomer Induk', '-', '+1+2+', 'master/kategori_nomer_induk', 1, 3, 2),
 (129, 'gambar_depan', 'Gambar Depan', '-', '+1+2+', 'master/gambar_depan', 1, 2, 2),
 (128, 'instansi', 'Instansi', '-', '+1+2+', 'master/instansi', 1, 1, 2),
-(173, 'periode_pengajuan', 'Pengajuan', '', ' 	+1+2+3+4+5+6+8+7+', 'pengajuan/periode_pengajuan', 1, 1, 4);
+(173, 'periode_pengajuan', 'Pengajuan', '', '+1+2+3+4+5+6+8+7+', 'pengajuan/periode_pengajuan', 1, 1, 4),
+(174, 'pengajuan_bahan', 'Pengajuan Bahan', 'Pengajuan Bahan', '+1+2+3+4+5+6+', 'pengajuan/pengajuan_bahan', 1, 2, 4),
+(175, 'pengajuan_alat', 'Pengajuan Alat', 'Pengajuan Alat', '+1+2+3+', 'pengajuan/pengajuan_alat', 1, 3, 4);
 
 -- --------------------------------------------------------
 
@@ -170,10 +183,11 @@ CREATE TABLE `cms_menu_grup` (
 
 INSERT INTO `cms_menu_grup` (`id_grup_menu`, `nama_grup`, `icon`) VALUES
 (3, 'Hidden Menu', NULL),
-(1, 'Manajemen', 'fa fa-fw fa-gear'),
+(1, 'Kelola', 'fa fa-fw fa-gear'),
 (2, 'Master', 'fa fa-fw fa-database'),
 (101, 'Dashboard', 'fa fa-fw fa-home'),
-(4, 'Peminjaman', 'fa fa-fw fa-book');
+(4, 'Pengajuan', 'fa fa-fw fa-book'),
+(5, 'Peminjaman', NULL);
 
 -- --------------------------------------------------------
 
@@ -228,7 +242,53 @@ INSERT INTO `cms_user` (`id`, `nama`, `gambar`, `username`, `password`, `level`,
 (11, 'Admin Outstanding', 'files/2016/10/e511c2db7c393226effc9f303cf2a674.png', 'admin2', '*E3CCE608FE4C2B066CB6AE607CB6A53C309EC0E6', 4, 1, '0291-595628', 'Jl. Citrosoma RT. 17/06', '2017-02-24 11:47:36'),
 (12, 'Bittaqwa', 'files/2017/01/850a0830a9fb703e55f1ef318d2195df.jpg', 'bittaqwa', '*2900EA52D759AACA10038BA767FDDA68A9F7853A', 6, 1, '', '', '2017-03-01 10:11:37'),
 (13, 'coba', 'files/2017/04/f6b70ba5e4de413f8832472bef538c0d.JPG', 'coba', '*FD64E348EC9DCCE6525B358693A9CFDC733F5184', 3, 1, 'qq', 'qq', '2017-04-25 09:27:29'),
-(14, 'RAFANDI', 'files/2020/05/foto.jpg', 'rafandi', '*66005FBF8E725C011243BD39EC5BBF6FFF812C97', 1, 1, NULL, NULL, '2020-06-04 20:51:13');
+(14, 'RAFANDI', 'files/2020/05/foto.jpg', 'rafandi', '*66005FBF8E725C011243BD39EC5BBF6FFF812C97', 1, 1, NULL, NULL, '2020-06-04 20:51:13'),
+(15, 'Akhmad', NULL, 'mamad', '*4FD7304813C297DFDE166F713CB77F4EF2EEE9F6', 1, 1, NULL, NULL, '2020-06-15 10:29:39');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `kelola_laboratorium`
+--
+
+CREATE TABLE `kelola_laboratorium` (
+  `id` int(255) NOT NULL,
+  `nama_lab` varchar(255) NOT NULL,
+  `alamat_lab` varchar(255) NOT NULL,
+  `korlab` varchar(255) NOT NULL,
+  `laboran` varchar(255) NOT NULL,
+  `status` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `kelola_laboratorium`
+--
+
+INSERT INTO `kelola_laboratorium` (`id`, `nama_lab`, `alamat_lab`, `korlab`, `laboran`, `status`) VALUES
+(1, 'Laboratorium Digital', 'D2-110', 'Alda', 'Bernika', 'ada');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `kelola_user`
+--
+
+CREATE TABLE `kelola_user` (
+  `id` int(255) NOT NULL,
+  `no_induk` varchar(255) NOT NULL,
+  `username` varchar(255) NOT NULL,
+  `nama` varchar(255) NOT NULL,
+  `email` varchar(255) NOT NULL,
+  `no_telpon` int(255) NOT NULL,
+  `level` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `kelola_user`
+--
+
+INSERT INTO `kelola_user` (`id`, `no_induk`, `username`, `nama`, `email`, `no_telpon`, `level`) VALUES
+(0, '4612418016', 'alda', 'alda bernika ifada', 'aldabernika25@gmail.com', 2147483647, 'Admin');
 
 -- --------------------------------------------------------
 
@@ -315,6 +375,45 @@ INSERT INTO `master_karegori_nomer_induk` (`id`, `kategori`, `no_induk`) VALUES
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `master_kategori_alat_bahan`
+--
+
+CREATE TABLE `master_kategori_alat_bahan` (
+  `id` int(255) NOT NULL,
+  `kode` varchar(255) NOT NULL,
+  `nama_alat_bahan` varchar(255) NOT NULL,
+  `jenis` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `master_kategori_alat_bahan`
+--
+
+INSERT INTO `master_kategori_alat_bahan` (`id`, `kode`, `nama_alat_bahan`, `jenis`) VALUES
+(1, 'B001', 'Kabel LAN', 'Kabel');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `master_kategori_no_induk`
+--
+
+CREATE TABLE `master_kategori_no_induk` (
+  `id` int(225) NOT NULL,
+  `kategori` varchar(30) DEFAULT NULL,
+  `no_induk` varchar(30) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `master_kategori_no_induk`
+--
+
+INSERT INTO `master_kategori_no_induk` (`id`, `kategori`, `no_induk`) VALUES
+(1, 'KTP', '87363838295');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `master_kotak`
 --
 
@@ -330,6 +429,9 @@ CREATE TABLE `master_kotak` (
 --
 
 INSERT INTO `master_kotak` (`lab`, `alat`, `bahan`, `modul`) VALUES
+(5, 3, 7, 2),
+(5, 3, 7, 2),
+(5, 3, 7, 2),
 (5, 3, 7, 2);
 
 -- --------------------------------------------------------
@@ -433,6 +535,9 @@ CREATE TABLE `master_tipe_laboratorium` (
 --
 
 INSERT INTO `master_tipe_laboratorium` (`id`, `jenis`, `foto`, `koordinator`, `laboran`, `alamat`, `email`, `anggota`) VALUES
+(1, 'laboratorium RSJ', 'files/2020/05/foto.jpg', 'diki', 'lek pandi', 'H5N1', 'satekirik@okdalang.com', 'keluarga, berencana'),
+(1, 'laboratorium RSJ', 'files/2020/05/foto.jpg', 'diki', 'lek pandi', 'H5N1', 'satekirik@okdalang.com', 'keluarga, berencana'),
+(1, 'laboratorium RSJ', 'files/2020/05/foto.jpg', 'diki', 'lek pandi', 'H5N1', 'satekirik@okdalang.com', 'keluarga, berencana'),
 (1, 'laboratorium RSJ', 'files/2020/05/foto.jpg', 'diki', 'lek pandi', 'H5N1', 'satekirik@okdalang.com', 'keluarga, berencana');
 
 -- --------------------------------------------------------
@@ -453,6 +558,47 @@ CREATE TABLE `master_user` (
 
 INSERT INTO `master_user` (`id`, `nip`, `level`) VALUES
 (2, 'jihan', '1');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `pengajuan_alat`
+--
+
+CREATE TABLE `pengajuan_alat` (
+  `id` int(11) NOT NULL,
+  `id_pengajuan_alat` int(11) NOT NULL,
+  `nama_alat` varchar(32) NOT NULL,
+  `seri` varchar(16) NOT NULL,
+  `merk` varchar(16) NOT NULL,
+  `harga` int(16) NOT NULL,
+  `jumlah` int(16) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `pengajuan_bahan`
+--
+
+CREATE TABLE `pengajuan_bahan` (
+  `id` int(32) NOT NULL,
+  `id_pengajuan_bahan` int(8) NOT NULL,
+  `nama_bahan` varchar(32) NOT NULL,
+  `seri` varchar(32) NOT NULL,
+  `merk` varchar(32) NOT NULL,
+  `satuan_grosir` int(32) NOT NULL,
+  `jumlah_grosir` int(32) NOT NULL,
+  `harga_grosir` int(32) NOT NULL,
+  `estimasi_jumlah` int(32) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `pengajuan_bahan`
+--
+
+INSERT INTO `pengajuan_bahan` (`id`, `id_pengajuan_bahan`, `nama_bahan`, `seri`, `merk`, `satuan_grosir`, `jumlah_grosir`, `harga_grosir`, `estimasi_jumlah`) VALUES
+(0, 2, 'PC', 'AMD', 'Intel', 1200000, 10, 12000000, 10);
 
 -- --------------------------------------------------------
 
@@ -570,6 +716,18 @@ ALTER TABLE `master_user`
   ADD PRIMARY KEY (`id`) USING BTREE;
 
 --
+-- Indexes for table `pengajuan_alat`
+--
+ALTER TABLE `pengajuan_alat`
+  ADD PRIMARY KEY (`id_pengajuan_alat`);
+
+--
+-- Indexes for table `pengajuan_bahan`
+--
+ALTER TABLE `pengajuan_bahan`
+  ADD PRIMARY KEY (`id_pengajuan_bahan`);
+
+--
 -- Indexes for table `periode_pengajuan`
 --
 ALTER TABLE `periode_pengajuan`
@@ -583,19 +741,19 @@ ALTER TABLE `periode_pengajuan`
 -- AUTO_INCREMENT for table `cms_captcha`
 --
 ALTER TABLE `cms_captcha`
-  MODIFY `captcha_id` bigint(13) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3280;
+  MODIFY `captcha_id` bigint(13) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3295;
 
 --
 -- AUTO_INCREMENT for table `cms_log`
 --
 ALTER TABLE `cms_log`
-  MODIFY `id_log` int(30) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=84;
+  MODIFY `id_log` int(30) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=107;
 
 --
 -- AUTO_INCREMENT for table `cms_menu`
 --
 ALTER TABLE `cms_menu`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=174;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=176;
 
 --
 -- AUTO_INCREMENT for table `cms_menu_grup`
@@ -607,7 +765,7 @@ ALTER TABLE `cms_menu_grup`
 -- AUTO_INCREMENT for table `cms_user`
 --
 ALTER TABLE `cms_user`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 
 --
 -- AUTO_INCREMENT for table `master_bahan`
@@ -638,6 +796,18 @@ ALTER TABLE `master_nama_alat`
 --
 ALTER TABLE `master_user`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+--
+-- AUTO_INCREMENT for table `pengajuan_alat`
+--
+ALTER TABLE `pengajuan_alat`
+  MODIFY `id_pengajuan_alat` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `pengajuan_bahan`
+--
+ALTER TABLE `pengajuan_bahan`
+  MODIFY `id_pengajuan_bahan` int(8) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `periode_pengajuan`

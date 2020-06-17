@@ -78,7 +78,7 @@ class Login extends CI_Controller {
 			}
 			else
 			{
-				echo $this->fungsi->warning('Username/password tidak cocok',site_url('cms/login'));
+				echo $this->fungsi->warning('Username/password anda tidak cocok',site_url('cms/login'));
 			}
 		}
 	}
@@ -134,10 +134,7 @@ class Login extends CI_Controller {
 			return TRUE;
 		}
 	}
-	public function lupa_password()
-	{
 
-	}
 	public function send_email() {
 		   $this->load->library('email');
 		   $this->email->initialize(array(

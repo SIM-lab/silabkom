@@ -7,11 +7,11 @@
     <?php echo form_open('',array('name'=>'faddmenugrup','class'=>'form-horizontal','role'=>'form'));?>
         
         <div class="form-group">
-            <label class="col-sm-4 control-label">ID Pengajuan</label>
+            <label class="col-sm-4 control-label">ID Pengajuan Bahan</label>
             <div class="col-sm-8">
             <?php echo form_hidden('id',$row->id); ?>
-            <?php echo form_input(array('name'=>'pengajuan_bahan','value'=>$row->id_pengajuan_bahan,'class'=>'form-control'));?>
-            <?php echo form_error('pengajuan_bahann');?>
+            <?php echo form_input(array('name'=>'id_pengajuan_bahan','value'=>$row->id_pengajuan_bahan,'class'=>'form-control'));?>
+            <?php echo form_error('id_pengajuan_bahan');?>
             <span id="check_data"></span>
             </div>
         </div>
@@ -68,7 +68,7 @@
             <label class="col-sm-4 control-label">Save</label>
             <div class="col-sm-8 tutup">
             <?php
-            echo button('send_form(document.faddmenugrup,"pengajuan/periode_pengajuan/show_editForm/","#divsubcontent")','Simpan','btn btn-success')." ";
+            echo button('send_form(document.faddmenugrup,"pengajuan/pengajuan_bahan/show_editForm/","#divsubcontent")','Simpan','btn btn-success')." ";
             ?>
             </div>
         </div>

@@ -2,11 +2,7 @@
 
 class M_profile extends CI_Model
 {
-    function __construct()
-    {
-        parent::__construct();
-        $this->load->model('apl/m_referen');
-    }
+
     function update_user($data)
     {
         $this->db->where('id',from_session('user_id'));
