@@ -5,7 +5,7 @@ class M_Jatuh_Tempo extends CI_Model {
 //select->read
 	public function getData($value='')
 	{
-		$this->db->from('jatuh_tempo');
+		$this->db->from('jatuh_tempo ma');
 		$this->db->order_by('ma.id', 'desc');
 		return $this->db->get();
 	}
