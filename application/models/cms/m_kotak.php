@@ -1,5 +1,4 @@
-<?php
-defined('BASEPATH') or exit ('No direct script access allowed');
+<?php defined('BASEPATH') or exit ('No direct script access allowed');
 
 class M_kotak extends CI_Model{
 

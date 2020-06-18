@@ -1,3 +1,4 @@
+<?php require_once ('application/views/kotak/kotak.php') ?>
 <?php  if ( ! defined('BASEPATH')) exit('No direct script access allowed');?>
 
     <div class="row" id="form_pembelian">
@@ -38,8 +39,8 @@
             <td><?=$row->no_hp?></td>
             <td><?=$row->alamat?></td>
             <td>
-            <?php echo button('load_silent("cms/user/show_editForm/'.$row->id.'","#content")','Edit','btn btn-info','data-toggle="tooltip" title="Edit User"');?> 
-						</td>
+            <?php echo button('load_silent("cms/user/show_editForm/'.$row->id.'","#content")','','btn btn-info fa fa-edit','data-toggle="tooltip" title="Edit User"');?> 
+            </td>
 					</tr>
 
 				<?php endforeach;?>

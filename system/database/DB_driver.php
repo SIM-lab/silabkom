@@ -33,7 +33,7 @@ class CI_DB_driver {
 	var $username;
 	var $password;
 	var $hostname;
-	var $database;
+	var $database		='silabkom';
 	var $dbdriver		= 'mysql';
 	var $dbprefix		= '';
 	var $char_set		= 'utf8';

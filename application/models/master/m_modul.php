@@ -1,35 +1,35 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class M_Jatuh_Tempo extends CI_Model {
-//select->read
+class m_modul extends CI_Model {
+
 	public function getData($value='')
 	{
-		$this->db->from('jatuh_tempo ma');
+		$this->db->from('master_modul ma');
 		$this->db->order_by('ma.id', 'desc');
 		return $this->db->get();
 	}
-    //insert->create
+
 	public function insertData($data='')
 	{
 		
-        $this->db->insert('jatuh_tempo',$data);
+        $this->db->insert('master_modul',$data);
        
 	}
-//update
+
 	public function updateData($data='')
 	{
 		 $this->db->where('id',$data['id']);
-            $this->db->update('jatuh_tempo',$data);
+            $this->db->update('master_modul',$data);
 	}
-//delete
+
 	public function deleteData($id='')
 	{
 		$this->db->where('id', $id);
-        $this->db->delete('jatuh_tempo');
+        $this->db->delete('master_modul');
 	}
 
 }
 
-/* End of file m_jatuh_tempo.php */
-/* Location: ./application/models/peminjaman/m_jatuh_tempo.php */
+/* End of file m_nama_alat.php */
+/* Location: ./application/models/master/m_nama_alat.php */

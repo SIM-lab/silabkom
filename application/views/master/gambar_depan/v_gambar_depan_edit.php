@@ -1,3 +1,4 @@
+<?php require_once ('application/views/kotak/kotak.php') ?>
 <?php  if ( ! defined('BASEPATH')) exit('No direct script access allowed');?>
 <?php
     $row = fetch_single_row($edit);

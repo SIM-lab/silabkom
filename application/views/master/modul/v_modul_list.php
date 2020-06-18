@@ -5,13 +5,13 @@
       <div class="col-lg-12">
         <div class="box box-primary">
           <div class="box-header with-border">
-            <h3 class="box-title">Pengajuan Bahan</h3>
+            <h3 class="box-title">Master modul</h3>
 
             <div class="box-tools pull-right">
             <?php
               $sesi = from_session('level');
               if ($sesi == '1' || $sesi == '2' || $sesi == '3' || $sesi == '6') {
-                echo button('load_silent("pengajuan/pengajuan_bahan/form/base","#modal")','Add New Pengajuan Bahan','btn btn-success');
+                echo button('load_silent("master/modul/form/base","#modal")','Add New modul','btn btn-success');
               } else {
                 # code...
               }
@@ -22,47 +22,41 @@
             <table width="100%" id="tableku" class="table table-striped">
               <thead>
                 <th>No</th>
-                <th>ID Pengajuan Bahan</th>
-                <th>Nama Bahan</th>
-                <th>Seri</th>
-                <th>Merk</th>
-                <th>Satuan Grosir</th>
-                <th>Jumlah Grosir</th>
-                <th>Harga Grosir</th>
-                <th>Estimasi Jumlah</th>
+                <th>Nama modul</th>
+                <th>keterangan</th>
+                <th>Modul</th>
+                <th>tipe</th>
+                <th>ukuran</th>
                 <th>Act</th>
               </thead>
               <tbody>
-              <?php 
+          <?php 
           $i = 1;
-          foreach($pengajuan_bahan->result() as $row): ?>
+          foreach($modul->result() as $row): ?>
           <tr>
             <td align="center"><?=$i++?></td>
-            <td align="center"><?=$row->id_pengajuan_bahan?></td>
-            <td align="center"><?=$row->nama_bahan?></td>
-            <td align="center"><?=$row->seri?></td>
-            <td align="center"><?=$row->merk?></td>
-            <td align="center"><?=$row->satuan_grosir?></td>
-            <td align="center"><?=$row->jumlah_grosir?></td>
-            <td align="center"><?=$row->harga_grosir?></td>
-            <td align="center"><?=$row->estimasi_jumlah?></td>
+            <td align="center"><?=$row->nama_modul?></td>
+            <td align="center"><?=$row->keterangan?></td>
+            <td align="center" ><?=$row->modul; ?></td>
+            <td align="center"><?=$row->tipe?></td>
+            <td align="center"><?=$row->ukuran?></td>
             <td align="center">
             <?php
               $sesi = from_session('level');
               if ($sesi == '1' || $sesi == '2' || $sesi == '3' || $sesi == '6') {
-                echo button('load_silent("pengajuan/pengajuan_bahan/form/sub/'.$row->id.'","#modal")','','btn btn-info fa fa-edit','data-toggle="tooltip" title="Edit"');
- 
+                echo button('load_silent("master/modul/form/sub/'.$row->id.'","#modal")','','btn btn-info fa fw fa-edit','data-toggle="tooltip" title="Edit"');
+                
               } else {
                 # code...
               }
               ?>
-              <a href="<?= site_url('pengajuan/pengajuan_bahan/delete/'.$row->id) ?>" class="btn btn-danger fa fa-trash" onclick="return confirm('Apakah Anda Yakin?')"></a>
-
-</td>
+              <a href="<?= site_url('master/modul/delete/'.$row->id) ?>" class="btn btn-danger" onclick="return confirm('Anda Yakin Ingin Menghapus Kategori Alat dan Bahan Ini ?')"><i class="fa fw fa-trash"></i></a>
+              <a href="<?= site_url('master/modul/download/'.$row->id) ?>" class="btn btn-success fa fw fa-download">
           </tr>
+          
 
         <?php endforeach;?>
-                </tbody>
+        </tbody>
             </table>
           </div>
         </div>

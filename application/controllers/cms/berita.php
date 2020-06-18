@@ -10,7 +10,7 @@ class Blog extends CI_Controller{
     function index(){
         $this->fungsi->check_previleges('berita');
 		$data['berita'] = $this->m_berita->berita();
-        $this->load->view('cms/berita/v_berita_add', $data);
+        $this->load->view('cms/berita/v_berita', $data);
     }
 
 } 

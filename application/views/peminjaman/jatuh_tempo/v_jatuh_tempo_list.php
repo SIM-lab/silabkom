@@ -1,4 +1,4 @@
-<?php require_once ('application/views/kotak.php');?>
+<?php require_once ('application/views/kotak/kotak.php') ?>
 <?php  if ( ! defined('BASEPATH')) exit('No direct script access allowed');?>
 
     <div class="row" id="form_pembelian">
@@ -11,7 +11,7 @@
             <?php
               $sesi = from_session('level');
               if ($sesi == '1' || $sesi == '2' || $sesi == '3' || $sesi == '6') {
-                echo button('load_silent("peminjaman/jatuh_tempo/form/base","#modal")','Add New Jatuh Tempo','btn btn-success');
+                echo button('load_silent("peminjaman/jatuh_tempo/jatuh_tempo/form/base","#modal")','Add New Jatuh Tempo','btn btn-success');
               } else {
                 # code...
               }
@@ -36,7 +36,7 @@
               <tbody>
               <?php 
           $i = 1;
-          foreach($satuan->result() as $row): ?>
+          foreach($jatuh_tempo->result() as $row): ?>
           <tr>
             <td align="center"><?=$i++?></td>
             <td align="center"><?=$row->id_peminjaman?></td>
@@ -52,12 +52,12 @@
             <?php
               $sesi = from_session('level');
               if ($sesi == '1' || $sesi == '2' || $sesi == '3' || $sesi == '6') {
-                echo button('load_silent("peminjaman/jatuh_tempo/form/sub/'.$row->id.'","#modal")','','btn btn-info fa fa-edit','data-toggle="tooltip" title="Edit"');
+                echo button('load_silent("peminjaman/jatuh_tempo/jatuh_tempo/form/sub/'.$row->id.'","#modal")','','btn btn-info fa fa-edit','data-toggle="tooltip" title="Edit"');
             } else {
                 # code...
               }
               ?>
-              <a href="<?= site_url('peminjaman/jatuh_tempo/delete/'.$row->id) ?>" class="btn btn-danger" onclick="return confirm('Anda yakin ingin menghapus jatuh tempo?')"><i class="fa fa-trash"></i></a>
+              <a href="<?= site_url('peminjaman/jatuh_tempo/jatuh_tempo/delete/'.$row->id) ?>" class="btn btn-danger" onclick="return confirm('Anda yakin ingin menghapus jatuh tempo?')"><i class="fa fa-trash"></i></a>
 
             </td>
           </tr>
