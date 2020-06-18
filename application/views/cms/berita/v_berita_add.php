@@ -21,9 +21,10 @@
             <div class="box-body pad">
               <form>
                     <textarea class="textarea" id="ckeditor" name="berita" rows="20" cols="140">
-                        Isi disini !
+                     
                     </textarea>
               </form>
+              
             </div>
           </div>
      
