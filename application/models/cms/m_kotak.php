@@ -12,8 +12,8 @@ class M_kotak extends CI_Model{
 	}
 
      
-	function lab() {
-		return $this->db->query("SELECT lab from master_kotak limit 1 ")->row()->lab;
+	function kotak() {
+		return $this->db->query("SELECT lab from master_kotak limit 1 ")->row()->kotak;
 	
 	}
 	function alat() {

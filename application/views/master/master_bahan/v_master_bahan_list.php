@@ -1,4 +1,4 @@
-<?php require_once ('application/views/kotak.php');?>
+<?php require_once ('application/views/kotak/kotak.php') ?>
 <?php  if ( ! defined('BASEPATH')) exit('No direct script access allowed');?>
 
     <div class="row" id="form_pembelian">
