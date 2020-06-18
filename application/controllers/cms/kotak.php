@@ -7,10 +7,10 @@ class Kotak extends CI_Controller {
 		$this->load->model('cms/m_kotak');
 	}
  
-	public function kotak()
+	public function lab()
 	{
 		$this->fungsi->check_previleges('kotak');
-		$data['kotak'] = $this->m_kotak->kotak();
+		$data['kotak'] = $this->m_kotak->lab();
 		$this->load->view('kotak', $data);
 	}
 	public function alat()
