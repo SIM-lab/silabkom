@@ -7,14 +7,14 @@
     <!-- Tell the browser to be responsive to screen width -->
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
     <!-- Bootstrap 3.3.5 -->
-    <?php echo css('assets/bootstrap/css/bootstrap.min.css')?>
+    <link rel="stylesheet" href="<?php echo base_url('assets/bootstrap/css/bootstrap.min.css'); ?>">
     <link rel="shortcut icon" href="<?php echo base_url('assets/img/fav.jpg'); ?>" />
     <!-- Font Awesome -->
-    <?php echo css('assets/css/fa.css')?>
+    <link rel="stylesheet" href="<?php echo base_url('assets/css/fa.css'); ?>">
     <!-- Ionicons -->
-    <?php echo css('assets/css/ionicons.min.css')?>
+    <link rel="stylesheet" href="<?php echo base_url('assets/css/ionicons.min.css'); ?>">
     <!-- Theme style -->
-    <?php echo css('assets/css/AdminLTE.min.css')?>
+    <link rel="stylesheet" href="<?php echo base_url('assets/css/AdminLTE.min.css'); ?>">
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -59,9 +59,9 @@
       </div><!-- /.login-box-body -->
     </div><!-- /.login-box -->
 
-    <!-- jQuery 2.1.4 -->
-    <?php echo js('assets/plugins/jQuery/jQuery-2.1.4.min.js') ?>
-    <?php echo js('assets/js/jquery-ui.min.js') ?>
+    <!-- jQuery 2.1.4 -->    
+    <script src="<?php echo js('assets/plugins/jQuery/jQuery-2.1.4.min.js') ?>"></script>
+    <script src="<?php echo js('assets/plugins/jQuery/jQuery-2.1.4.min.js') ?>"></script>
     <script>
       $(function () {
         $('#username').focus();
