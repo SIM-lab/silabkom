@@ -34,9 +34,9 @@
             <label class="col-sm-4 control-label">status_penggantian</label>
             <div class="col-sm-8">
             <select class="form-control" name="status_penggantian">
-                <?php foreach ($status_penggantian->result() as $status_penggantian): ?>
-                    <option value="<?= $status_penggantian->status_penggantian ?>" <?= $status_penggantian->status_penggantian == $row->status_penggantian ? "selected" : null ?>><?= $status_penggantian->status_penggantian ?></option>
-                <?php endforeach; ?>
+            <option value=""  disabled selected hidden> ---</option>
+            <option value="Sudah Diganti">Sudah Diganti</option>
+            <option value="Belum Diganti">Belum Diganti</option>
                 </select>
             </div>
             <?php echo form_error('kode');?>

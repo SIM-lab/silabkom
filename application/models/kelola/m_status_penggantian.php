@@ -3,11 +3,11 @@
 class M_status_penggantian extends CI_Model {
  
 public function getData($value='') {
- $this->db->select('*');
- $this->db->from('master_nama_alat');
- $this->db->join('kelola_penggantian','kelola_penggantian.nama_barang=master_nama_alat.nama_alat');
- $query = $this->db->get();
- return $query->result();
+    $this->db->select('*');    
+    $this->db->from('kelola_penggantian');
+    $this->db->join('master_bahan', 'kelola_penggantian.id = master_bahan.id');
+    $this->db->join('master_nama_alat', 'kelola_penggantian.id = master_nama_alat.id');
+    $query = $this->db->get();
 }
 
 }

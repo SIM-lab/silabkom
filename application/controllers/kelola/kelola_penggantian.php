@@ -8,8 +8,8 @@ class Kelola_penggantian extends CI_Controller {
 		parent::__construct();
 		$this->fungsi->restrict();
 		$this->load->model('kelola/m_kelola_penggantian');
-		$this->load->model('m_status_penggantian');
-		$this->load->model('master/m_nama_alat');
+		//$this->load->model('kelola/m_status_penggantian');
+		//$this->load->model('master/m_nama_alat');
 		//$this->load->model('peminjaman');
 
 	}
@@ -52,9 +52,9 @@ class Kelola_penggantian extends CI_Controller {
 
 		if ($this->form_validation->run() == FALSE)
 		{
-			$data['nama_barang'] = $this ->m_nama_alat->getData();
-			$data['status_penggantian']=$this->m_status_penggantian->getData();
-			//$data['status']='';
+			//$data['nama_barang'] = $this ->m_nama_alat->getData();
+			//$data['status_penggantian']=$this->m_status_penggantian->getData();
+			$data['status']='';
 			$this->load->view('kelola/kelola_penggantian/v_kelola_penggantian_add',$data);
 		}
 		else
