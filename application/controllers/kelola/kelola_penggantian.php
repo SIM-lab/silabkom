@@ -89,8 +89,8 @@ class Kelola_penggantian extends CI_Controller {
 		if ($this->form_validation->run() == FALSE)
 		{
 			$data['edit'] = $this->db->get_where('kelola_penggantian',array('id'=>$id));
-			$data['nama_barang'] = $this ->m_nama_alat->getData();
-			$data['status_penggantian']=$this->m_status_penggantian->getData();
+			//$data['nama_barang'] = $this ->m_nama_alat->getData();
+			//$data['status_penggantian']=$this->m_status_penggantian->getData();
 			//$data['status']='';
 			$this->load->view('kelola/kelola_penggantian/v_kelola_penggantian_edit',$data);
 		}
