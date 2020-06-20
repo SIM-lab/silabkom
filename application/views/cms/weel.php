@@ -75,7 +75,7 @@
     <span class="sr-only">Toggle navigation</span>
   </a>
   <!-- Navbar Right Menu -->
-  <div class="navbar-custom-menu">
+  <div class="navbar-custom-menu " >
     <ul class="nav navbar-nav">
       <!-- User Account Menu -->
       <li class="dropdown user user-menu">
@@ -90,7 +90,7 @@
 </a>
         <ul class="dropdown-menu">
           <!-- The user image in the menu -->
-          <li class="user-header">
+          <li class="user-header" >
           <?php
               echo $avatar = parse_avatar(from_session('gambar'),from_session('nama'),50,'img-circle  elevation-2');
                 ?>
@@ -118,12 +118,12 @@
         <!-- sidebar: style can be found in sidebar.less -->
         <section class="sidebar">
           <!-- Sidebar user panel -->
-          <div class="user-panel">
-            <div class="pull-left image ">
+          <div class="user-panel ">
+            <div class="pull-left image">
               <?php
-                  $avatar = parse_avatar(from_session('gambar'),from_session('nama'),40,'img-circle');
+                  $avatar = parse_avatar(from_session('gambar'),from_session('nama'),40,'img-circle elevation-2');
                 ?>
-             <?php echo anchor('cms/user/show_editForm_user/'.from_session('id'),$avatar) ; ?>
+             <?php echo $avatar ; ?>
             </div>
             <div class="pull-left info" >
             <p><font size="6px"><?php echo from_session('nama');?></font></p>
