@@ -9,13 +9,13 @@ class Kotak extends CI_Controller {
 	public function index()
 	{
 		$this->fungsi->check_previleges('kotak');
-		$data['kutak'] = $this->m_kotak->getData();
+		$data['kotak'] = $this->m_kotak->getData();
 		$this->load->view('kotak/kotak',$data);
 	}
-	public function lab()
+	public function showlab()
 	{
 		$this->fungsi->check_previleges('lab');
-		$lab['lab'] = $this->m_kotak->lab();
+		$lab['lab'] = $this->m_kotak->getData();
 		$this->load->view('kotak/kotak', $lab);
 	}
 	public function alat()
