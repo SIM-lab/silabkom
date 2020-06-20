@@ -4,7 +4,7 @@
     <?php echo form_open('',array('name'=>'faddmenugrup','class'=>'form-horizontal','role'=>'form'));?>
         
         <div class="form-group">
-            <label class="col-sm-4 control-label">ID Peminjaman/label>
+            <label class="col-sm-4 control-label">ID Peminjaman</label>
             <div class="col-sm-8">
             <?php echo form_input(array('name'=>'id_peminjaman','class'=>'form-control'));?>
             <?php echo form_error('id_peminjaman');?>
@@ -79,7 +79,7 @@
             <label class="col-sm-4 control-label">Simpan</label>
             <div class="col-sm-8 tutup">
             <?php
-            echo button('send_form(document.faddmenugrup,"penyimpanan/jatuh_tempo/jatuh_tempo/show_editForm/","#divsubcontent")','Simpan','btn btn-success')." ";
+            echo button('send_form(document.faddmenugrup,"penyimpanan/jatuh_tempo/show_editForm/","#divsubcontent")','Simpan','btn btn-success')." ";
             ?>
             </div>
         </div>

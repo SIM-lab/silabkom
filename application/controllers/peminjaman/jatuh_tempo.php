@@ -25,10 +25,10 @@ class jatuh_tempo extends CI_Controller {
 		$buttons[] = button('jQuery.facebox.close()','Tutup','btn btn-default','data-dismiss="modal"');
 		echo $this->fungsi->parse_modal($header,$subheader,$content,$buttons,"");
 		if($param=='base'){
-			$this->fungsi->run_js('load_silent("peminjaman/jatuh_tempo/jatuh_tempo/show_addForm/","#divsubcontent")');	
+			$this->fungsi->run_js('load_silent("peminjaman/jatuh_tempo/show_addForm/","#divsubcontent")');	
 		}else{
 			$base_kom=$this->uri->segment(5);
-			$this->fungsi->run_js('load_silent("peminjaman/jatuh_tempo/jatuh_tempo/show_editForm/'.$base_kom.'","#divsubcontent")');	
+			$this->fungsi->run_js('load_silent("peminjaman/jatuh_tempo/show_editForm/'.$base_kom.'","#divsubcontent")');	
 		}
 	}
 
@@ -49,7 +49,7 @@ class jatuh_tempo extends CI_Controller {
 		if ($this->form_validation->run() == FALSE)
 		{
 			$data['status']='';
-			$this->load->view('peminjaman/jatuh_tempo/jatuh_tempo/v_jatuh_tempo_add',$data);
+			$this->load->view('peminjaman/jatuh_tempo/v_jatuh_tempo_add',$data);
 		}
 		else
 		{
@@ -82,9 +82,9 @@ class jatuh_tempo extends CI_Controller {
 
 		if ($this->form_validation->run() == FALSE)
 		{
-			$data['edit'] = $this->db->get_where('peminjaman_jatuh_tempo',array('id'=>$id));
+			$data['edit'] = $this->db->get_where('jatuh_tempo',array('id'=>$id));
 			$data['status']='';
-			$this->load->view('peminjaman/jatuh_tempo/jatuh_tempo/v_jatuh_tempo_edit',$data);
+			$this->load->view('peminjaman/jatuh_tempo/v_jatuh_tempo_edit',$data);
 		}
 		else
 		{
