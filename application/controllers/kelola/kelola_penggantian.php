@@ -20,6 +20,12 @@ class Kelola_penggantian extends CI_Controller {
 		$data['kelola_penggantian'] = $this->m_kelola_penggantian->getData();
 		$this->load->view('kelola/kelola_penggantian/v_kelola_penggantian_list',$data);
 	}
+	public function formadd($value='')
+	{
+		$this->fungsi->check_previleges('kelola_penggantian');
+		$data['kelola_penggantian']  = get_options($this->db->query('select id, status from master_status'),true);
+		$this->load->view('kelola/kelola_penggantian/v_kelola_penggantian_list',$data);
+	}
 
 	public function form($param='')
 	{
