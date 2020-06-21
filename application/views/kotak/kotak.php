@@ -7,7 +7,7 @@
 		<!-- small box -->
 		<div class="small-box bg-blue">
 		<div class="inner">
-		<h3><?php $var  = $this->db->get('master_tipe_laboratorium')->num_rows(); echo $var; ?></h3>
+		<h3><?php echo $lab  = $this->db->get('master_tipe_laboratorium')->num_rows(); ?></h3>
 		<p>Data Laboratorium</p>
 		</div>
 		<div class="icon">
@@ -22,7 +22,7 @@
 		<!-- small box --> 
 		<div class="small-box bg-green">
 		<div class="inner">
-		<h3><?php $var  = $this->db->get('master_nama_alat')->num_rows(); echo $var; ?></h3>
+		<h3><?php echo $alat = $this->db->get('master_nama_alat')->num_rows();?></h3>
 		<p>Data Alat</p>
 		</div>		
 		<div class="icon">
@@ -41,7 +41,7 @@
 		<!-- small box --> 
 		<div class="small-box bg-yellow">
 		<div class="inner">
-		<h3><?php $var  = $this->db->get('master_bahan')->num_rows(); echo $var; ?></h3>
+		<h3><?php echo $bahan = $this->db->get('master_bahan')->num_rows();?></h3>
 		<p>Data Bahan</p>
 		</div>
 		<div class="icon">
@@ -56,7 +56,7 @@
 		<!-- small box --> 
 		<div class="small-box bg-red">
 		<div class="inner">
-		<h3><?php $var  = $this->db->get('master_modul')->num_rows(); echo $var; ?></h3> 
+		<h3><?php echo $modul = $this->db->get('master_modul')->num_rows();?></h3> 
 		<p>Data modul</p>
 		</div>
 		<div class="icon">
