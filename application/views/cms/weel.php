@@ -229,9 +229,6 @@
     <?php echo js('assets/plugins/datatables/extensions/FixedColumns/js/dataTables.fixedColumns.min.js') ?>
     <?php echo js('assets/plugins/datatables/extensions/TableTools/js/dataTables.tableTools.min.js') ?>
     <?php echo js('assets/js/dataTables.fixedColumns.min.js') ?>
-<!-- isian berita-->
-<script src="<?php echo js('https://cdn.ckeditor.com/4.14.0/full/ckeditor.js') ?>"></script>
-<script src="<?php echo js('assets/plugins/ckeditor/ckeditor.js') ?>"></script>
     <script>
     $(document).ajaxStart(function() { Pace.restart(); });
     var site = '<?php echo site_url();?>';
