@@ -11,7 +11,7 @@
             <?php
               $sesi = from_session('level');
               if ($sesi == '1' || $sesi == '2' || $sesi == '3' || $sesi == '6') {
-                echo button('load_silent("master/tipe_laboratorium/form/base",)','Add New Laboratorium','btn btn-success');
+                echo button('load_silent("master/tipe_laboratorium/form/base","#modal")','Add New Laboratorium','btn btn-success');
               } else {
                 # code...
               }
@@ -19,7 +19,7 @@
             </div>
           </div>
           <div class="box-body">
-            <table width="100%" id="lab" class="table table-striped">
+            <table width="100%" id="ableku" class="table table-striped">
               <thead>
                 <th>No</th>
                 <th>Jenis Laboratorium</th>
@@ -48,7 +48,7 @@
             <?php
               $sesi = from_session('level');
               if ($sesi == '1' || $sesi == '2' || $sesi == '3' || $sesi == '6') {
-                echo button('load_silent("master/tipe_laboratorium/form/sub/'.$row->id.'","#modal")','','btn btn-success fa fa-pencil','data-toggle="tooltip" title="Edit"');
+                echo button('load_silent("master/tipe_laboratorium/form/sub/'.$row->id.'","#modal")','','btn btn-info fa fa-edit','data-toggle="tooltip" title="Edit"');
               } else {
                 
               }
@@ -67,7 +67,7 @@
     </div>
 <script type="text/javascript">
   $(document).ready(function() {
-    var table = $('#lab').DataTable( {
+    var table = $('#tableku').DataTable( {
       "ordering": false,
     } );
   });
