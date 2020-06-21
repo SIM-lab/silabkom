@@ -1,4 +1,8 @@
-<?php  if ( ! defined('BASEPATH')) exit('No direct script access allowed');?>
+<?php
+
+use function PHPSTORM_META\type;
+
+if ( ! defined('BASEPATH')) exit('No direct script access allowed');?>
 <?php
     $row = fetch_single_row($edit);
 ?>
@@ -43,7 +47,7 @@
         <div class="form-group">
         <label class="col-sm-4 control-label">Tanggal Pinjam</label>
         <div class="col-sm-8">
-        <?php echo form_input(array('name'=>'tanggal_pinjam','value'=>$row->tanggal_pinjam,'class'=>'form-control'));?>
+        <?php echo form_input(array('name'=>'tanggal_pinjam','type'=>'date','value'=>$row->tanggal_pinjam,'class'=>'form-control'));?>
         <?php echo form_error('tanggal_pinjam');?>
         </div>
         </div>
