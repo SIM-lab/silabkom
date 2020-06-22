@@ -12,7 +12,7 @@ class modul extends CI_Controller {
 	public function index()
 	{
 		$this->fungsi->check_previleges('modul');
-		$data['modul'] = $this->m_modul->getData();
+		$data['modyar'] = $this->m_modul->getData();
 		$this->load->view('master/modul/v_modul_list',$data);
 	}
 	public function form($param='')

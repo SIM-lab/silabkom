@@ -32,7 +32,7 @@
               <tbody>
           <?php 
           $i = 1;
-          foreach($modul->result() as $row): ?>
+          foreach($modyar->result() as $row): ?>
           <tr>
             <td align="center"><?=$i++?></td>
             <td align="center"><?=$row->nama_modul?></td>
