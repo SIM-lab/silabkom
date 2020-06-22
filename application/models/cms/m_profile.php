@@ -16,7 +16,7 @@ class M_profile extends CI_Model
         $this->db->update('data_pegawai', $data);
     }
     function ubah_password($data)
-    {
+     {
         $pass = $this->db->query('SELECT PASSWORD("'.$data['password_b'].'") as pwd')->row()->pwd;
         $ubah['password']=$pass;
         $id=from_session('user_id');

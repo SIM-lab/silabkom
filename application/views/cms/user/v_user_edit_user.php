@@ -7,10 +7,13 @@
         <div class="box box-primary">
             <div class="box-header with-border">
                 <h3 class="box-title">From Edit User</h3>
+                <div class="box-tools pull-right">
+             <?php echo button('load_silent("cms/profile/ubah_password/","#content")','Ubah Password','btn btn-danger','data-toggle="tooltip" title="Ubah Password"');?> 
+          </div>
             </div>
+            
           <div class="box-body">
-          <?php echo button('load_silent("cms/profile/ubah_password/"'.$row->id.'"#content")','Ubah Password','btn btn-danger','data-toggle="tooltip" title="Ubah Password"');?> 
-            <?php echo form_open('',array('name'=>'faddmenugrup','class'=>'form-horizontal','role'=>'form'));?>
+         <?php echo form_open('',array('name'=>'faddmenugrup','class'=>'form-horizontal','role'=>'form'));?>
             
             <div class="form-group">
                 <label class="col-sm-2 control-label">Nama</label>
