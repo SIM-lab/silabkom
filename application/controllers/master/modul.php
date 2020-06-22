@@ -15,7 +15,6 @@ class modul extends CI_Controller {
 		$data['modul'] = $this->m_modul->getData();
 		$this->load->view('master/modul/v_modul_list',$data);
 	}
-
 	public function form($param='')
 	{
 		$content   = "<div id='divsubcontent'></div>";

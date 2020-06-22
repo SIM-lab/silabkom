@@ -53,7 +53,7 @@ class satuan extends CI_Controller {
 		}
 		else
 		{
-			$datapost = get_post_data(array('nama_satuan','keterangan','id_status'));
+			$datapost = get_post_data(array('id','nama','keterangan'));
 			$this->m_satuan->insertData($datapost);
 			$this->fungsi->run_js('load_silent("master/satuan","#content")');
 			$this->fungsi->message_box("Data Master Nama satuan sukses disimpan...","success");
@@ -88,7 +88,7 @@ class satuan extends CI_Controller {
 		}
 		else
 		{
-			$datapost = get_post_data(array('id','nama_satuan','keterangan','id_status'));
+			$datapost = get_post_data(array('id','nama','keterangan'));
 			$this->m_satuan->updateData($datapost);
 			$this->fungsi->run_js('load_silent("master/satuan","#content")');
 			$this->fungsi->message_box("Data Master Nama satuan sukses diperbarui...","success");
