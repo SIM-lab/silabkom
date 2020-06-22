@@ -32,7 +32,7 @@ class tipe_laboratorium extends CI_Controller {
 			$this->fungsi->run_js('load_silent("master/tipe_laboratorium/show_editForm/'.$base_kom.'","#divsubcontent")');
 		}
 
-		}
+	}
 
 	public function show_addForm()
 	{
