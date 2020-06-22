@@ -19,7 +19,7 @@
             </div>
           </div>
           <div class="box-body">
-            <table width="100%" id="ableku" class="table table-striped">
+            <table width="100%" id="tableku" class="table table-striped">
               <thead>
                 <th>No</th>
                 <th>Jenis Laboratorium</th>
