@@ -21,9 +21,9 @@
             </div>
         </div>
         <div class="form-group">
-            <label class="col-sm-4 control-label">Modul</label>
+            <label class="col-sm-4 control-label">File</label>
             <div class="col-sm-8">
-            <?php echo form_upload(array('name'=>'modul','id'=>'document','class'=>'form-control'));?>
+            <?php echo form_upload(array('name'=>'file','id'=>'file','class'=>'form-control'));?>
             <span id="check_data"></span>
             </div>
         </div>
