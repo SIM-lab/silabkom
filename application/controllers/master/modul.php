@@ -101,10 +101,7 @@ class modul extends CI_Controller {
 		$this->m_modul->deleteData($id);
 		redirect('admin');
     }
-    public function download()
-    {				
-		force_download('uploads/mimiperi.pdf',NULL);
-	}	
+   
 
 }
 

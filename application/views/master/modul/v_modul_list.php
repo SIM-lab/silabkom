@@ -50,8 +50,8 @@
                 # code...
               }
               ?>
-              <a href="<?= site_url('master/modul/delete/'.$row->id) ?>" class="btn btn-danger" onclick="return confirm('Anda Yakin Ingin Menghapus Kategori Alat dan Bahan Ini ?')"><i class="fa fw fa-trash"></i></a>
-              <a href="<?= site_url('master/modul/download/'.$row->id) ?>" class="btn btn-success fa fw fa-download">
+              <a href="<?= site_url('master/modul/delete/'.$row->id) ?>" class="btn btn-danger fa fw fa-trash" onclick="return confirm('Anda Yakin Ingin Menghapus Kategori Alat dan Bahan Ini ?')"></a>
+              <a href="<?=base_url(''.$row->modul)?>" class="btn btn-info fa fw fa-download" target="_blank"></a>
           </tr>
           
 
