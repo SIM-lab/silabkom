@@ -1,3 +1,4 @@
+<?php require_once ('application/views/kotak/kotak.php') ?>
 <?php  if ( ! defined('BASEPATH')) exit('No direct script access allowed');?>
 
     <div class="row" id="form_pembelian">
@@ -37,6 +38,7 @@
             <td align="center"><?=$row->id_peminjaman?></td>
             <td align="center"><?=$row->nama_alat?></td>
             <td align="center"><?=$row->merk?></td>
+            <td align="center"><?=$row->seri?></td>
             <td align="center"><span class="badge badge-success"><?=$row->kondisi?></span></td>
             <td align="center">
             <?php

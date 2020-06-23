@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 22, 2020 at 02:13 PM
+-- Generation Time: Jun 23, 2020 at 04:49 PM
 -- Server version: 10.1.32-MariaDB
 -- PHP Version: 5.6.36
 
@@ -48,7 +48,7 @@ INSERT INTO `cms_menu` (`id`, `alias`, `nama`, `deskripsi`, `allowed_level`, `ur
 (3, 'menu', 'Menu', 'Untuk memanajemen menu administrasi (back-end)', '+1+', 'cms/manage/menu', 1, 7, 1),
 (89, 'reset_pass', 'Reset Password User', 'Reset Password User', '+1+', 'apl/reset', 1, 1, 3),
 (35, 'semua', 'semua', 'untuk login semua', '+1+2+3+4+5+6+8+7+', 'cms/login/admin_page', 1, 1, 3),
-(88, 'tambah_user', 'Tambah User', '', '+1+2+3+4+', 'apl/crud', 1, 1, 1),
+(88, 'tambah_user', 'Tambah User', '', '+1+2+3+4+', 'cms/manage/form_add_user', 1, 1, 3),
 (102, 'log', 'Log System', 'Log System', '+1+2+', 'cms/catatan/catat', 1, 2, 1),
 (136, 'satuan', 'Satuan', '-', '+1+2+', 'master/satuan', 1, 9, 2),
 (101, 'status_pak', 'Home', 'Status Pengajuan PAK', '+1+2+3+4+5+6+', 'pak/dashboard/status_pak', 1, 1, 101),
@@ -66,7 +66,8 @@ INSERT INTO `cms_menu` (`id`, `alias`, `nama`, `deskripsi`, `allowed_level`, `ur
 (176, 'jatuh_tempo', 'Jatuh Tempo', '', '+1+2+3+4+5+6+8+7+', 'peminjaman/jatuh_tempo', 1, 1, 5),
 (177, 'user', 'User', '', '+1+2+3+4+5+6+8+7', 'cms/user', 1, 1, 1),
 (178, 'modul', 'Modul', 'modal modul', '+1+2+3+4+5+6+7+8', 'master/modul', 1, 10, 2),
-(179, 'kelola_penggantian', 'Penggantian', '', '+1+2+3+', 'kelola/kelola_penggantian', 1, 3, 6);
+(179, 'kelola_penggantian', 'Penggantian', '', '+1+2+3+', 'kelola/kelola_penggantian', 1, 3, 6),
+(180, 'peminjaman_alat', 'Alat', '', '+1+2+3+4+5=6+7+8', 'peminjaman/peminjaman_alat', 1, 2, 5);
 
 --
 -- Indexes for dumped tables
@@ -86,7 +87,7 @@ ALTER TABLE `cms_menu`
 -- AUTO_INCREMENT for table `cms_menu`
 --
 ALTER TABLE `cms_menu`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=180;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=181;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
