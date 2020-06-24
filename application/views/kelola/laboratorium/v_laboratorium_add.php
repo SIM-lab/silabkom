@@ -35,16 +35,6 @@
             <span id="check_data"></span>
             </div>
         </div>
-        <div class="form-group">
-            <label class="col-sm-4 control-label">status</label>
-            <div class="col-sm-8">
-            <select class="form-control" name="status">
-            <option value=""  disabled selected hidden> ---</option>
-            <option value="Ada">Ada</option>
-            <option value="Ada">Ada</option>
-                </select>
-            </div>
-            <?php echo form_error('status');?>
             <div class="form-group">
                 <label class="col-sm-4 control-label">Status</label>
                 <div class="col-sm-8">
@@ -52,9 +42,7 @@
                   <?php echo form_error('status', '<span class="error-span">', '</span>'); ?>
                 </div>
             </div>
-
- 
-
+        </div>
         <div class="form-group">
             <label class="col-sm-4 control-label">Simpan</label>
             <div class="col-sm-8 tutup">
