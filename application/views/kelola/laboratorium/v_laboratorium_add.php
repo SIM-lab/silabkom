@@ -45,15 +45,6 @@
                 </select>
             </div>
             <?php echo form_error('status');?>
-            </div>
-            <div class="form-group">
-                <label class="col-sm-2 control-label">Status</label>
-                <div class="col-sm-8">
-                  <?php echo form_dropdown('status',$status,set_value('id'),'id="status" class="form-control select2"');?>
-                  <?php echo form_error('status');?>
-                    <span id="check_data"></span>
-                </div>
-            </div>
         </div>
         <div class="form-group">
             <label class="col-sm-4 control-label">Simpan</label>
