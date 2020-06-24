@@ -37,10 +37,16 @@
             </div>
         </div>
         <div class="form-group">
-            <label class="col-sm-4 control-label">Status</label>
+            <label class="col-sm-4 control-label">status</label>
             <div class="col-sm-8">
-            <?php echo form_input(array('name'=>'status','value'=>$row->status,'class'=>'form-control'));?>
-            <?php echo form_error('status');?>
+            <select class="form-control" name="status">
+            <option value=""  disabled selected hidden> ---</option>
+            <option value="Ada">Ada</option>
+            <option value="Tidak Ada">Tidak Ada</option>
+                </select>
+            </div>
+            <?php echo form_error('kode');?>
+            <span id="check_data"></span>
             </div>
         </div>
         <div class="form-group">

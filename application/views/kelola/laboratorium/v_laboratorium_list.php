@@ -38,7 +38,7 @@
             <td align="center"><?=$row->alamat_lab?></td>
             <td align="center"><?=$row->korlab?></td>
             <td align="center"><?=$row->laboran?></td>
-            <td align="center"><?=$row->status?></td>
+            <td align="center"><span class="badge badge-success"><?=$row->status?></span></td>
             <td align="center">         
             <?php
               $sesi = from_session('level');
