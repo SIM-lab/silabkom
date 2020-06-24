@@ -15,8 +15,20 @@ class Laboratorium extends CI_Controller {
 		$this->fungsi->check_previleges('laboratorium');
 		$data['laboratorium'] = $this->m_laboratorium->getData();
 		$this->load->view('kelola/laboratorium/v_laboratorium_list',$data);
-    }
-    
+	}
+	
+    public function formadd($value='')
+	{
+		$this->fungsi->check_previleges('laboratorium');
+		$data['status']  = get_options($this->db->query('select id, status from master_status'),true);
+		$this->load->view('kelola/laboratorium/v_laboratorium_add',$data);
+	}
+	public function formedit($value='')
+	{
+		$this->fungsi->check_previleges('laboratorium');
+		$data['status']  = get_options($this->db->query('select id, status from master_status'),true);
+		$this->load->view('kelola/laboratorium/v_laboratorium_edit',$data);
+	}
 	public function form($param='')
 	{
 		$content   = "<div id='divsubcontent'></div>";
@@ -52,7 +64,7 @@ class Laboratorium extends CI_Controller {
 
 		if ($this->form_validation->run() == FALSE)
 		{
-			$data['status']='';
+			$data['status']  = get_options($this->db->query('select id, status from master_status'),true);
 			$this->load->view('kelola/laboratorium/v_laboratorium_add',$data);
 		}
 		else
@@ -87,7 +99,7 @@ class Laboratorium extends CI_Controller {
 		if ($this->form_validation->run() == FALSE)
 		{
 			$data['edit'] = $this->db->get_where('kelola_laboratorium',array('id'=>$id));
-			$data['status']='';
+			$data['status']  = get_options($this->db->query('select id, status from master_status'),true);
 			$this->load->view('kelola/laboratorium/v_laboratorium_edit',$data);
 		}
 		else
@@ -96,40 +108,6 @@ class Laboratorium extends CI_Controller {
 			$this->m_laboratorium->updateData($datapost);
 			$this->fungsi->run_js('load_silent("kelola/laboratorium","#content")');
 			$this->fungsi->message_box("Data Kelola laboratorium sukses diperbarui...","success");
-			$this->fungsi->catat($datapost,"Mengedit kelola_laboratorium dengan data sbb:",true);
-		}
-	}
-	public function show_deleteForm ($id='')
-	{
-		$this->fungsi->check_previleges('laboratorium');
-		$this->load->library('form_validation');
-		$config = array(
-				array(
-					'field'	=> 'id',
-					'label' => 'wes mbarke',
-					'rules' => ''
-				),
-				array(
-					'field'	=> 'nama_lab',
-					'label' => 'nama_lab',
-					'rules' => 'required'
-				)
-			);
-		$this->form_validation->set_rules($config);
-		$this->form_validation->set_error_delimiters('<span class="error-span">', '</span>');
-
-		if ($this->form_validation->run() == FALSE)
-		{
-			$data['delete'] = $this->db->get_where('kelola_laboratorium',array('id'=>$id));
-			$data['status']='';
-			$this->load->view('kelola/laboratorium/v_laboratorium_list',$data);
-		}
-		else
-		{
-			$datapost = get_post_data(array('id','nama_lab','alamat_lab','korlab','laboran','status'));
-			$this->m_laboratorium->deleteData($datapost);
-			$this->fungsi->run_js('load_silent("kelola/laboratorium","#content")');
-			$this->fungsi->message_box("Data Kelola Laboratorium sukses diperbarui...","success");
 			$this->fungsi->catat($datapost,"Mengedit kelola_laboratorium dengan data sbb:",true);
 		}
 	}
