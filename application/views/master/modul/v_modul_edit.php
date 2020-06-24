@@ -2,12 +2,7 @@
 <?php
     $row = fetch_single_row($edit);
 ?>
-    <div class="row" id="form_pembelian">
-      <div class="col-lg-12">
-        <div class="box box-primary">
-            <div class="box-header with-border">
-                <h3 class="box-title">From Modul Edit</h3>
-            </div>
+    <div class="row">
           <div class="box-body">
             <?php echo form_open('',array('name'=>'faddmenugrup','class'=>'form-horizontal','role'=>'form'));?>
             <?php echo form_hidden('id',$row->id); ?>
@@ -39,7 +34,7 @@
                 <?php echo form_error('tipe');?>
                 </div>
             </div>
-            </div>
+            
             <div class="form-group">
                 <label class="col-sm-2 control-label">Ukuran</label>
                 <div class="col-sm-8">
@@ -57,10 +52,8 @@
                 </div>
             </div>
         </form>
-          </div>
         </div>
-      </div>
-    </div>
+          </div>
 <script type="text/javascript">
 $(document).ready(function() {
     $("#ufile").fileinput({
