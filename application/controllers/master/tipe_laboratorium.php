@@ -40,8 +40,8 @@ class tipe_laboratorium extends CI_Controller {
 		$this->load->library('form_validation');
 		$config = array(
 				array(
-					'field'	=> 'tipe_laboratorium',
-					'label' => 'tipe_laboratorium',
+					'field'	=> 'jenis_laboratorium',
+					'label' => 'jenis_laboratorium',
 					'rules' => 'required'
 				)
 			);
@@ -74,8 +74,8 @@ class tipe_laboratorium extends CI_Controller {
 				'rules' => ''
 			),
 				array(
-					'field'	=> 'tipe_laboratorium',
-					'label' => 'tipe_laboratorium',
+					'field'	=> 'jenis_laboratorium',
+					'label' => 'jenis_laboratorium',
 					'rules' => 'required'
 				)
 			);

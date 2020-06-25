@@ -24,7 +24,7 @@
             </div>
         </div>
         <div class="form-group">
-            <label class="col-sm-4 control-label">Simpan</label>
+            <label class="col-sm-4 control-label"></label>
             <div class="col-sm-8 tutup">
             <?php
             echo button('send_form(document.faddmenugrup,"master/satuan/show_editForm/","#divsubcontent")','Simpan','btn btn-success')." ";

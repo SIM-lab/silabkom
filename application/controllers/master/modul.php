@@ -126,6 +126,11 @@ class modul extends CI_Controller {
 		$this->fungsi->check_previleges('modul');
 		$this->load->library('form_validation');
 		$config = array(
+			array(
+				'field'	=> 'id',
+				'label' => '',
+				'rules' => ''
+			),
 				array(
 					'field'	=> 'nama_modul',
 					'label' => 'nama_modul',

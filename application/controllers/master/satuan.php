@@ -38,8 +38,8 @@ class satuan extends CI_Controller {
 		$this->load->library('form_validation');
 		$config = array(
 				array(
-					'field'	=> 'nama_satuan',
-					'label' => 'nama_satuan',
+					'field'	=> 'nama',
+					'label' => 'nama',
 					'rules' => 'required'
 				)
 			);
@@ -72,8 +72,8 @@ class satuan extends CI_Controller {
 					'rules' => ''
 				),
 				array(
-					'field'	=> 'nama_satuan',
-					'label' => 'nama_satuan',
+					'field'	=> 'nama',
+					'label' => 'nama',
 					'rules' => 'required'
 				)
 			);
