@@ -173,7 +173,7 @@
       <!-- Add the sidebar's background. This div must be placed
            immediately after the control sidebar -->
     </div><!-- ./wrapper -->
-    <script src="https://unpkg.com/ionicons@5.0.0/dist/ionicons.js"></script>
+ 
  <!-- jQuery 2.1.4 -->
  <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
     <?php echo js('assets/js/jquery-ui.min.js') ?>
@@ -240,7 +240,7 @@
       $('#Dashboard').click();
     });
     </script>
-  <script src="https://unpkg.com/ionicons@5.0.0/dist/ionicons.js"></script>
+
   </body>
 </html>
  
