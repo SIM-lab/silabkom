@@ -38,8 +38,8 @@ class gambar_depan extends CI_Controller {
 		$this->load->library('form_validation');
 		$config = array(
 				array(
-					'field'	=> 'nama_gambar_depan',
-					'label' => 'nama_gambar_depan',
+					'field'	=> 'foto',
+					'label' => 'foto',
 					'rules' => 'required'
 				)
 			);
@@ -71,8 +71,8 @@ class gambar_depan extends CI_Controller {
 					'rules' => ''
 				),
 				array(
-					'field'	=> 'nama_gambar_depan',
-					'label' => 'nama_gambar_depan',
+					'field'	=> 'foto',
+					'label' => 'foto',
 					'rules' => 'required'
 				)
 			);
@@ -100,7 +100,6 @@ class gambar_depan extends CI_Controller {
         $id = $this->uri->segment(4);
         $this->m_gambar_depan->deleteData($id);
         redirect('admin');
-        $this->load->view('master/gambar_depan/v_gambar_depan');
       } 
 }
  
