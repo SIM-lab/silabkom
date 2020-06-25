@@ -23,7 +23,9 @@ class Kelola_penggantian extends CI_Controller {
 	public function formadd($value='')
 	{
 		$this->fungsi->check_previleges('kelola_penggantian');
-		$data['kelola_penggantian']  = get_options($this->db->query('select id, status from master_status'),true);
+		$data['status']  = get_options($this->db->query('select id, status from master_status where id'),true);
+		$data['nama_bahan']  = get_options($this->db->query('select nama_bahan from master_bahan'),true);
+		$data['nama_alat']  = get_options($this->db->query('select id, nama_alat from master_nama_alat'),true);
 		$this->load->view('kelola/kelola_penggantian/v_kelola_penggantian_list',$data);
 	}
 
@@ -59,8 +61,9 @@ class Kelola_penggantian extends CI_Controller {
 		if ($this->form_validation->run() == FALSE)
 		{
 			//$data['nama_barang'] = $this ->m_nama_alat->getData();
-			//$data['status_penggantian']=$this->m_status_penggantian->getData();
-			$data['status']='';
+			$data['nama_alat']  = get_options($this->db->query('select id, nama_alat from master_nama_alat'),true);
+			$data['nama_bahan']  = get_options($this->db->query('select id, nama_bahan from master_bahan'),true);
+			$data['status']  = get_options($this->db->query('select id, status from master_status'),true);
 			$this->load->view('kelola/kelola_penggantian/v_kelola_penggantian_add',$data);
 		}
 		else
@@ -95,9 +98,9 @@ class Kelola_penggantian extends CI_Controller {
 		if ($this->form_validation->run() == FALSE)
 		{
 			$data['edit'] = $this->db->get_where('kelola_penggantian',array('id'=>$id));
-			//$data['nama_barang'] = $this ->m_nama_alat->getData();
-			//$data['status_penggantian']=$this->m_status_penggantian->getData();
-			//$data['status']='';
+			$data['nama_alat']  = get_options($this->db->query('select id, nama_alat from master_nama_alat'),true);
+			$data['nama_bahan']  = get_options($this->db->query('select id, nama_bahan from master_bahan'),true);
+			$data['status']  = get_options($this->db->query('select id, status from master_status'),true);
 			$this->load->view('kelola/kelola_penggantian/v_kelola_penggantian_edit',$data);
 		}
 		else

@@ -6,15 +6,14 @@ class M_kelola_penggantian extends CI_Model {
     //select->read
 	public function getData($value='')
 	{
-		$this->db->from('kelola_penggantian mb');
-		$this->db->order_by('mb.id', 'desc');
+		$this->db->from('kelola_penggantian ma');
+		$this->db->order_by('ma.id', 'desc');
 		return $this->db->get();
 	}
 	public function getList($value='')
 	{
 		$this->db->join('master_status ml', 'cu.status = ml.id', 'left');
-		$this->db->select('cu.*,ml.status');
-		
+		$this->db->select('cu.*,ml.l');		
 		$this->db->where('cu.status !=', 1);
 		return $this->db->get('kelola_penggantian cu');
 	}

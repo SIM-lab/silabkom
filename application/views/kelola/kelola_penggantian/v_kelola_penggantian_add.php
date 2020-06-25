@@ -31,22 +31,10 @@
         </div>
        
         <div class="form-group">
-            <label class="col-sm-4 control-label">status_penggantian</label>
-            <div class="col-sm-8">
-            <select class="form-control" name="status_penggantian">
-            <option value=""  disabled selected hidden> ---</option>
-            <option value="Sudah Diganti">Sudah Diganti</option>
-            <option value="Belum Diganti">Belum Diganti</option>
-                </select>
-            </div>
-            <?php echo form_error('status_penggantian');?>
-            </div>
-            <div class="form-group">
-                <label class="col-sm-2 control-label">Status</label>
+                <label class="col-sm-4 control-label">Status</label>
                 <div class="col-sm-8">
-                  <?php echo form_dropdown('status',$status,set_value('id'),'id="status" class="form-control select2"');?>
-                  <?php echo form_error('status');?>
-                    <span id="check_data"></span>
+                  <?php echo form_dropdown('status',$status,set_value('status'),'id="status" class="form-control select2"');?>
+                  <?php echo form_error('status', '<span class="error-span">', '</span>'); ?>
                 </div>
             </div>
             </div>

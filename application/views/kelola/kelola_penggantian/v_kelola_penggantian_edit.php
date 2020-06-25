@@ -21,27 +21,20 @@
             <?php echo form_error('nama');?>
             </div>
         </div>
-      
         <div class="form-group">
-            <label class="col-sm-4 control-label">nama_barang</label>
-            <div class="col-sm-8">
-            <?php echo form_input(array('name'=>'nama_barang','value'=>$row->nama_barang,'class'=>'form-control'));?>
-            <?php echo form_error('nama_barang');?>
-            </div>
-        </div>
-
+    <label class="col-sm-4 control-label">Nama_barang</label>
+    <div class="col-sm-8">
+      <?php echo form_dropdown('nama_barang',$nama_bahan,$row->nama_barang,'id="nama_barang" class="form-control select2"');?>
+      <?php echo form_error('nama_barang', '<span class="error-span">', '</span>'); ?>
+    </div>
+</div>
         <div class="form-group">
-            <label class="col-sm-4 control-label">status_penggantian</label>
-            <div class="col-sm-8">
-            <select class="form-control" name="status_penggantian">
-            <option value=""  disabled selected hidden> ---</option>
-            <option value="Sudah Diganti">Sudah Diganti</option>
-            <option value="Belum Diganti">Belum Diganti</option>
-                </select>
-            </div>
-            <?php echo form_error('kode');?>
-            <span id="check_data"></span>
-            </div>
+    <label class="col-sm-4 control-label">Status</label>
+    <div class="col-sm-8">
+      <?php echo form_dropdown('status',$status,$row->status,'id="status" class="form-control select2"');?>
+      <?php echo form_error('status', '<span class="error-span">', '</span>'); ?>
+    </div>
+</div>
         </div>
        
 
