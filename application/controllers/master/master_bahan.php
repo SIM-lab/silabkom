@@ -12,7 +12,7 @@ class Master_bahan extends CI_Controller {
 
 	public function index()
 	{
-		$this->fungsi->check_previleges('nama_bahan');
+		$this->fungsi->check_previleges('master_bahan');
 		$data['master_bahan'] = $this->m_master_bahan->getData();
 		$this->load->view('master/master_bahan/v_master_bahan_list',$data);
 	}
@@ -38,8 +38,8 @@ class Master_bahan extends CI_Controller {
 		$this->load->library('form_validation');
 		$config = array(
 				array(
-					'field'	=> 'master_bahan',
-					'label' => 'master_bahan',
+					'field'	=> 'kode',
+					'label' => 'kode',
 					'rules' => 'required'
 				)
 			);
@@ -49,7 +49,7 @@ class Master_bahan extends CI_Controller {
 		if ($this->form_validation->run() == FALSE)
 		{
 			$data['status']='';
-			$this->load->view('master/master_bahan/v_nama_bahan_add',$data);
+			$this->load->view('master/master_bahan/v_master_bahan_add',$data);
 		}
 		else
 		{
@@ -72,8 +72,8 @@ class Master_bahan extends CI_Controller {
 					'rules' => ''
 				),
 				array(
-					'field'	=> 'master_bahan',
-					'label' => 'master_bahan',
+					'field'	=> 'kode',
+					'label' => 'kode',
 					'rules' => 'required'
 				)
 			);
@@ -83,12 +83,11 @@ class Master_bahan extends CI_Controller {
 		if ($this->form_validation->run() == FALSE)
 		{
 			$data['edit'] = $this->db->get_where('master_bahan',array('id'=>$id));
-			$data['status']='';
 			$this->load->view('master/master_bahan/v_master_bahan_edit',$data);
 		}
 		else
 		{
-			$datapost = get_post_data(array('id','jenis_bahan','nama_bahan','tahun','pengarang','id_status'));
+			$datapost = get_post_data(array('kode','jenis_bahan','nama_bahan','tahun','pengarang','id_status'));
 			$this->m_master_bahan->updateData($datapost);
 			$this->fungsi->run_js('load_silent("master/master_bahan","#content")');
 			$this->fungsi->message_box("Data Master Nama Bahan sukses diperbarui...","success");
