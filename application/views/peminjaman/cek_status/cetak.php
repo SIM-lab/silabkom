@@ -11,9 +11,11 @@
                     <td>Semarang</td>
                     </div>
                     <div>
-                    <td>NO.Telp 08983924536</td>
+                    <td>Nama : <?php echo from_session('nama');?></td></div>
+                    <div>
+                    <td>Level: <?php echo from_session('nama_level');?></td>
                     </div>
-            </div></center>
+            </></center>
 
             <div class="box-body">
             <table border="1" style="width: 100%">
