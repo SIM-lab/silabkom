@@ -49,9 +49,7 @@
                 # code...
               }
               ?>
-                 <b>
-                <a href ="application/page/cek_status/cetak.php" class="btn btn-primary" style="margin-bottom;
-                10px; "title=""><i class="fa fa-print"></i>Cetak</a>
+              <a href="<?= site_url('peminjaman/cek_status/view_print/'.$row->id) ?>" class="btn btn-warning" ><i class="fa fw fa-print"></i>Cetak</a>
             </td>
           </tr>
         <?php endforeach;?>

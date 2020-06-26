@@ -66,5 +66,11 @@ class cek_status extends CI_Controller {
 		$this->m_cek_status->cetakData($id);
 		redirect('admin');
 	}
+	public function view_print($id='')
+	{
+		//$this->fungsi->check_previleges('jatuh_tempo');
+		$data['id'] = $this->m_cek_status->getData();
+		$this->load->view('peminjaman/cek_status/cetak',$data);
+	}
 
 }
