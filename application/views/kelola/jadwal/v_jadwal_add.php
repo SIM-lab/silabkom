@@ -22,10 +22,11 @@
         <div class="form-group">
             <label class="col-sm-4 control-label">Status</label>
             <select name ='status'>
-          <div class="col-sm-8">
-          <option value ='Ada'>Ada</option>
-          <option value ='Tidak Ada'>Tidak Ada</option>
-          </select>
+            <div class="col-sm-8">
+            <option value ='Ada'>Ada</option>
+            <option value ='Tidak Ada'>Tidak Ada</option>
+             </select>
+            </div>
         </div>
         <div class="form-group">
             <label class="col-sm-4 control-label">Simpan</label>
