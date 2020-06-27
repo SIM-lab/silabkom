@@ -7,39 +7,33 @@
         <div class="form-group">
             <label class="col-sm-4 control-label">Nama Alat</label>
             <div class="col-sm-8">
-            <div class="form-group">
                 <select class="form-control" name="nama_alat">
                 <?php foreach ($nama_alat->result() as $nama_alat): ?>
                     <option value="<?= $nama_alat->id ?>"><?= $nama_alat->nama_alat ?></option>
                 <?php endforeach; ?>
                 </select>
-            </div>
             <?php echo form_error('nama_alat');?>
             </div>
         </div>
         <div class="form-group">
             <label class="col-sm-4 control-label">Nama Satuan</label>
             <div class="col-sm-8">
-            <div class="form-group">
                 <select class="form-control" name="nama_satuan">
                 <?php foreach ($nama->result() as $nama): ?>
                     <option value="<?= $nama->id ?>"><?= $nama->nama?></option>
                 <?php endforeach; ?>
                 </select>
-            </div>
             <?php echo form_error('nama_satuan');?>
             </div>
         </div>
         <div class="form-group">
             <label class="col-sm-4 control-label">Jenis</label>
             <div class="col-sm-8">
-            <div class="form-group">
                 <select class="form-control" name="jenis">
                 <?php foreach ($jenis->result() as $jenis): ?>
                     <option value="<?= $jenis->id ?>" ><?= $jenis->jenis ?></option>
                 <?php endforeach; ?>
                 </select>
-            </div>
             <?php echo form_error('jenis');?>
             </div>
         </div>
@@ -60,8 +54,12 @@
         <div class="form-group">
             <label class="col-sm-4 control-label">Kondisi</label>
             <div class="col-sm-8">
-            <?php echo form_input(array('name'=>'kondisi','class'=>'form-control'));?>
-            <?php echo form_error('kondisi');?>
+                <select class="form-control" name="kondisi">
+                <?php foreach ($kondisi->result() as $kondisi): ?>
+                    <option value="<?= $kondisi->id ?>" ><?= $kondisi->kondisi ?></option>
+                <?php endforeach; ?>
+                </select>
+            <?php echo form_error('jenis');?>
             </div>
         </div>
         <div class="form-group">

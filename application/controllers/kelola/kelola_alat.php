@@ -11,6 +11,7 @@ class kelola_alat extends CI_Controller {
 		$this->load->model('master/m_nama_alat');
 		$this->load->model('master/m_satuan');
 		$this->load->model('master/m_kategori_alat_bahan');
+		$this->load->model('umum/m_kondisi');
 	}
 
 	public function index()
@@ -19,6 +20,7 @@ class kelola_alat extends CI_Controller {
 		$data['kelola_alat'] = $this->m_kelola_alat->getData();
 		$this->load->view('kelola/kelola_alat/v_kelola_alat_list',$data);
 	}
+
     public function form($param='')
 	{
 		$content   = "<div id='divsubcontent'></div>";
@@ -58,6 +60,7 @@ class kelola_alat extends CI_Controller {
 			$data['nama_alat'] = $this->m_nama_alat->getData();
 			$data['nama'] = $this->m_satuan->getData();
 			$data['jenis'] = $this->m_kategori_alat_bahan->getData();
+			$data['kondisi'] = $this->m_kondisi->getData();
 			$this->load->view('kelola/kelola_alat/v_kelola_alat_add',$data);
 		}
 		else
@@ -95,6 +98,7 @@ class kelola_alat extends CI_Controller {
 			$data['nama_alat'] = $this->m_nama_alat->getData();
 			$data['nama'] = $this->m_satuan->getData();
 			$data['jenis'] = $this->m_kategori_alat_bahan->getData();
+			$data['kondisi'] = $this->m_kondisi->getData();
 			$this->load->view('kelola/kelola_alat/v_kelola_alat_edit',$data);
 		}
 		else

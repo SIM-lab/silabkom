@@ -9,13 +9,11 @@
             <label class="col-sm-4 control-label">Nama Alat</label>
             <div class="col-sm-8">
             <?php echo form_hidden('id',$row->id); ?>
-            <div class="form-group">
                 <select class="form-control" name="nama_alat">
                 <?php foreach ($nama_alat->result() as $nama_alat): ?>
                     <option value="<?= $nama_alat->id ?>" <?= $nama_alat->id == $row->nama_alat ? "selected" : null ?>><?= $nama_alat->nama_alat ?></option>
                 <?php endforeach; ?>
                 </select>
-            </div>
             <?php echo form_error('nama_alat');?>
             <span id="check_data"></span>
             </div>
@@ -24,13 +22,11 @@
         <div class="form-group">
             <label class="col-sm-4 control-label">Nama Satuan</label>
             <div class="col-sm-8">
-            <div class="form-group">
                 <select class="form-control" name="nama_satuan">
                 <?php foreach ($nama->result() as $nama): ?>
                     <option value="<?= $nama->id ?>" <?= $nama->id == $row->nama_satuan ? "selected" : null ?>><?= $nama->nama ?></option>
                 <?php endforeach; ?>
                 </select>
-            </div>
             <?php echo form_error('nama_satuan');?>
             <span id="check_data"></span>
             </div>
@@ -38,13 +34,11 @@
         <div class="form-group">
             <label class="col-sm-4 control-label">Jenis</label>
             <div class="col-sm-8">
-            <div class="form-group">
                 <select class="form-control" name="jenis">
                 <?php foreach ($jenis->result() as $jenis): ?>
                     <option value="<?= $jenis->id ?>" <?= $jenis->id == $row->jenis ? "selected" : null ?>><?= $jenis->jenis ?></option>
                 <?php endforeach; ?>
                 </select>
-            </div>
             <?php echo form_error('jenis');?>
             <span id="check_data"></span>
             </div>
@@ -68,8 +62,12 @@
         <div class="form-group">
             <label class="col-sm-4 control-label">Kondisi</label>
             <div class="col-sm-8">
-            <?php echo form_input(array('name'=>'kondisi','class'=>'form-control', 'value'=>$row->kondisi));?>
-            <?php echo form_error('kode');?>
+                <select class="form-control" name="kondisi">
+                <?php foreach ($kondisi->result() as $kondisi): ?>
+                    <option value="<?= $kondisi->id ?>" <?= $kondisi->id == $row->kondisi ? "selected" : null ?>><?= $kondisi->kondisi ?></option>
+                <?php endforeach; ?>
+                </select>
+            <?php echo form_error('jenis');?>
             <span id="check_data"></span>
             </div>
         </div>

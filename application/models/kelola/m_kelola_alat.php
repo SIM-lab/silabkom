@@ -10,6 +10,7 @@ class M_kelola_alat extends CI_Model
 		$this->db->join('master_nama_alat', 'master_nama_alat.id = kelola_alat.nama_alat');
 		$this->db->join('master_satuan', 'master_satuan.id = kelola_alat.nama_satuan');
 		$this->db->join('master_kategori_alat_bahan', 'master_kategori_alat_bahan.id = kelola_alat.jenis');
+		//$this->db->join('kondisi', 'kondisi.id = kelola_alat.kondisi');, kondisi.kondisi
 		return $this->db->get();
     }
 
