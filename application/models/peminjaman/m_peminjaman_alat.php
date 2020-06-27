@@ -6,8 +6,9 @@ class M_peminjaman_alat extends CI_Model {
     //select->read
 	public function getData($value='')
 	{
-		$this->db->from('peminjaman_alat mb');
-		$this->db->order_by('mb.id', 'desc');
+		$this->db->select('peminjaman_alat.*, master_nama_alat.nama_alat');
+		$this->db->from('peminjaman_alat');
+		$this->db->join('master_nama_alat', 'master_nama_alat.id = peminjaman_alat.nama_alat');
 		return $this->db->get();
 	}
 

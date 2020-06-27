@@ -13,11 +13,16 @@
             </div>
         </div>
         <div class="form-group">
-            <label class="col-sm-4 control-label">nama_alat</label>
+            <label class="col-sm-4 control-label">Nama Alat</label>
             <div class="col-sm-8">
-            <?php echo form_input(array('name'=>'nama_alat','class'=>'form-control'));?>
+            <div class="form-group">
+                <select class="form-control" name="nama_alat">
+                <?php foreach ($nama_alat->result() as $nama_alat): ?>
+                    <option value="<?= $nama_alat->id ?>"><?= $nama_alat->nama_alat ?></option>
+                <?php endforeach; ?>
+                </select>
+            </div>
             <?php echo form_error('nama_alat');?>
-            <span id="check_data"></span>
             </div>
         </div>
 
