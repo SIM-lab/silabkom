@@ -1,7 +1,7 @@
 <?php require_once ('application/views/kotak/kotak.php') ?>
 <?php  if ( ! defined('BASEPATH')) exit('No direct script access allowed');?>
 
-    <div class="row" id="form_pembelian">
+    <div class="row">
       <div class="col-lg-12">
         <div class="box box-primary">
           <div class="box-header with-border">
@@ -36,7 +36,6 @@
             <td align="center"><?=$i++?></td>
             <td align="center"><?=$row->nama_jadwal?></td>
             <td align="center"><?=$row->file_jadwal?></td>
-            <td align="center"><?=$row->status?></td>
             <td align="center"><span class="badge bg-red"><?=$row->status?></td>
             <td align="center">
             <?php

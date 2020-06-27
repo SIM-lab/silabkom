@@ -16,6 +16,12 @@ class jadwal extends CI_Controller {
 		$data['jadwal'] = $this->m_jadwal->getData();
 		$this->load->view('kelola/jadwal/v_jadwal_list',$data);
 	}
+	public function formadd($value='')
+	{
+		$this->fungsi->check_previleges('laboratorium');
+		$data['status']  = get_options($this->db->query('select id, status from master_status'),true);
+		$this->load->view('kelola/jadwal/v_jadwal_add',$data);
+	}
 
 	public function form($param='')
 	{
@@ -48,7 +54,7 @@ class jadwal extends CI_Controller {
 
 		if ($this->form_validation->run() == FALSE)
 		{
-			$data['status']='';
+			$data['status']  = get_options($this->db->query('select id, status from master_status'),true);
 			$this->load->view('kelola/jadwal/v_jadwal_add',$data);
 		}
 		else
@@ -82,8 +88,8 @@ class jadwal extends CI_Controller {
 
 		if ($this->form_validation->run() == FALSE)
 		{
-			$data['edit'] = $this->db->get_where('jadwal',array('id'=>$id));
-			$data['status']='';
+			$data['status']  = get_options($this->db->query('select id, status from master_status'),true);
+			$data['edit'] = $this->db->get_where('jadwal',array('id'=>$id));			
 			$this->load->view('kelola/jadwal/v_jadwal_edit',$data);
 		}
 		else

@@ -12,8 +12,8 @@
             <div class="form-group">
                 <select class="form-control" name="nama_alat">
                 <?php foreach ($nama_alat->result() as $nama_alat): ?>
-                    <option value="<?= $nama_alat->id ?>" <?= $nama_alat->id == $row->nama_alat ? "selected" : null ?>><?= $nama_bahan->nama_bahan ?></option>
-                <?php endforeach; ?>
+            <option value="<?= $nama_alat->id?>" <?= $nama_alat->id == $row->kategori ? "selected" : null ?>><?= $nama_alat->Kategori ?></option>
+            <?php endforeach; ?>
                 </select>
             </div>
             <?php echo form_error('nama_alat');?>

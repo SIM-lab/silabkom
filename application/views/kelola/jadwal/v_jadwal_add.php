@@ -21,13 +21,11 @@
         </div>
         <div class="form-group">
             <label class="col-sm-4 control-label">Status</label>
-            <select name ='status'>
-            <div class="col-sm-8">
-            <option value ='Ada'>Ada</option>
-            <option value ='Tidak Ada'>Tidak Ada</option>
-             </select>
+             <div class="col-sm-8">
+              <?php echo form_dropdown('status',$status,'id="status" class="form-control select2"');?>
+              <?php echo form_error('status', '<span class="error-span">', '</span>'); ?>
             </div>
-        </div>
+            </div>
         <div class="form-group">
             <label class="col-sm-4 control-label">Simpan</label>
             <div class="col-sm-8 tutup">

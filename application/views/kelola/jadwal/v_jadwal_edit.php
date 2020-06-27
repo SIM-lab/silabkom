@@ -14,9 +14,7 @@
             </div>
         </div>
         <div class="form-group">
-            <label class="col-sm-4 control-label">File Jadwal</label>
-            <div class="col-sm-8">
-            <label class="col-sm-2 control-label" for="file_jadwal">File Jadwal</label>
+        <label class="col-sm-4 control-label" for="file_jadwal">File Jadwal</label>           
                 <div class="col-sm-8">
                 <?php echo form_upload(array('name'=>'file_jadwal','id'=>'file_jadwal','class'=>'form-control'));?>
                 <!-- <span id='info'></span></label> -->
@@ -24,10 +22,10 @@
         </div>
         <div class="form-group">
             <label class="col-sm-4 control-label">Status</label>
-            <div class="col-sm-8">
-            <?php echo form_input(array('name'=>'status','value'=>$row->status,'class'=>'form-control'));?>
-            <?php echo form_error('status');?>
-            </div>   
+                <div class="col-sm-8">
+                <?php echo form_dropdown('status',$status,$row->status,'id="status" class="form-control select2"');?>
+                 <?php echo form_error('status', '<span class="error-span">', '</span>'); ?>
+                </div>
         </div>
         <div class="form-group">
             <label class="col-sm-4 control-label">Save</label>
