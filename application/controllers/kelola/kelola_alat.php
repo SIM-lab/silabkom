@@ -94,7 +94,7 @@ class kelola_alat extends CI_Controller {
 			$data['edit'] = $this->db->get_where('kelola_alat',array('id'=>$id));
 			$data['nama_alat'] = $this->m_nama_alat->getData();
 			$data['nama'] = $this->m_satuan->getData();
-			$data['kategori'] = $this->m_kategori_alat_bahan->getData();
+			$data['jenis'] = $this->m_kategori_alat_bahan->getData();
 			$this->load->view('kelola/kelola_alat/v_kelola_alat_edit',$data);
 		}
 		else

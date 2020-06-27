@@ -12,8 +12,8 @@
             <div class="form-group">
                 <select class="form-control" name="nama_alat">
                 <?php foreach ($nama_alat->result() as $nama_alat): ?>
-            <option value="<?= $nama_alat->id?>" <?= $nama_alat->id == $row->kategori ? "selected" : null ?>><?= $nama_alat->Kategori ?></option>
-            <?php endforeach; ?>
+                    <option value="<?= $nama_alat->id ?>" <?= $nama_alat->id == $row->nama_alat ? "selected" : null ?>><?= $nama_alat->nama_alat ?></option>
+                <?php endforeach; ?>
                 </select>
             </div>
             <?php echo form_error('nama_alat');?>
@@ -27,7 +27,7 @@
             <div class="form-group">
                 <select class="form-control" name="nama_satuan">
                 <?php foreach ($nama->result() as $nama): ?>
-                    <option value="<?= $nama->id ?>" <?= $nama->id == $row->nama_satuan ? "selected" : null ?>><?= $Nama->Nama ?></option>
+                    <option value="<?= $nama->id ?>" <?= $nama->id == $row->nama_satuan ? "selected" : null ?>><?= $nama->nama ?></option>
                 <?php endforeach; ?>
                 </select>
             </div>
@@ -41,7 +41,7 @@
             <div class="form-group">
                 <select class="form-control" name="jenis">
                 <?php foreach ($jenis->result() as $jenis): ?>
-                    <option value="<?= $jenis->id ?>" <?= $jenis->id == $row->jenis ? "selected" : null ?>><?= $Kategori->Kategori ?></option>
+                    <option value="<?= $jenis->id ?>" <?= $jenis->id == $row->jenis ? "selected" : null ?>><?= $jenis->jenis ?></option>
                 <?php endforeach; ?>
                 </select>
             </div>
