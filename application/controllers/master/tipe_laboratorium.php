@@ -55,7 +55,7 @@ class tipe_laboratorium extends CI_Controller {
 		}
 		else
 		{
-			$datapost = get_post_data(array('id','jenis','foto','koordinator','laboran','alamat','email','anggota'));
+			$datapost = get_post_data(array('id','jenis_laboratorium','foto','koordinator','laboran','alamat','email','anggota'));
 			$this->m_tipe_laboratorium->insertData($datapost);
 			$this->fungsi->run_js('load_silent("master/tipe_laboratorium","#content")');
 			$this->fungsi->message_box("Data Master Tipe Laboratorium sukses disimpan...","success");
@@ -90,7 +90,7 @@ class tipe_laboratorium extends CI_Controller {
 		}
 		else
 		{
-			$datapost = get_post_data(array('id','jenis','foto','koordinator','laboran','alamat','email','anggota'));
+			$datapost = get_post_data(array('id','jenis_laboratorium','foto','koordinator','laboran','alamat','email','anggota'));
 			$this->m_tipe_laboratorium->updateData($datapost);
 			$this->fungsi->run_js('load_silent("master/tipe_laboratorium","#content")');
 			$this->fungsi->message_box("Data Master Tipe Laboratorium sukses diperbarui...","success");
