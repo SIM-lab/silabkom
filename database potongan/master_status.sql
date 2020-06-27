@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 24, 2020 at 11:27 AM
+-- Generation Time: Jun 27, 2020 at 02:37 PM
 -- Server version: 10.1.32-MariaDB
 -- PHP Version: 5.6.36
 
@@ -29,7 +29,7 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE `master_status` (
-  `id` int(2) NOT NULL,
+  `id` varchar(19) NOT NULL,
   `status` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -38,8 +38,8 @@ CREATE TABLE `master_status` (
 --
 
 INSERT INTO `master_status` (`id`, `status`) VALUES
-(1, 'Ada'),
-(2, 'Tidak Ada');
+('Ada', 'Ada'),
+('Tidak Ada', 'Tidak Ada');
 
 --
 -- Indexes for dumped tables
@@ -50,16 +50,6 @@ INSERT INTO `master_status` (`id`, `status`) VALUES
 --
 ALTER TABLE `master_status`
   ADD PRIMARY KEY (`id`);
-
---
--- AUTO_INCREMENT for dumped tables
---
-
---
--- AUTO_INCREMENT for table `master_status`
---
-ALTER TABLE `master_status`
-  MODIFY `id` int(2) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
