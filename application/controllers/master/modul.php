@@ -67,10 +67,10 @@ class modul extends CI_Controller {
 		else
 		{
 
-			$upload_folder = get_upload_folder('./files/');
+			$upload_folder = get_upload_folder('./files/upload-file');
 
 			$config['upload_path'] = $upload_folder;
-			$config['allowed_types'] = 'gif|jpg|jpeg|png|doc|xls|ppt|pdf|txt|csv';
+			$config['allowed_types'] = 'gif|jpg|jpeg|png|docx|xlsx|ppt|pdf|txt';
 			$config['max_size']	= '5000';
 			$config['max_width']  = '1024';
 			$config['max_height']  = '768';
@@ -79,7 +79,7 @@ class modul extends CI_Controller {
 		    $this->load->library('upload', $config);
 		    $err = "";
 		    $msg = "";
-		    if ( ! $this->upload->do_upload('ufile'))
+		    if ( ! $this->upload->do_upload('file'))
 		    {
 		      $err = $this->upload->display_errors('<span class="error_string">','</span>');
 		    }
@@ -107,7 +107,7 @@ class modul extends CI_Controller {
 		      	$datapost = array(
 				'nama_modul'     => $this->input->post('nama_modul'), 
 				'keterangan' => $this->input->post('keterangan'),
-				'ufile'   => substr($upload_folder,2).$data['file_name'], 
+				'file'   => substr($upload_folder,2).$data['file_name'], 
 				'tipe'    => $this->input->post('tipe'), 
 				'ukuran'   => $this->input->post('ukuran'), 
 				);
@@ -164,7 +164,7 @@ class modul extends CI_Controller {
 		else
 		{
 
-			$upload_folder = get_upload_folder('./files/');
+			$upload_folder = get_upload_folder('./files/upload-file');
 
 			$config['upload_path'] = $upload_folder;
 			$config['allowed_types'] = 'gif|jpg|jpeg|png|doc|xls|ppt|pdf|txt|csv';
@@ -176,7 +176,7 @@ class modul extends CI_Controller {
 		    $this->load->library('upload', $config);
 		    $err = "";
 		    $msg = "";
-		    if ( ! $this->upload->do_upload('ufile'))
+		    if ( ! $this->upload->do_upload('file'))
 		    {
 		      $err = $this->upload->display_errors('<span class="error_string">','</span>');
 		    }
@@ -204,7 +204,7 @@ class modul extends CI_Controller {
 		      	$datapost = array(
 				'nama_modul'     => $this->input->post('nama_modul'), 
 				'keterangan' => $this->input->post('keterangan'),
-				'ufile'   => substr($upload_folder,2).$data['file_name'], 
+				'file'   => substr($upload_folder,2).$data['file_name'], 
 				'tipe'    => $this->input->post('tipe'), 
 				'ukuran'   => $this->input->post('ukuran'), 
 				);

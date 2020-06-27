@@ -23,7 +23,7 @@
                 <div class="form-group">
                 <label class="col-sm-2 control-label" for="userfile">File</label>
                 <div class="col-sm-8">
-                <?php echo form_upload(array('name'=>'ufile','id'=>'ufile','class'=>'form-control'));?>
+                <?php echo form_upload(array('name'=>'modul','id'=>'file','class'=>'form-control'));?>
                 <!-- <span id='info'></span></label> -->
                 </div>
             </div>
@@ -56,9 +56,9 @@
           </div>
 <script type="text/javascript">
 $(document).ready(function() {
-    $("#ufile").fileinput({
+    $("#file").fileinput({
     'showUpload'            :true,
-      initialPreview: '<img src="<?php echo base_url().$row->ufile; ?>" class="file-preview-image">'
+      initialPreview: '<img src="<?php echo base_url().$row->modul; ?>" class="file-preview-image">'
     });
     $(".select2").select2();
     $('.fileinput-upload-button').hide();
@@ -69,48 +69,48 @@ $(document).ready(function() {
 
 function save()
 {
-    var path = $("#ufile").val().replace('C:\\fakepath\\', '');
-    var ida = $('#id').val();
+    var path = $("#file").val().replace('C:\\fakepath\\', '');
+    var id = $('#id').val();
     if (path == '') {
         $.ajax({
         type: "POST",
-        url: "<?= site_url('master/modul/show_editForm/"+ida+"')?>",
+        url: "<?= site_url('master/modul/show_editForm/')?>",
         dataType:'json',
         data: {
             id        : $("#id").val(),
             nama_modul    : $("#nama_modul").val(),
             keterangan    : $("#username").val(),
-            tipe          : $("#tipe").val(),
-            level         : $("#level").val(),
-            ukuran        : $("#ukuran").val(),
+            modul          : $("#file").val(),
+            tipe         : $("#tipe").val(),
+            ukuran        : $("#ukuran").val()
           
         },
         success   : function(data)
         {
           $.growl.notice({ title: 'Sukses', message: data['msg']});      
-          load_silent("master/modul/","#divsubcontent");
+          load_silent("master/modul","#divsubcontent");
         }
       });
 
     } else{
         $.ajaxFileUpload
           ({
-            url: "<?= site_url('master/modul/show_editForm/"+ida+"')?>",
+            url: "<?= site_url('master/modul/show_editForm/')?>",
             secureuri:false,
-            fileElementId:'ufile',
+            fileElementId:'file',
             dataType: 'json',
             data: {
-                id        : $("#id").val(),
-                nama_modul  : $("#nama_modul").val(),
-                username    : $("#username").val(),
-                tipe        : $("#tipe").val(),
-                level       : $("#level").val(),
-                ukuran      : $("#ukuran").val(),
+              id        : $("#id").val(),
+            nama_modul    : $("#nama_modul").val(),
+            keterangan    : $("#username").val(),
+            modul          : $("#file").val(),
+            tipe         : $("#tipe").val(),
+            ukuran        : $("#ukuran").val()
               },
             success: function (data)
             {
               $.growl.notice({ title: 'Berhasil', message: data['msg'] });
-              load_silent("master/modul/","#divsubcontent");
+              load_silent("master/modul","#divsubcontent");
             },
             error: function (data, e)
             {
