@@ -1,8 +1,6 @@
 <?php  if ( ! defined('BASEPATH')) exit('No direct script access allowed');?>
-
 <div class="box-body big">
-    <?php echo form_open('',array('name'=>'faddmenugrup','class'=>'form-horizontal','role'=>'form'));?>
-        
+    <?php echo form_open('',array('name'=>'faddmenugrup','class'=>'form-horizontal','role'=>'form'));?>        
         <div class="form-group">
             <label class="col-sm-4 control-label">Nama Lab</label>
             <div class="col-sm-8">
@@ -37,15 +35,13 @@
         </div>
         <div class="form-group">
             <label class="col-sm-4 control-label">Status</label>
-            <select name ='status'>
-            <div class="col-sm-8">
-            <option value ='Ada'>Ada</option>
-            <option value ='Tidak Ada'>Tidak Ada</option>
-            </select>
+             <div class="col-sm-8">
+              <?php echo form_dropdown('status',$status,'id="status" class="form-control select2"');?>
+              <?php echo form_error('status', '<span class="error-span">', '</span>'); ?>
             </div>
-        </div>
+            </div>
         <div class="form-group">
-            <label class="col-sm-4 control-label">Simpan</label>
+            <label class="col-sm-4 control-label"></label>
             <div class="col-sm-8 tutup">
             <?php
             echo button('send_form(document.faddmenugrup,"kelola/laboratorium/show_addForm/","#divsubcontent")','simpan','btn btn-success')." ";
@@ -54,7 +50,6 @@
         </div>
     </form>
 </div>
-
 <script type="text/javascript">
     $(".select2").select2();
     $('.tutup').click(function(e) {  

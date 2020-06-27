@@ -54,7 +54,7 @@
 
           <div class="row">
           <div class="col-xs-6">
-          <a href="<?= site_url('lupa') ?>" class="btn ">lupa pasword ? </a> <!-- Bersifat sementara --->
+          <a href="https://api.whatsapp.com/send?phone=628813792426&text=Saya%20lupa%20username%20dan%20kata%20sandi." class="btn ">lupa pasword ? </a> <!-- ndak isoh nyambungke form lupa sandi ning database, sambungen  --->
           </div> 
             <div class="col-xs-6">
               <button type="submit" class="btn btn-success btn-block btn-flat">LOGIN</button>
