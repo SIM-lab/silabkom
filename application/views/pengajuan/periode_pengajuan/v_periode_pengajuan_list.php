@@ -10,7 +10,7 @@
             <div class="box-tools pull-right">
             <?php
               $sesi = from_session('level');
-              if ($sesi == '1' || $sesi == '2' || $sesi == '3' || $sesi == '6') {
+              if ($sesi == '1' || $sesi == '2' || $sesi == '3'|| $sesi == '4'|| $sesi == '5' || $sesi == '6') {
                 echo button('load_silent("pengajuan/periode_pengajuan/form/base","#modal")','Add New periode pengajuan','btn btn-success');
               } else {
                 # code...
@@ -49,7 +49,7 @@
             <td align="center">
             <?php
               $sesi = from_session('level');
-              if ($sesi == '1' || $sesi == '2' || $sesi == '3' || $sesi == '6') {
+              if ($sesi == '1' || $sesi == '2' || $sesi == '3'|| $sesi == '4'|| $sesi == '5' || $sesi == '6') {
                 echo button('load_silent("pengajuan/periode_pengajuan/form/sub/'.$row->id.'","#modal")','','btn btn-info fa fa-edit','data-toggle="tooltip" title="Edit"');
  
               } else {
