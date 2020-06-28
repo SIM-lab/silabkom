@@ -15,16 +15,14 @@
             </div>
         </div>
         <div class="form-group">
-            <label class="col-sm-4 control-label">Nama Alat</label>
+        <label class="col-sm-4 control-label">Nama Alat</label>
             <div class="col-sm-8">
             <?php echo form_hidden('id',$row->id); ?>
-            <div class="form-group">
                 <select class="form-control" name="nama_alat">
                 <?php foreach ($nama_alat->result() as $nama_alat): ?>
-                    <option value="<?= $nama_alat->id ?>" <?= $nama_alat->id == $row->nama_alat ? "selected" : null ?>><?= $nama_bahan->nama_bahan ?></option>
+                    <option value="<?= $nama_alat->id ?>" <?= $nama_alat->id == $row->nama_alat ? "selected" : null ?>><?= $nama_alat->nama_alat ?></option>
                 <?php endforeach; ?>
                 </select>
-            </div>
             <?php echo form_error('nama_alat');?>
             <span id="check_data"></span>
             </div>
