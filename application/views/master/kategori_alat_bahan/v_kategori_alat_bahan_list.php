@@ -1,16 +1,10 @@
-<<<<<<< HEAD
-<?php require_once ('application/views/kotak.php');?>
-=======
-<?php require_once ('application/views/kotak/kotak.php') ?>
->>>>>>> 6c053859d02217527dbf41f050fffd44456b3823
+<?php require_once ('application/views/kotak/kotak.php');?>
 <?php  if ( ! defined('BASEPATH')) exit('No direct script access allowed');?>
-
     <div class="row" id="form_pembelian">
       <div class="col-lg-12">
         <div class="box box-primary">
           <div class="box-header with-border">
             <h3 class="box-title">Master Kategori Alat Bahan</h3>
-
             <div class="box-tools pull-right">
             <?php
               $sesi = from_session('level');
