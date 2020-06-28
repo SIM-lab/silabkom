@@ -57,22 +57,27 @@
             <span id="check_data"></span>
             </div>
         </div>
-
         <div class="form-group">
             <label class="col-sm-4 control-label">Status Pengajuan</label>
             <div class="col-sm-8">
-            <?php echo form_input(array('name'=>'status_pengajuan','class'=>'form-control'));?>
-            <?php echo form_error('status_pengajuan');?>
-            <span id="check_data"></span>
+            <select class="form-control" name="status_pengajuan">
+            <option value=""  disabled selected hidden> ---</option>
+            <option value="Sudah Disetujui">Sudah Disetujui</option>
+            <option value="Sudah Didistribusikan">Sudah Didistribusikan</option>
+            <option value="Tidak Disetujui">Tidak Disetujui</option>
+                </select>
             </div>
+            <?php echo form_error('status_pengajuan');?>
         </div>
-
         <div class="form-group">
             <label class="col-sm-4 control-label">Status</label>
-            <div class="col-sm-8">
-            <?php echo form_input(array('name'=>'status','class'=>'form-control'));?>
+            <select class="form-control" name="status">
+            <option value=""  disabled selected hidden> ---</option>
+            <option value="Ada">Ada</option>
+            <option value="Tidak Ada">Tidak Ada</option>
+                </select>
+            </div>
             <?php echo form_error('status');?>
-            <span id="check_data"></span>
             </div>
         </div>
         
