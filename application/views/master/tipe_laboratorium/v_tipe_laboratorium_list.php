@@ -37,7 +37,7 @@
           foreach($tipe_laboratorium->result() as $row): ?>
           <tr>
             <td align="center"><?=$i++?></td>
-            <td align="center"><?=$row->jenis_laboratorium?></td>
+            <td align="center"><?=$row->jenis?></td>
             <td align="center"><img src="<?php echo base_url().$row->foto; ?>" class="file-preview-image"></td>
             <td align="center"><?=$row->koordinator?></td>
             <td align="center"><?=$row->laboran?></td>
