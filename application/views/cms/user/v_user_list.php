@@ -40,6 +40,8 @@
             <td><?=$row->alamat?></td>
             <td>
             <?php echo button('load_silent("cms/user/show_editForm/'.$row->id.'","#content")','','btn btn-info fa fa-edit','data-toggle="tooltip" title="Edit User"');?> 
+            <?php echo button('load_silent("cms/user/delete/'.$row->id.'","#content")','','btn btn-danger fa fa-trash','data-toggle="tooltip" title="DeleteUser"');?> 
+
             </td>
 					</tr>
 

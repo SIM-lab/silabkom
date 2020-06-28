@@ -10,8 +10,8 @@
             <div class="box-tools pull-right">
             <?php
               $sesi = from_session('level');
-              if ($sesi == '1' || $sesi == '2' || $sesi == '3' || $sesi == '6') {
-                echo button('load_silent("peminjaman/jatuh_tempo/jatuh_tempo/form/base","#modal")','Add New Jatuh Tempo','btn btn-success');
+              if ($sesi == '1' || $sesi == '2'|| $sesi == '4'|| $sesi == '5' || $sesi == '6') {
+                echo button('load_silent("peminjaman/jatuh_tempo/form/base","#modal")','Add New Jatuh Tempo','btn btn-success');
               } else {
                 # code...
               }
@@ -47,17 +47,17 @@
             <td align="center"><?=$row->tanggal_pinjam?></td>
             <td align="center"><?=$row->status_peminjaman?></td>
             <td align="center"><?=$row->cetak?></td>
-            <td align="center"><?=$row->status?></td>
+            <td align="center"><span class="badge badge-success"><?=$row->status?></span></td>
             <td align="center">
             <?php
               $sesi = from_session('level');
-              if ($sesi == '1' || $sesi == '2' || $sesi == '3' || $sesi == '6') {
-                echo button('load_silent("peminjaman/jatuh_tempo/jatuh_tempo/form/sub/'.$row->id.'","#modal")','','btn btn-info fa fa-edit','data-toggle="tooltip" title="Edit"');
+              if ($sesi == '1' || $sesi == '2'|| $sesi == '4'|| $sesi == '5' || $sesi == '6') {
+                echo button('load_silent("peminjaman/jatuh_tempo/form/sub/'.$row->id.'","#modal")','','btn btn-info fa fa-edit','data-toggle="tooltip" title="Edit"');
             } else {
                 # code...
               }
               ?>
-              <a href="<?= site_url('peminjaman/jatuh_tempo/jatuh_tempo/delete/'.$row->id) ?>" class="btn btn-danger" onclick="return confirm('Anda yakin ingin menghapus jatuh tempo?')"><i class="fa fa-trash"></i></a>
+              <a href="<?= site_url('peminjaman/jatuh_tempo/delete/'.$row->id) ?>" class="btn btn-danger" onclick="return confirm('Anda yakin ingin menghapus jatuh tempo?')"><i class="fa fa-trash"></i></a>
 
             </td>
           </tr>

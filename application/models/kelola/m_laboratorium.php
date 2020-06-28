@@ -3,13 +3,21 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class m_laboratorium extends CI_Model {
 
-    //select->read
+	//select->read
 	public function getData($value='')
 	{
 		$this->db->from('kelola_laboratorium ma');
 		$this->db->order_by('ma.id', 'desc');
 		return $this->db->get();
 	}
+	public function getList($value='')
+	{
+		$this->db->join('master_status ml', 'cu.status = ml.id', 'left');
+		$this->db->select('cu.*,ml.l');		
+		$this->db->where('cu.status !=', 1);
+		return $this->db->get('kelola_laboratorium cu');
+	}
+
 
     //insert->create
 	public function insertData($data='')

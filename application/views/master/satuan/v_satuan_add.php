@@ -8,8 +8,8 @@
         <div class="form-group">
             <label class="col-sm-4 control-label">Nama Satuan</label>
             <div class="col-sm-8">
-            <?php echo form_input(array('name'=>'nama_satuan','class'=>'form-control'));?>
-            <?php echo form_error('nama_satuan');?>
+            <?php echo form_input(array('name'=>'nama','class'=>'form-control'));?>
+            <?php echo form_error('nama');?>
             <span id="check_data"></span>
             </div>
         </div>
@@ -23,10 +23,10 @@
         </div>
         
         <div class="form-group">
-            <label class="col-sm-4 control-label">Save</label>
+            <label class="col-sm-4 control-label"></label>
             <div class="col-sm-8 tutup">
             <?php
-            echo button('send_form(document.faddmenugrup,"master/satuan/show_addForm/","#divsubcontent")','Save','btn btn-success')." ";
+            echo button('send_form(document.faddmenugrup,"master/satuan/show_addForm/","#divsubcontent")','Simpan','btn btn-success')." ";
             ?>
             </div>
         </div>

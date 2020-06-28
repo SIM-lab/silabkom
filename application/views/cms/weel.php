@@ -75,7 +75,7 @@
     <span class="sr-only">Toggle navigation</span>
   </a>
   <!-- Navbar Right Menu -->
-  <div class="navbar-custom-menu">
+  <div class="navbar-custom-menu " >
     <ul class="nav navbar-nav">
       <!-- User Account Menu -->
       <li class="dropdown user user-menu">
@@ -90,7 +90,7 @@
 </a>
         <ul class="dropdown-menu">
           <!-- The user image in the menu -->
-          <li class="user-header">
+          <li class="user-header" >
           <?php
               echo $avatar = parse_avatar(from_session('gambar'),from_session('nama'),50,'img-circle  elevation-2');
                 ?>
@@ -118,12 +118,12 @@
         <!-- sidebar: style can be found in sidebar.less -->
         <section class="sidebar">
           <!-- Sidebar user panel -->
-          <div class="user-panel">
-            <div class="pull-left image ">
+          <div class="user-panel ">
+            <div class="pull-left image">
               <?php
-                  $avatar = parse_avatar(from_session('gambar'),from_session('nama'),40,'img-circle');
+                  $avatar = parse_avatar(from_session('gambar'),from_session('nama'),40,'img-circle elevation-2');
                 ?>
-             <?php echo anchor('cms/user/show_editForm_user/'.from_session('id'),$avatar) ; ?>
+             <?php echo $avatar ; ?>
             </div>
             <div class="pull-left info" >
             <p><font size="6px"><?php echo from_session('nama');?></font></p>
@@ -173,9 +173,9 @@
       <!-- Add the sidebar's background. This div must be placed
            immediately after the control sidebar -->
     </div><!-- ./wrapper -->
-    <script src="https://unpkg.com/ionicons@5.0.0/dist/ionicons.js"></script>
+ 
  <!-- jQuery 2.1.4 -->
- <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+ <script src="https://code.jquery.com/jquery-1.9.1.js"></script>
     <?php echo js('assets/js/jquery-ui.min.js') ?>
     <?php echo js('assets/plugins/pace/pace.min.js') ?>
     <!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
@@ -229,9 +229,6 @@
     <?php echo js('assets/plugins/datatables/extensions/FixedColumns/js/dataTables.fixedColumns.min.js') ?>
     <?php echo js('assets/plugins/datatables/extensions/TableTools/js/dataTables.tableTools.min.js') ?>
     <?php echo js('assets/js/dataTables.fixedColumns.min.js') ?>
-<!-- isian berita-->
-<script src="//cdn.ckeditor.com/4.14.0/full/ckeditor.js"></script>
-<?php echo js('ckeditor/ckeditor.js') ?>
     <script>
     $(document).ajaxStart(function() { Pace.restart(); });
     var site = '<?php echo site_url();?>';
@@ -243,7 +240,7 @@
       $('#Dashboard').click();
     });
     </script>
-  <script src="https://unpkg.com/ionicons@5.0.0/dist/ionicons.js"></script>
+
   </body>
 </html>
  

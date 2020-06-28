@@ -32,12 +32,12 @@
               <tbody>
           <?php 
           $i = 1;
-          foreach($modul->result() as $row): ?>
+          foreach($modyar->result() as $row): ?>
           <tr>
             <td align="center"><?=$i++?></td>
             <td align="center"><?=$row->nama_modul?></td>
             <td align="center"><?=$row->keterangan?></td>
-            <td align="center" ><?=$row->modul; ?></td>
+            <td align="center" ><?=$row->modul ?></td>
             <td align="center"><?=$row->tipe?></td>
             <td align="center"><?=$row->ukuran?></td>
             <td align="center">
@@ -50,8 +50,8 @@
                 # code...
               }
               ?>
-              <a href="<?= site_url('master/modul/delete/'.$row->id) ?>" class="btn btn-danger" onclick="return confirm('Anda Yakin Ingin Menghapus Kategori Alat dan Bahan Ini ?')"><i class="fa fw fa-trash"></i></a>
-              <a href="<?= site_url('master/modul/download/'.$row->id) ?>" class="btn btn-success fa fw fa-download">
+              <a href="<?= site_url('master/modul/delete/'.$row->id) ?>" class="btn btn-danger fa fw fa-trash" onclick="return confirm('Anda Yakin Ingin Menghapus Kategori Alat dan Bahan Ini ?')"></a>
+              <a href="<?=base_url(''.$row->modul)?>" class="btn btn-info fa fw fa-download" target="_blank"></a>
           </tr>
           
 

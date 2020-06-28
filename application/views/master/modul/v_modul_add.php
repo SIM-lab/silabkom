@@ -21,9 +21,9 @@
             </div>
         </div>
         <div class="form-group">
-            <label class="col-sm-4 control-label">Modul</label>
+            <label class="col-sm-4 control-label">File</label>
             <div class="col-sm-8">
-            <?php echo form_upload(array('name'=>'modul','id'=>'document','class'=>'form-control'));?>
+            <?php echo form_upload(array('name'=>'file','id'=>'modul','class'=>'form-control'));?>
             <span id="check_data"></span>
             </div>
         </div>
@@ -55,8 +55,68 @@
 </div>
 
 <script type="text/javascript">
+$(document).ready(function() {
+    $("#file").fileinput({
+    'showUpload'            :true,
+      initialPreview: '<img src="<?php echo base_url().$row->modul; ?>" class="file-preview-image">'
+    });
     $(".select2").select2();
+    $('.fileinput-upload-button').hide();
     $('.tutup').click(function(e) {  
         $('#myModal').modal('hide');
     });
+});
+
+function save()
+{
+    var path = $("#file").val().replace('C:\\fakepath\\', '');
+    if (path == '') {
+        $.ajax({
+        type: "POST",
+        //url: "<?= site_url('master/modul/show_addForm/"+id+"')?>",
+        dataType:'json',
+        data: {
+            nama_modul    : $("#nama_modul").val(),
+            keterangan    : $("#username").val(),
+            modul          : $("#file").val(),
+            tipe         : $("#tipe").val(),
+            ukuran        : $("#ukuran").val()
+          
+        },
+        success   : function(data)
+        {
+          $.growl.notice({ title: 'Sukses', message: data['msg']});      
+          load_silent("master/modul/show_addForm/","#divsubcontent");
+        }
+      });
+
+    } else{
+        $.ajaxFileUpload
+          ({
+           // url: "<?= site_url('master/modul/show_addForm/"+id+"')?>",
+            secureuri:false,
+            fileElementId:'file',
+            dataType: 'json',
+            data: {
+                nama_modul    : $("#nama_modul").val(),
+            keterangan    : $("#username").val(),
+            modul          : $("#file").val(),
+            tipe         : $("#tipe").val(),
+            ukuran        : $("#ukuran").val()
+              },
+            success: function (data)
+            {
+              $.growl.notice({ title: 'Berhasil', message: data['msg'] });
+              load_silent("master/modul/show_addForm/","#divsubcontent");
+            },
+            error: function (data, e)
+            {
+              $("#info").html(e);
+            }
+          })
+
+    };
+  
+  return false;
+}
 </script>

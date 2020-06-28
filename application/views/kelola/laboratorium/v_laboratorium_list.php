@@ -1,4 +1,5 @@
 <?php require_once ('application/views/kotak/kotak.php');?>
+<?php require_once ('application/views/kotak/kotak.php') ?>
 <?php  if ( ! defined('BASEPATH')) exit('No direct script access allowed');?>
 
     <div class="row" id="form_pembelian">
@@ -39,7 +40,7 @@
             <td align="center"><?=$row->alamat_lab?></td>
             <td align="center"><?=$row->korlab?></td>
             <td align="center"><?=$row->laboran?></td>
-            <td align="center"><?=$row->status?></td>
+            <td align="center"><span class="badge badge-success"><?=$row->status ?></span></td>
             <td align="center">         
             <?php
               $sesi = from_session('level');

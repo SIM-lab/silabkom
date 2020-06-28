@@ -4,7 +4,7 @@
     <?php echo form_open('',array('name'=>'faddmenugrup','class'=>'form-horizontal','role'=>'form'));?>
         
         <div class="form-group">
-            <label class="col-sm-4 control-label">ID Peminjaman/label>
+            <label class="col-sm-4 control-label">ID Peminjaman</label>
             <div class="col-sm-8">
             <?php echo form_input(array('name'=>'id_peminjaman','class'=>'form-control'));?>
             <?php echo form_error('id_peminjaman');?>
@@ -46,7 +46,7 @@
         <div class="form-group">
         <label class="col-sm-4 control-label">Tanggal Pinjam</label>
         <div class="col-sm-8">
-        <?php echo form_input(array('name'=>'tanggal_pinjam','class'=>'form-control'));?>
+        <?php echo form_input(array('type'=>'date','name'=>'tanggal_pinjam','class'=>'form-control'));?>
         <?php echo form_error('tanggal_pinjam');?>
             <span id="check_data"></span>
             </div>
@@ -70,16 +70,15 @@
         <div class="form-group">
             <label class="col-sm-4 control-label">Status</label>
             <div class="col-sm-8">
-            <?php echo form_input(array('name'=>'status','class'=>'form-control'));?>
-            <?php echo form_error('status');?>
-            <span id="check_data"></span>
+            <?php echo form_dropdown('status',$status,'id="status" class="form-control select2"');?>
+            <?php echo form_error('status', '<span class="error-span">', '</span>'); ?>
             </div>
         </div>
         <div class="form-group">
             <label class="col-sm-4 control-label">Simpan</label>
             <div class="col-sm-8 tutup">
             <?php
-            echo button('send_form(document.faddmenugrup,"penyimpanan/jatuh_tempo/jatuh_tempo/show_editForm/","#divsubcontent")','Simpan','btn btn-success')." ";
+            echo button('send_form(document.faddmenugrup,"peminjaman/jatuh_tempo/show_addForm/","#divsubcontent")','Simpan','btn btn-success')." ";
             ?>
             </div>
         </div>

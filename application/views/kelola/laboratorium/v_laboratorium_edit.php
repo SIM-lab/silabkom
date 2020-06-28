@@ -1,12 +1,9 @@
 <?php  if ( ! defined('BASEPATH')) exit('No direct script access allowed');?>
-<?php
-    $row = fetch_single_row($edit);
+<?php   $row = fetch_single_row($edit);
    // $row = fetch_single_row($delete);
 ?>
-
 <div class="box-body big">
-    <?php echo form_open('',array('name'=>'feditmenugrup','class'=>'form-horizontal','role'=>'form'));?>
-        
+    <?php echo form_open('',array('name'=>'feditmenugrup','class'=>'form-horizontal','role'=>'form'));?>        
     <div class="form-group">
             <label class="col-sm-4 control-label">Nama Lab</label>
             <div class="col-sm-8">
@@ -35,13 +32,13 @@
             <?php echo form_input(array('name'=>'laboran','value'=>$row->laboran,'class'=>'form-control'));?>
             <?php echo form_error('laboran');?>
             </div>
-        </div>
+        </div>        
         <div class="form-group">
             <label class="col-sm-4 control-label">Status</label>
-            <div class="col-sm-8">
-            <?php echo form_input(array('name'=>'status','value'=>$row->status,'class'=>'form-control'));?>
-            <?php echo form_error('status');?>
-            </div>
+                <div class="col-sm-8">
+                <?php echo form_dropdown('status',$status,$row->status,'id="status" class="form-control select2"');?>
+                 <?php echo form_error('status', '<span class="error-span">', '</span>'); ?>
+                </div>
         </div>
         <div class="form-group">
             <label class="col-sm-4 control-label">Simpan</label>
@@ -53,8 +50,6 @@
         </div>
     </form>
 </div>
-
-
 <script type="text/javascript">
 $(document).ready(function() {
     $(".select2").select2();

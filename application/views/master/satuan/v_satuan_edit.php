@@ -12,7 +12,7 @@
             <label class="col-sm-4 control-label">Nama Satuan</label>
             <div class="col-sm-8">
             <?php echo form_hidden('id',$row->id); ?>
-            <?php echo form_input(array('name'=>'nama_satuan','value'=>$row->nama_satuan,'class'=>'form-control'));?>
+            <?php echo form_input(array('name'=>'nama','value'=>$row->nama,'class'=>'form-control'));?>
             <?php echo form_error('nama_satuan');?>
             </div>
         </div>
@@ -24,7 +24,7 @@
             </div>
         </div>
         <div class="form-group">
-            <label class="col-sm-4 control-label">Simpan</label>
+            <label class="col-sm-4 control-label"></label>
             <div class="col-sm-8 tutup">
             <?php
             echo button('send_form(document.faddmenugrup,"master/satuan/show_editForm/","#divsubcontent")','Simpan','btn btn-success')." ";

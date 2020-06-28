@@ -32,7 +32,7 @@
           foreach($satuan->result() as $row): ?>
           <tr>
             <td align="center"><?=$i++?></td>
-            <td align="center"><?=$row->nama_satuan?></td>
+            <td align="center"><?=$row->nama?></td>
             <td align="center"><?=$row->keterangan?></td>
             <td align="center">
             <?php

@@ -46,7 +46,7 @@ class Profile extends CI_Controller {
     $this->load->helper('asset');
     $this->load->view('cms/manage/profile_edit');
   }
-  function edit_user($id)
+  function edit_user($id_user)
   {
     $user=get_post_data(array('email','alamat','no_hp'));
     $this->m_profile->ubah_identitas($user);
@@ -149,7 +149,6 @@ class Profile extends CI_Controller {
   }
   function ubah_password()
   {
- 
    $this->load->library('form_validation');
     $config = array(
 
@@ -180,7 +179,7 @@ class Profile extends CI_Controller {
       $header = "Form Ubah Password";
       $subheader = "Untuk merubah password mohon masukkan password lama anda";
       $buttons[] = button('document.fgantipass.reset()','Reset Form','btn btn-default');
-      $buttons[] = button('load_silent(" ","#content")','Batalkan','btn btn-danger','data-dismiss="modal"');
+      $buttons[] = button('load_silent("cms/profile","#content")','Batalkan','btn btn-danger','data-dismiss="modal"');
       echo $this->fungsi->parse_formbox($header,$subheader,$content,$buttons,"");
     }
     else

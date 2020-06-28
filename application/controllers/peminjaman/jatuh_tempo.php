@@ -16,6 +16,18 @@ class jatuh_tempo extends CI_Controller {
 		$data['jatuh_tempo'] = $this->m_jatuh_tempo->getData();
 		$this->load->view('peminjaman/jatuh_tempo/v_jatuh_tempo_list',$data);
 	}
+	public function formadd($value='')
+	{
+		$this->fungsi->check_previleges('jatuh_tempo');
+		$data['status']  = get_options($this->db->query('select id, status from master_status'),true);
+		$this->load->view('kelola/jatuh_tempo/v_jatuh_tempo_add',$data);
+	}
+	public function formedit($value='')
+	{
+		$this->fungsi->check_previleges('jatuh_tempo');
+		$data['jatuh_tempo']  = get_options($this->db->query('select id, status from master_status'),true);
+		$this->load->view('kelola/jatuh_tempo/v_jatuh_tempo_edit',$data);
+	}
 
 	public function form($param='')
 	{
@@ -25,10 +37,10 @@ class jatuh_tempo extends CI_Controller {
 		$buttons[] = button('jQuery.facebox.close()','Tutup','btn btn-default','data-dismiss="modal"');
 		echo $this->fungsi->parse_modal($header,$subheader,$content,$buttons,"");
 		if($param=='base'){
-			$this->fungsi->run_js('load_silent("peminjaman/jatuh_tempo/jatuh_tempo/show_addForm/","#divsubcontent")');	
+			$this->fungsi->run_js('load_silent("peminjaman/jatuh_tempo/show_addForm/","#divsubcontent")');	
 		}else{
 			$base_kom=$this->uri->segment(5);
-			$this->fungsi->run_js('load_silent("peminjaman/jatuh_tempo/jatuh_tempo/show_editForm/'.$base_kom.'","#divsubcontent")');	
+			$this->fungsi->run_js('load_silent("peminjaman/jatuh_tempo/show_editForm/'.$base_kom.'","#divsubcontent")');	
 		}
 	}
 
@@ -48,8 +60,8 @@ class jatuh_tempo extends CI_Controller {
 
 		if ($this->form_validation->run() == FALSE)
 		{
-			$data['status']='';
-			$this->load->view('peminjaman/jatuh_tempo/jatuh_tempo/v_jatuh_tempo_add',$data);
+			$data['status']=get_options($this->db->query('select id, status from master_status'),true);
+			$this->load->view('peminjaman/jatuh_tempo/v_jatuh_tempo_add',$data);
 		}
 		else
 		{
@@ -82,9 +94,9 @@ class jatuh_tempo extends CI_Controller {
 
 		if ($this->form_validation->run() == FALSE)
 		{
-			$data['edit'] = $this->db->get_where('peminjaman_jatuh_tempo',array('id'=>$id));
-			$data['status']='';
-			$this->load->view('peminjaman/jatuh_tempo/jatuh_tempo/v_jatuh_tempo_edit',$data);
+			$data['edit'] = $this->db->get_where('jatuh_tempo',array('id'=>$id));
+			$data['status']=get_options($this->db->query('select id, status from master_status'),true);
+			$this->load->view('peminjaman/jatuh_tempo/v_jatuh_tempo_edit',$data);
 		}
 		else
 		{
