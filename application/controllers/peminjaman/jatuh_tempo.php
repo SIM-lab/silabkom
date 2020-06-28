@@ -16,6 +16,18 @@ class jatuh_tempo extends CI_Controller {
 		$data['jatuh_tempo'] = $this->m_jatuh_tempo->getData();
 		$this->load->view('peminjaman/jatuh_tempo/v_jatuh_tempo_list',$data);
 	}
+	public function formadd($value='')
+	{
+		$this->fungsi->check_previleges('jatuh_tempo');
+		$data['status']  = get_options($this->db->query('select id, status from master_status'),true);
+		$this->load->view('kelola/jatuh_tempo/v_jatuh_tempo_add',$data);
+	}
+	public function formedit($value='')
+	{
+		$this->fungsi->check_previleges('jatuh_tempo');
+		$data['jatuh_tempo']  = get_options($this->db->query('select id, status from master_status'),true);
+		$this->load->view('kelola/jatuh_tempo/v_jatuh_tempo_edit',$data);
+	}
 
 	public function form($param='')
 	{
@@ -48,7 +60,7 @@ class jatuh_tempo extends CI_Controller {
 
 		if ($this->form_validation->run() == FALSE)
 		{
-			$data['status']='';
+			$data['status']=get_options($this->db->query('select id, status from master_status'),true);
 			$this->load->view('peminjaman/jatuh_tempo/v_jatuh_tempo_add',$data);
 		}
 		else
@@ -83,7 +95,7 @@ class jatuh_tempo extends CI_Controller {
 		if ($this->form_validation->run() == FALSE)
 		{
 			$data['edit'] = $this->db->get_where('jatuh_tempo',array('id'=>$id));
-			$data['status']='';
+			$data['status']=get_options($this->db->query('select id, status from master_status'),true);
 			$this->load->view('peminjaman/jatuh_tempo/v_jatuh_tempo_edit',$data);
 		}
 		else

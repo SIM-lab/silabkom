@@ -68,9 +68,9 @@ if ( ! defined('BASEPATH')) exit('No direct script access allowed');?>
         <div class="form-group">
             <label class="col-sm-4 control-label">Status</label>
             <div class="col-sm-8">
-            <?php echo form_input(array('name'=>'status','value'=>$row->status,'class'=>'form-control'));?>
-            <?php echo form_error('status');?>
-           </div>
+            <?php echo form_dropdown('status',$status,$row->status,'id="status" class="form-control select2"');?>
+            <?php echo form_error('status', '<span class="error-span">', '</span>'); ?>
+            </div>
         </div>
         <div class="form-group">
             <label class="col-sm-4 control-label">Simpan</label>

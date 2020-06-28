@@ -47,7 +47,7 @@
             <td align="center"><?=$row->tanggal_pinjam?></td>
             <td align="center"><?=$row->status_peminjaman?></td>
             <td align="center"><?=$row->cetak?></td>
-            <td align="center"><?=$row->status?></td>
+            <td align="center"><span class="badge badge-success"><?=$row->status?></span></td>
             <td align="center">
             <?php
               $sesi = from_session('level');
