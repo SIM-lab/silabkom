@@ -7,8 +7,8 @@
         <div class="form-group">
             <label class="col-sm-4 control-label">Jenis Laboratorium</label>
             <div class="col-sm-8">
-            <?php echo form_input(array('name'=>'jenis_laboratorium','class'=>'form-control'));?>
-            <?php echo form_error('jenis_laboratoriom');?>
+            <?php echo form_input(array('name'=>'jenis','class'=>'form-control'));?>
+            <?php echo form_error('jenis');?>
             <span id="check_data"></span>
             </div>
         </div>
