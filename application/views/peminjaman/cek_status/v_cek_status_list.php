@@ -46,11 +46,13 @@
             <?php
               $sesi = from_session('level');
               if ($sesi == '1' || $sesi == '2'|| $sesi == '4'|| $sesi == '5' || $sesi == '6') {
+                echo button('load_silent("peminjaman/cek_status/form/sub/'.$row->id.'","#modal")','','btn btn-info fa fa-edit','data-toggle="tooltip" title="Edit"');
             } else {
                 # code...
               }
               ?>
-              <a href="<?= site_url('peminjaman/cek_status/view_print/'.$row->id) ?>" class="btn btn-warning" ><i class="fa fw fa-print"></i>Cetak</a>
+              <a href="<?= site_url('peminjaman/cek_status/delete/'.$row->id) ?>" class="btn btn-danger fa fa-trash" onclick="return confirm('Anda yakin ingin menghapus jatuh tempo?')"></a>
+              <a href="<?= site_url('peminjaman/cek_status/view_print/'.$row->id) ?>" class="btn btn-warning fa fw fa-print" ></a>
             </td>
           </tr>
         <?php endforeach;?>

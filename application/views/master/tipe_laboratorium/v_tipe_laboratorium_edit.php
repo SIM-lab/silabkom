@@ -10,8 +10,8 @@
             <label class="col-sm-4 control-label">Jenis Laboratorium</label>
             <div class="col-sm-8">
                 <?php echo form_hidden('id',$row->id); ?>
-            <?php echo form_input(array('name'=>'jenis_laboratorium','value'=>$row->jenis_laboratorium,'class'=>'form-control'));?>
-            <?php echo form_error('jenis_laboratorium');?>
+            <?php echo form_input(array('name'=>'jenis','value'=>$row->jenis,'class'=>'form-control'));?>
+            <?php echo form_error('jenis');?>
             </div>
         </div>
         <div class="form-group">
