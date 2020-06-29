@@ -35,7 +35,7 @@
             <?php
               $sesi = from_session('level');
               if ($sesi == '1' || $sesi == '2' || $sesi == '3' || $sesi == '6') {
-                echo button('load_silent("master/gambar_depan/form/sub/'.$row->id.'","#modal")','','btn btn-success fa fa-pencil','data-toggle="tooltip" title="Edit"');
+                echo button('load_silent("master/gambar_depan/form/sub/'.$row->id.'","#modal")','','btn btn-info fa fa-edit','data-toggle="tooltip" title="Edit"');
               } else {
                 
               }

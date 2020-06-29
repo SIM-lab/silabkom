@@ -57,7 +57,7 @@
                 # code...
               }
               ?>
-              <a href="<?= site_url('peminjaman/jatuh_tempo/delete/'.$row->id) ?>" class="btn btn-danger" onclick="return confirm('Anda yakin ingin menghapus jatuh tempo?')"><i class="fa fa-trash"></i></a>
+              <a href="<?= site_url('peminjaman/jatuh_tempo/delete/'.$row->id) ?>" class="btn btn-danger fa fa-trash" onclick="return confirm('Anda yakin ingin menghapus jatuh tempo?')"></a>
 
             </td>
           </tr>

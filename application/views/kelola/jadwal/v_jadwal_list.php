@@ -46,7 +46,7 @@
                 # code...
               }
               ?>
-              <a href="<?= site_url('kelola/jadwal/delete/'.$row->id) ?>" class="btn btn-danger" onclick="return confirm('Anda yakin ingin menghapus jadwal tersebut ?')"><i class="fa fa-trash"></i></a>
+              <a href="<?= site_url('kelola/jadwal/delete/'.$row->id) ?>" class="btn btn-danger fa fa-trash" onclick="return confirm('Anda yakin ingin menghapus jadwal tersebut ?')"></a>
               <a href="<?=base_url(''.$row->file_jadwal)?>" class="btn btn-info fa fw fa-download" target="_blank"></a>
             </td>
           </tr>

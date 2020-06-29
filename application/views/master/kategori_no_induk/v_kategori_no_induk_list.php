@@ -43,7 +43,7 @@
                 # code...
               }
               ?>
-               <a href="<?= site_url('master/kategori_no_induk/delete/'.$row->id) ?>" class="btn btn-danger" onclick="return confirm('Anda Yakin Ingin Menghapus Master Kategori No Induk Ini ?')"><i class="fa fw fa-trash"></i></a>
+               <a href="<?= site_url('master/kategori_no_induk/delete/'.$row->id) ?>" class="btn btn-danger fa fw fa-trash" onclick="return confirm('Anda Yakin Ingin Menghapus Master Kategori No Induk Ini ?')"></a>
             </td>
           </tr>
 
