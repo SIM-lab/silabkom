@@ -56,8 +56,8 @@ class satuan extends CI_Controller {
 			$datapost = get_post_data(array('id','nama','keterangan'));
 			$this->m_satuan->insertData($datapost);
 			$this->fungsi->run_js('load_silent("master/satuan","#content")');
-			$this->fungsi->message_box("Data Master Nama satuan sukses disimpan...","success");
-			$this->fungsi->catat($datapost,"Menambah Master satuan dengan data sbb:",true);
+			$this->fungsi->message_box("Data Master Satuan sukses disimpan...","success");
+			$this->fungsi->catat($datapost,"Menambah master_satuan dengan data sbb:",true);
 		}
 	}
 
