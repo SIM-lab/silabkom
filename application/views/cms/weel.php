@@ -126,7 +126,7 @@
              <?php echo $avatar ; ?>
             </div>
             <div class="pull-left info" >
-            <p><font size="6px"><?php echo from_session('nama');?></font></p>
+            <p><font size="4px"><?php echo from_session('username');?></font></p>
             </div>
           </div>
           <ul class="sidebar-menu ">
