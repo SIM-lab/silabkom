@@ -8,7 +8,8 @@ class peminjaman_alat extends CI_Controller {
 		parent::__construct();
 		$this->fungsi->restrict();
 		$this->load->model('peminjaman/m_peminjaman_alat');
-		$this->load->model('master/m_nama_alat');
+		//$this->load->model('master/m_nama_alat');
+		$this->load->model('master/m_kategori_alat_bahan');
 
 	}
 
@@ -50,7 +51,8 @@ class peminjaman_alat extends CI_Controller {
 
 		if ($this->form_validation->run() == FALSE)
 		{
-			$data['nama_alat'] = $this ->m_nama_alat->getData();
+			$data['kode'] = $this ->m_kategori_alat_bahan->getData();
+			$data['nama_alat_bahan'] = $this ->m_kategori_alat_bahan->getData();
 			$this->load->view('peminjaman/peminjaman_alat/v_peminjaman_alat_add',$data);
 		}
 		else
@@ -85,7 +87,8 @@ class peminjaman_alat extends CI_Controller {
 		if ($this->form_validation->run() == FALSE)
 		{
 			$data['edit'] = $this->db->get_where('peminjaman_alat',array('id'=>$id));
-			$data['nama_alat'] = $this ->m_nama_alat->getData();
+			$data['kode'] = $this ->m_kategori_alat_bahan->getData();
+			$data['nama_alat_bahan'] = $this ->m_kategori_alat_bahan->getData();
 			$this->load->view('peminjaman/peminjaman_alat/v_peminjaman_alat_edit',$data);
 		}
 		else

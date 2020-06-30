@@ -5,13 +5,15 @@
 
 <div class="box-body big">
     <?php echo form_open('',array('name'=>'faddmenugrup','class'=>'form-horizontal','role'=>'form'));?>
-        
-        <div class="form-group">
-            <label class="col-sm-4 control-label">id_peminjaman</label>
+    <div class="form-group">
+            <label class="col-sm-4 control-label">ID-Peminjaman</label>
             <div class="col-sm-8">
-            <?php echo form_hidden('id',$row->id); ?>
-            <?php echo form_input(array('name'=>'id_peminjaman','value'=>$row->id_peminjaman,'class'=>'form-control'));?>
-            <?php echo form_error('id_peminjaman');?> 
+                <select class="form-control" name="id_peminjaman">
+                <?php foreach ($kode->result() as $kode): ?>
+                    <option value="<?= $kode->kode ?>"><?= $kode->kode ?></option>
+                <?php endforeach; ?>
+                </select>
+            <?php echo form_error('id_peminjaman');?>
             </div>
         </div>
         <div class="form-group">

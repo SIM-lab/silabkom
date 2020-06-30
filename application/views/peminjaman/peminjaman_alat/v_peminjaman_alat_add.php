@@ -4,24 +4,25 @@
     <?php echo form_open('',array('name'=>'faddmenugrup','class'=>'form-horizontal','role'=>'form'));?>
         
         
-        <div class="form-group">
-            <label class="col-sm-4 control-label">id_peminjaman</label>
+    <div class="form-group">
+            <label class="col-sm-4 control-label">ID-Peminjaman</label>
             <div class="col-sm-8">
-            <?php echo form_input(array('name'=>'id_peminjaman','class'=>'form-control'));?>
+                <select class="form-control" name="id_peminjaman">
+                <?php foreach ($kode->result() as $kode): ?>
+                    <option value="<?= $kode->kode ?>"><?= $kode->kode ?></option>
+                <?php endforeach; ?>
+                </select>
             <?php echo form_error('id_peminjaman');?>
-            <span id="check_data"></span>
             </div>
         </div>
         <div class="form-group">
-            <label class="col-sm-4 control-label">Nama Alat</label>
+            <label class="col-sm-4  control-label">Nama Alat</label>
             <div class="col-sm-8">
-            <div class="form-group">
                 <select class="form-control" name="nama_alat">
-                <?php foreach ($nama_alat->result() as $nama_alat): ?>
-                    <option value="<?= $nama_alat->id ?>"><?= $nama_alat->nama_alat ?></option>
+                <?php foreach ($nama_alat_bahan->result() as $nama_alat_bahan): ?>
+                    <option value="<?= $nama_alat_bahan->nama_alat_bahan ?>"><?= $nama_alat_bahan->nama_alat_bahan ?></option>
                 <?php endforeach; ?>
                 </select>
-            </div>
             <?php echo form_error('nama_alat');?>
             </div>
         </div>
@@ -69,6 +70,12 @@
 $(document).ready(function() {
     $('.tutup').click(function(e) {  
         $('#myModal').modal('hide');
-    });
+        });
 });
+</script>
+<script>
+     $("#kotak").change(function(){
+$("#nama_alat").val($(this).val());
+
+}); 
 </script>

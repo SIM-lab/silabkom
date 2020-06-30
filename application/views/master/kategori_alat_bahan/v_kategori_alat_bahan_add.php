@@ -7,7 +7,7 @@
         <div class="form-group">
             <label class="col-sm-4 control-label">Kode</label>
             <div class="col-sm-8">
-            <?php echo form_input(array('name'=>'kode','class'=>'form-control'));?>
+            <?php echo form_input(array('name'=>'kode','class'=>'form-control','value'=>'B'));?>
             <?php echo form_error('kode');?>
             <span id="check_data"></span>
             </div>
