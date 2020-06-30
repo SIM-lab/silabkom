@@ -5,8 +5,8 @@ class M_Jatuh_Tempo extends CI_Model {
 //select->read
 	public function getData($value='')
 	{
-		$this->db->from('jatuh_tempo ma');
-		$this->db->order_by('ma.id', 'desc');
+		$this->db->from('jatuh_tempo');
+		$this->db->order_by('jatuh_tempo.id', 'desc');
 		return $this->db->get();
 	}
     //insert->create
@@ -23,11 +23,11 @@ class M_Jatuh_Tempo extends CI_Model {
             $this->db->update('jatuh_tempo',$data);
 	}
 //delete
-	public function deleteData($id='')
-	{
-		$this->db->where('id', $id);
-        $this->db->delete('jatuh_tempo');
-	}
+public function deleteData($id='')
+{
+	$this->db->where('id', $id);
+	$this->db->delete('jatuh_tempo');
+}
 
 }
 

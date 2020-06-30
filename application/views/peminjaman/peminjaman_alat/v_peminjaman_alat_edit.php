@@ -5,6 +5,7 @@
 
 <div class="box-body big">
     <?php echo form_open('',array('name'=>'faddmenugrup','class'=>'form-horizontal','role'=>'form'));?>
+    <?php echo form_hidden('id',$row->id); ?>
     <div class="form-group">
             <label class="col-sm-4 control-label">ID-Peminjaman</label>
             <div class="col-sm-8">
@@ -19,7 +20,6 @@
         <div class="form-group">
         <label class="col-sm-4 control-label">Nama Alat</label>
             <div class="col-sm-8">
-            <?php echo form_hidden('id',$row->id); ?>
                 <select class="form-control" name="nama_alat">
                 <?php foreach ($nama_alat->result() as $nama_alat): ?>
                     <option value="<?= $nama_alat->id ?>" <?= $nama_alat->id == $row->nama_alat ? "selected" : null ?>><?= $nama_alat->nama_alat ?></option>
