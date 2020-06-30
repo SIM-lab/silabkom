@@ -57,15 +57,19 @@
                 # code...
               }
               ?>
-              <a href="<?= site_url('peminjaman/jatuh_tempo/delete/'.$row->id) ?>" class="btn btn-danger fa fa-trash" onclick="return confirm('Anda yakin ingin menghapus jatuh tempo?')"></a>
-
+                <?php
+              $sesi = from_session('level');
+              if ($sesi == '1' || $sesi == '2'|| $sesi == '4'|| $sesi == '5' || $sesi == '6') {
+                echo button('load_silent("peminjaman/jatuh_tempo/delete/'.$row->id.'","#content")','','btn btn-danger fa fw fa-trash','data-toggle="tooltip" title="Hapus"');
+            } else {
+                # code...
+              }
+              ?>
             </td>
           </tr>
         <?php endforeach;?>
         </tbody>
         </table>
-        <b>
-          <a href="<?php if(isset($_SERVER['HTTP_REFERER'])){echo $_SERVER['HTTP_REFERER'];}?>">Back</a>
         </div>
       </div>
     </div>

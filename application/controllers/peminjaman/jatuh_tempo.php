@@ -108,12 +108,15 @@ class jatuh_tempo extends CI_Controller {
         }  
     }
 
-    public function delete()
-            {
-                $id = $this->uri->segment(4);
-                $this->m_jatuh_tempo->deleteData($id);
-                redirect('admin');
-            }
+	public function delete($id) 
+	{
+		$this->fungsi->check_previleges('jatuh_tempo');
+		if($id == '' || !is_numeric($id)) die;
+		$this->m_jatuh_tempo->deleteData($id);
+		$this->fungsi->run_js('load_silent("peminjaman/jatuh_tempo","#content")');
+		$this->fungsi->message_box("Data Jatuh Tempo berhasil dihapus...","notice");
+		$this->fungsi->catat("Menghapus laporan dengan id ".$id);
+	}
 }
 
 /* End of file jatuh_tempo.php */
