@@ -19,7 +19,7 @@ class periode_pengajuan extends CI_Controller {
 	public function form($param='')
 	{
 		$content   = "<div id='divsubcontent'></div>";
-		$header    = "Form Periode Pengajuan";
+		$header    = "Form Periode Pengajuan ";
 		$subheader = "periode_pengajuan";
 		$buttons[] = button('jQuery.facebox.close()','Tutup','btn btn-default','data-dismiss="modal"');
 		echo $this->fungsi->parse_modal($header,$subheader,$content,$buttons,"");
@@ -47,11 +47,12 @@ class periode_pengajuan extends CI_Controller {
 		if ($this->form_validation->run() == FALSE)
 		{
 			$data['status']='';
+			$data['periode_pengajuan'] = $this->m_periode_pengajuan->periode_pengajuan();
 			$this->load->view('pengajuan/periode_pengajuan/v_periode_pengajuan_add',$data);
 		}
 		else
 		{
-			$datapost = get_post_data(array('id','periode_pengajuan','semester','bulan','tahun','sumber_pendanaan','pajak','status_pengajuan','status'));
+			$datapost = get_post_data(array('id','periode_pengajuan','semester','bulan','tahun','sumber_pendanaan','tanggal_pendanaan','pajak','status_pengajuan','status'));
 			$this->m_periode_pengajuan->insertData($datapost);
 			$this->fungsi->run_js('load_silent("pengajuan/periode_pengajuan","#content")');
 			$this->fungsi->message_box("Data Periode Pengajuan sukses disimpan...","success");
@@ -81,16 +82,18 @@ class periode_pengajuan extends CI_Controller {
 		{
 			$data['edit'] = $this->db->get_where('periode_pengajuan',array('id'=>$id));
 			$data['status']='';
+			$data['periode_pengajuan'] = $this->m_periode_pengajuan->periode_pengajuan();
 			$this->load->view('pengajuan/periode_pengajuan/v_periode_pengajuan_edit',$data);
 		}
 		else
 		{
-			$datapost = get_post_data(array('id','periode_pengajuan','semester','bulan','tahun','sumber_pendanaan','pajak','status_pengajuan','status'));
+			$datapost = get_post_data(array('id','periode_pengajuan','semester','bulan','tahun','sumber_pendanaan','tanggal_pendanaan','pajak','status_pengajuan','status'));
 			$this->m_periode_pengajuan->updateData($datapost);
 			$this->fungsi->run_js('load_silent("pengajuan/periode_pengajuan","#content")');
 			$this->fungsi->message_box("Data Periode Pengajuan sukses diperbarui...","success");
 			$this->fungsi->catat($datapost,"Mengedit periode_pengajuan dengan data sbb:",true);
-		}
+		} 
+		
 	}
 	public function delete()
 	{
