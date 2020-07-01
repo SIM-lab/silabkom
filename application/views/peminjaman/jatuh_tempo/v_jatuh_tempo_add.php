@@ -51,29 +51,6 @@
             <span id="check_data"></span>
             </div>
         </div>
-            <div class="form-group">
-            <label class="col-sm-4 control-label">Status Peminjaman</label>
-            <div class="col-sm-8">
-            <?php echo form_input(array('name'=>'status_peminjaman','class'=>'form-control'));?>
-            <?php echo form_error('status_peminjaman');?>
-            <span id="check_data"></span>
-            </div>
-        </div>
-        <div class="form-group">
-            <label class="col-sm-4 control-label">Cetak</label>
-            <div class="col-sm-8">
-            <?php echo form_input(array('name'=>'cetak','class'=>'form-control'));?>
-            <?php echo form_error('cetak');?>
-            <span id="check_data"></span>
-            </div>
-        </div>
-        <div class="form-group">
-            <label class="col-sm-4 control-label">Status</label>
-            <div class="col-sm-8">
-            <?php echo form_dropdown('status',$status,'id="status" class="form-control select2"');?>
-            <?php echo form_error('status', '<span class="error-span">', '</span>'); ?>
-            </div>
-        </div>
         <div class="form-group">
             <label class="col-sm-4 control-label">Simpan</label>
             <div class="col-sm-8 tutup">

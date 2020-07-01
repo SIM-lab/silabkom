@@ -65,16 +65,13 @@
           <option value ='Pendanaan Sudah Turun'>Pendanaan Sudah Turun</option>
           </select>
         </div>
-
         <div class="form-group">
-        <label class="col-sm-4 control-label">Status</label>
-          <select class="col-sm-8" name ='status'>
-          <option value ='Ada'>Ada</option>
-          <option value ='Tidak Ada'>Tidak Ada</option>
-          </select>
+            <label class="col-sm-4 control-label">Status</label>
+            <div class="col-sm-8">
+            <?php echo form_dropdown('status',$status,$row->sumber_pendanaan,'id="status" class="form-control select2"');?>
+            <?php echo form_error('status', '<span class="error-span">', '</span>'); ?>
+            </div>
         </div>
-
-        
         <div class="form-group">
             <label class="col-sm-4 control-label">Simpan</label>
             <div class="col-sm-8 tutup">

@@ -55,26 +55,6 @@
             <span id="check_data"></span>
             </div>
         </div>
-
-        <div class="form-group">
-            <label class="col-sm-4 control-label">Status Pengajuan</label>
-            <select name ='status_pengajuan'>
-          <div class="col-sm-8">
-          <option value ='Sudah Disetujui '>Sudah Disetujui</option>
-          <option value ='Belum Disetujui'>Belum Disetujui</option>
-          <option value ='Sudah Terdistribusikan'>Sudah Terdistribusikan</option>
-          <option value ='Pendanaan Sudah Turun'>Pendanaan Sudah Turun</option>
-          </select>
-        </div>
-        <div class="form-group">
-        <label class="col-sm-4 control-label">Status</label>
-          <select name ='status'>
-          <div class="col-sm-8">
-          <option value ='Ada'>Ada</option>
-          <option value ='Tidak Ada'>Tidak Ada</option>
-          </select>
-        </div>
-
         <div class="form-group">
             <label class="col-sm-4 control-label">Save</label>
             <div class="col-sm-8 tutup">
